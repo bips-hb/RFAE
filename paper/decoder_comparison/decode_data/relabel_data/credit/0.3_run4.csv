@@ -1,0 +1,314 @@
+checking_status,duration,credit_history,purpose,credit_amount,savings_status,employment,installment_commitment,personal_status,other_parties,residence_since,property_magnitude,age,other_payment_plans,housing,existing_credits,job,num_dependents,own_telephone,foreign_worker,class
+>=200,5,existing paid,business,997,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,business,978,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,repairs,952,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,education,1074,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,all paid,other,741,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,no credits/all paid,new car,1085,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,radio/tv,984,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,delayed previously,other,561,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,radio/tv,1002,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,existing paid,radio/tv,967,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,critical/other existing credit,repairs,557,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,used car,1022,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,all paid,other,675,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,8,all paid,repairs,684,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,7,delayed previously,other,466,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,used car,981,>=1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,no credits/all paid,education,960,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,7,critical/other existing credit,other,664,>=1000,1<=X<4,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,education,442,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,used car,993,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,other,577,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,repairs,758,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,repairs,943,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,used car,983,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,furniture/equipment,1017,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,other,702,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,radio/tv,1027,>=1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,radio/tv,956,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,all paid,new car,1005,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,repairs,926,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,no credits/all paid,new car,988,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,existing paid,retraining,1069,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,furniture/equipment,1006,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,7,delayed previously,repairs,461,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,used car,979,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,repairs,787,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,no credits/all paid,repairs,756,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,5,no credits/all paid,furniture/equipment,1052,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,7,critical/other existing credit,retraining,1087,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,repairs,864,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,other,710,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,all paid,education,979,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,education,1069,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,other,692,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,used car,1037,>=1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,other,472,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,8,all paid,other,841,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,used car,1050,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,delayed previously,retraining,1036,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,critical/other existing credit,repairs,638,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,repairs,658,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,no credits/all paid,radio/tv,1009,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,retraining,1059,>=1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,new car,968,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,5,critical/other existing credit,used car,987,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,used car,1057,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,education,995,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,all paid,furniture/equipment,963,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,all paid,other,518,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,delayed previously,other,601,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,education,1057,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,business,961,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,no credits/all paid,used car,1075,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,critical/other existing credit,used car,963,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,repairs,483,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,other,861,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,all paid,other,882,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,8,existing paid,used car,980,>=1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,critical/other existing credit,other,687,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,repairs,646,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,business,955,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,all paid,repairs,589,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,5,all paid,repairs,894,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,repairs,586,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,all paid,repairs,666,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,5,existing paid,retraining,984,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,4,all paid,radio/tv,276,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,none,own,1,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,used car,984,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,repairs,716,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,all paid,other,641,>=1000,1<=X<4,1,male mar/wid,guarantor,2,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,5,critical/other existing credit,other,452,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,repairs,902,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,used car,1040,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,used car,1074,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,used car,1012,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,retraining,1038,>=1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,other,833,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,repairs,772,>=1000,1<=X<4,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,used car,970,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,radio/tv,1060,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,other,614,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,retraining,1006,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,all paid,education,1018,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,5,delayed previously,other,483,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,education,1029,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,all paid,other,520,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,7,all paid,other,776,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,5,all paid,repairs,544,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,8,all paid,repairs,444,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,6,existing paid,radio/tv,1010,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,other,942,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,all paid,new car,1030,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,all paid,other,695,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,8,existing paid,repairs,642,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,no credits/all paid,other,599,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,5,existing paid,other,690,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,used car,973,>=1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,business,1056,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,all paid,other,485,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,repairs,467,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,repairs,943,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,other,460,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,other,478,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,retraining,1060,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,critical/other existing credit,other,711,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,radio/tv,1045,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,used car,1059,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,other,659,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,used car,1084,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,radio/tv,1065,>=1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,critical/other existing credit,other,927,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,all paid,new car,1072,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,repairs,732,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,7,all paid,other,578,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,8,existing paid,new car,1018,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,no credits/all paid,other,536,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,used car,953,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,delayed previously,radio/tv,1040,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,critical/other existing credit,retraining,953,>=1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,other,484,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,other,687,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,repairs,881,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,repairs,908,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,repairs,935,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,other,549,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,all paid,other,904,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,7,critical/other existing credit,radio/tv,974,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,repairs,728,>=1000,1<=X<4,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,no credits/all paid,new car,964,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,6,all paid,repairs,895,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,7,critical/other existing credit,used car,1056,>=1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,existing paid,education,1017,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,radio/tv,1066,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,delayed previously,retraining,989,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,other,879,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,critical/other existing credit,retraining,1014,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,radio/tv,1077,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,no credits/all paid,used car,1035,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,repairs,913,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,repairs,461,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,other,822,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,retraining,1029,>=1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,new car,1082,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,other,447,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,no credits/all paid,repairs,885,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,8,critical/other existing credit,other,835,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,repairs,945,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,used car,997,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,retraining,1064,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,used car,1037,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,business,1044,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,business,1087,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,repairs,500,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,radio/tv,1070,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,used car,1030,>=1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,furniture/equipment,1068,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,other,838,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,other,634,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,other,906,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,other,476,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,other,791,>=1000,1<=X<4,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,all paid,other,899,>=1000,1<=X<4,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,repairs,507,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,used car,1004,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,existing paid,repairs,700,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,retraining,965,>=1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,new car,1081,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,all paid,repairs,694,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,8,delayed previously,other,766,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,no credits/all paid,repairs,616,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,no credits/all paid,other,715,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,5,delayed previously,retraining,1083,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,no credits/all paid,education,1016,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,repairs,952,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,repairs,624,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,new car,1055,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,no credits/all paid,other,444,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,8,delayed previously,repairs,913,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,other,574,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,no credits/all paid,repairs,633,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,delayed previously,repairs,755,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,all paid,used car,1079,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,critical/other existing credit,repairs,445,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,business,1039,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,other,783,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,used car,975,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,no credits/all paid,education,1016,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,6,critical/other existing credit,repairs,481,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,used car,980,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,delayed previously,business,1032,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,repairs,672,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,furniture/equipment,1082,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,new car,1039,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,critical/other existing credit,furniture/equipment,1082,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,other,789,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,other,581,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,no credits/all paid,repairs,484,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,5,existing paid,used car,979,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,other,739,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,all paid,used car,981,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,all paid,repairs,857,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,8,delayed previously,repairs,719,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,retraining,1037,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,critical/other existing credit,radio/tv,968,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,furniture/equipment,1066,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,furniture/equipment,961,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,repairs,820,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,education,975,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,retraining,1057,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,used car,1025,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,new car,1055,>=1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,repairs,849,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,other,781,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,no credits/all paid,other,586,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,6,existing paid,repairs,830,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,delayed previously,radio/tv,1038,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,delayed previously,other,453,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,repairs,948,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,radio/tv,963,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,other,507,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,critical/other existing credit,other,836,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,retraining,1032,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,radio/tv,1050,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,4,no credits/all paid,other,306,>=1000,unemployed,1,male mar/wid,guarantor,2,car,20,none,for free,2,unskilled resident,1,yes,no,good
+>=200,6,all paid,other,880,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,5,critical/other existing credit,repairs,863,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,furniture/equipment,1026,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,new car,1005,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,repairs,594,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,all paid,other,579,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,other,885,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,critical/other existing credit,used car,1011,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,repairs,450,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,radio/tv,993,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,existing paid,retraining,961,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,furniture/equipment,1015,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,radio/tv,999,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,existing paid,retraining,1011,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,other,937,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,existing paid,used car,970,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,business,1022,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,retraining,965,>=1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,new car,1042,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,education,1059,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,delayed previously,other,715,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,no credits/all paid,business,1032,>=1000,unemployed,1,male single,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,7,existing paid,other,807,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,other,849,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,all paid,repairs,577,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,unskilled resident,1,yes,no,good
+>=200,7,existing paid,retraining,1028,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,repairs,484,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,used car,1058,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,repairs,487,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,critical/other existing credit,repairs,799,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,radio/tv,1016,>=1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,existing paid,repairs,661,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,critical/other existing credit,repairs,681,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,all paid,education,947,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,7,existing paid,retraining,1010,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,repairs,782,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,radio/tv,1031,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,used car,973,>=1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,existing paid,used car,1055,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,existing paid,repairs,892,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,all paid,used car,969,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,existing paid,repairs,930,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,used car,989,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,critical/other existing credit,other,645,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,delayed previously,used car,1037,>=1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,radio/tv,1034,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,all paid,other,657,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,critical/other existing credit,radio/tv,1058,500<=X<1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,all paid,other,675,>=1000,unemployed,1,male mar/wid,guarantor,1,car,25,none,for free,2,unskilled resident,1,yes,no,good
+>=200,6,delayed previously,other,645,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,existing paid,radio/tv,1044,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,new car,967,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,used car,1086,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,critical/other existing credit,repairs,861,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,no credits/all paid,other,793,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,unskilled resident,1,yes,no,good
+>=200,5,critical/other existing credit,used car,972,500<=X<1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,critical/other existing credit,retraining,1007,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,delayed previously,retraining,1083,>=1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,delayed previously,radio/tv,974,>=1000,unemployed,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,critical/other existing credit,other,850,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,existing paid,radio/tv,958,>=1000,unemployed,1,male single,guarantor,2,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,all paid,radio/tv,1039,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,existing paid,business,1011,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,5,critical/other existing credit,repairs,939,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,new car,974,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,stores,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,critical/other existing credit,other,771,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,used car,1006,500<=X<1000,unemployed,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,7,no credits/all paid,other,903,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,6,all paid,other,583,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,7,delayed previously,used car,963,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,5,delayed previously,used car,1081,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,8,existing paid,used car,985,>=1000,1<=X<4,1,male single,guarantor,1,car,25,none,own,2,unemp/unskilled non res,1,yes,no,bad
+>=200,6,existing paid,repairs,486,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,6,existing paid,education,1006,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,critical/other existing credit,other,596,>=1000,unemployed,1,male div/sep,guarantor,2,car,25,none,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,8,delayed previously,business,990,>=1000,1<=X<4,1,male single,guarantor,2,car,25,none,own,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,7,no credits/all paid,new car,1042,>=1000,1<=X<4,1,male div/sep,guarantor,2,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,no credits/all paid,repairs,655,>=1000,unemployed,1,male mar/wid,guarantor,2,car,25,none,own,2,unskilled resident,1,yes,no,good
+>=200,8,no credits/all paid,repairs,827,>=1000,unemployed,1,male div/sep,guarantor,1,car,25,none,for free,1,unskilled resident,1,yes,no,good

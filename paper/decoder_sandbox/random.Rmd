@@ -1,0 +1,96 @@
+---
+title: "completely random"
+output: html_notebook
+---
+```{r}
+# Load libraries
+library(glmnet)
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(tidyr)
+library(dplyr)
+library(RANN)
+library(mgcv)
+library(data.table)
+library(FactoMineR)
+library(ranger)
+library(caret)
+
+# Load internal functions
+#setwd('~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Kings/tree_kernels')
+source("pca.R")
+source('eigenmap.R')
+source("decode.R")
+source("utils.R")
+source("errors.R")
+source("decoder_sandbox/eForest.R")
+source("decoder_sandbox/eForestSynth.R")
+
+# Register cores
+cl <- makeCluster(12)
+registerDoParallel(cl)
+#library(doMC)
+#registerDoMC(12)
+
+```
+
+```{r}
+data = 'student'
+trn <- fread(paste0('./decoder_sandbox/original_data/', data, '_trn.csv'
+                    ),header=TRUE)
+trn[, V1 := NULL]
+trn_obj <- prep_x(trn)
+
+tst <- fread(paste0('./decoder_sandbox/original_data/', data, '_tst.csv'
+                    ),header=TRUE)
+tst[, V1 := NULL]
+tst <- prep_x(tst, trn_obj[[2]], trn_obj[[3]])[[1]]
+trn <- trn_obj[[1]]
+setDT(trn)
+setDT(tst)
+trn_og <- trn[y == 1]
+trn_og[, y := NULL]
+d <- ncol(trn_og)
+dz <- round(d * 0.2)
+
+```
+
+```{r}
+rf <- ranger(y ~ ., data = trn, num.trees = 200,
+             classification = TRUE, respect.unordered.factors = 'order')
+emap <- eigenmap(rf, trn_og, k=dz)
+z <- predict.eigenmap(emap, rf, tst)
+#results$aurf[[data]] <- decode(z, emap, trn_og, k = 3)
+aurf <- decode(z, emap, trn_og, k = 3)
+error <- reconstruction_error(aurf, tst)
+```
+
+```{r}
+rf1 <- ranger(y ~ ., data = trn, num.trees = 200,
+             mtry=1, num.random.splits=1,
+             classification = TRUE, respect.unordered.factors = 'order')
+emap1 <- eigenmap(rf1, trn_og, k=dz)
+z1 <- predict.eigenmap(emap1, rf1, tst)
+#results$aurf[[data]] <- decode(z, emap, trn_og, k = 3)
+aurf1 <- decode(z1, emap1, trn_og, k = 3)
+error1 <- reconstruction_error(aurf1, tst)
+```
+
+```{r}
+trn_lt <- trn_og
+y <- rbinom(nrow(trn_og), 1, 0.5)
+trn_lt$y <- y
+
+rf2 <- ranger(y ~ ., data = trn, num.trees = 200,
+             classification = TRUE, respect.unordered.factors = 'order')
+emap2 <- eigenmap(rf2, trn_og, k=dz)
+z2 <- predict.eigenmap(emap2, rf2, tst)
+#results$aurf[[data]] <- decode(z, emap, trn_og, k = 3)
+aurf2 <- decode(z2, emap2, trn_og, k = 3)
+error2 <- reconstruction_error(aurf2, tst)
+```

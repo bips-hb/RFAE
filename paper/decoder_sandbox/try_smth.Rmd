@@ -1,0 +1,91 @@
+---
+title: "try_smth"
+output: html_notebook
+---
+
+
+```{r}
+source('../eigenmap.R')
+source('../z_to_adj.R')
+source('../adj_to_leaves.R')
+source("../decode.R")
+source("../utils.R")
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table,warn.conflicts=FALSE)
+library(dslabs)
+library(RSpectra)
+cl <- makeCluster(detectCores()/2)
+registerDoParallel(cl)
+#registerDoSEQ()
+#stopCluster(cl)
+```
+
+```{r}
+plpn = list()
+
+plpn$trn <- read.csv("cprs_data/plpn_trn.csv", row.names = 1)
+plpn$tst <- read.csv("cprs_data/plpn_tst.csv", row.names = 1)
+plpn$trn <- plpn$trn %>% mutate_if(is.character, as.factor)
+plpn$tst <- plpn$tst %>% mutate_if(is.character, as.factor)
+
+
+```
+
+```{r}
+plpn$trn_og <- subset(plpn$trn, y == 1)
+plpn$trn_noy <- subset(plpn$trn_og, select = -y)
+
+plpn$rf <- ranger(y ~ ., data = plpn$trn,
+                  classification = TRUE, respect.unordered.factors ='order')
+plpn$emap <- eigenmap(plpn$rf, 
+                      plpn$trn_og,
+                      k=3)
+plpn$z <- predict.eigenmap(plpn$emap, plpn$rf, 
+                           plpn$tst)
+
+```
+
+```{r}
+sparse=FALSE
+m = nrow(plpn$z)
+L_hat <- plpn$z %*% diag(sqrt(plpn$emap$lambda)) %*% t(plpn$emap$v) 
+L_hat[L_hat < 0] <- 0
+L_hat <- as(L_hat, 'sparseMatrix')
+d_old <- 1 / plpn$emap$d # These are now square root of node degrees
+A_hat <- sapply(seq_len(nrow(plpn$z)), function(i) {
+  L_hat[i, ] * d_old # Row-wise 
+})
+d_hat <- colSums(A_hat)
+A_hat <- sapply(seq_len(nrow(A_hat)), function(i) {
+  A_hat[i, ] * d_hat # Column-wise
+})
+A_hat[A_hat > plpn$rf$num.trees] <- plpn$rf$num.trees
+if (isTRUE(sparse)) {
+  for (i in seq_len(m)) {
+    thresh <- quantile(A_hat[i, ], plpn$emap$sparsity, names = FALSE)
+    flag <- A_hat[i, ] < thresh
+    A_hat[i, ][flag] <- 0
+  }
+}
+```
+
+```{r}
+scaled <- A_hat[5, ]/sum(A_hat[5, ])
+tst <- plpn$tst[50, ]
+for (i in colnames(plpn$tst)) {
+  if (is.numeric(plpn$tst[[i]])) {
+    tst[[i]] <- sum(plpn$trn_og[i] * scaled)
+    
+  } else {
+    total_weights <- tapply(scaled, factor(plpn$trn_og[[i]]), sum)
+    tst[[i]] <- names(total_weights[which.max(total_weights)])
+  }
+  #tst[[i]] <- plpn$trn_og[sample(1:266, size = 1, prob = scaled), i]
+}
+```

@@ -1,0 +1,389 @@
+checking_status,duration,credit_history,purpose,credit_amount,savings_status,employment,installment_commitment,personal_status,other_parties,residence_since,property_magnitude,age,other_payment_plans,housing,existing_credits,job,num_dependents,own_telephone,foreign_worker,class
+no checking,6,existing paid,retraining,283,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1356,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,existing paid,retraining,1764,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,14020,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1529,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16220,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16069,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13463,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,16803,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,existing paid,retraining,453,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,14733,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,18228,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,existing paid,retraining,1011,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,4,no credits/all paid,retraining,1385,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,no credits/all paid,retraining,1512,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,479,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1212,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15866,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16297,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,14239,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1714,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,no credits/all paid,retraining,383,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,delayed previously,retraining,1732,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,988,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,4,no credits/all paid,retraining,962,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13541,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,28,critical/other existing credit,retraining,4402,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,16614,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,16514,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,17975,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,14676,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,existing paid,retraining,482,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,18122,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1675,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,delayed previously,retraining,1666,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,299,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,1631,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,delayed previously,retraining,1769,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1843,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15890,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,18271,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13605,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1067,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,15234,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,critical/other existing credit,retraining,1083,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1198,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1291,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,14063,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,existing paid,retraining,545,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,delayed previously,retraining,1757,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,323,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,14111,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,17636,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,15819,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15747,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,no credits/all paid,retraining,745,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,14714,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,existing paid,retraining,405,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17318,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,15649,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1502,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,existing paid,retraining,1587,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1504,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,existing paid,retraining,937,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,existing paid,retraining,1328,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1237,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,critical/other existing credit,retraining,2255,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,retraining,630,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,707,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,existing paid,retraining,1782,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,retraining,899,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,existing paid,retraining,938,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,critical/other existing credit,retraining,1187,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15450,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,16230,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,existing paid,retraining,717,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,delayed previously,retraining,1578,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1681,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1608,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1386,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,720,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,1374,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,no credits/all paid,retraining,1802,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,15087,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15132,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,11025,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15929,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,18292,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,651,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1198,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,15463,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,495,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1684,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,retraining,987,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1102,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,critical/other existing credit,retraining,2090,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16998,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,329,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,18094,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,283,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1619,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1661,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1199,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,delayed previously,retraining,1233,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1757,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1432,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1636,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,12846,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,468,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1138,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13240,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,15451,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1668,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,15449,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13300,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1038,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,12655,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,delayed previously,retraining,1035,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,delayed previously,retraining,1643,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,1288,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,14765,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,503,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,existing paid,retraining,1731,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,767,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,7290,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,14945,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,no credits/all paid,retraining,1732,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,12616,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,14664,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15230,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,critical/other existing credit,retraining,2650,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,1610,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,existing paid,retraining,1131,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,1734,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13518,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,13374,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,delayed previously,retraining,1751,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,15796,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1190,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,9427,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,17306,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,critical/other existing credit,retraining,906,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,9807,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16737,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,297,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,12831,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,9856,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,7704,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,8557,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13816,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,915,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1424,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1560,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13501,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,17227,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,critical/other existing credit,retraining,284,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,existing paid,retraining,354,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,302,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17051,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17913,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1067,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1246,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1755,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,existing paid,retraining,894,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17904,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,1695,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,18108,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,1006,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1056,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,1766,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,13350,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,15338,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,existing paid,retraining,1187,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,16371,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15813,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,13026,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,delayed previously,retraining,701,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,no credits/all paid,retraining,467,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1308,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,14349,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17030,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,delayed previously,retraining,429,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,771,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,1049,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,14266,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,13657,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,18382,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,delayed previously,retraining,945,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,14942,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,18390,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,14259,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,374,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,no credits/all paid,retraining,606,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,delayed previously,retraining,904,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,13256,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13907,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,existing paid,retraining,662,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1090,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1005,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,existing paid,retraining,1102,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,1537,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,14876,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1282,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,733,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,14707,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,18361,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,725,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,17143,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16186,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,27,critical/other existing credit,retraining,3603,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,15840,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,1287,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,15806,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,15634,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,retraining,528,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15913,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1468,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,delayed previously,retraining,359,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,existing paid,retraining,609,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17352,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,911,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,existing paid,retraining,465,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,296,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,14441,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,1472,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,16093,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1803,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1314,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,18256,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,14153,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,14641,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,existing paid,retraining,538,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,existing paid,retraining,682,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,12719,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,12965,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13250,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,13824,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,18179,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,13782,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,837,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,critical/other existing credit,retraining,2037,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,17731,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,15525,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13381,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,490,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,delayed previously,retraining,447,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,17274,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,delayed previously,retraining,688,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,856,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13471,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13267,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,948,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,14640,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1386,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,16177,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,18147,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13866,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,4,existing paid,retraining,679,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,critical/other existing credit,retraining,2508,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,delayed previously,retraining,1371,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,15029,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1306,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,delayed previously,retraining,1026,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17134,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15666,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1250,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,7387,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,existing paid,retraining,1270,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,existing paid,retraining,1189,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,13685,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,15544,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,1272,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,15398,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,existing paid,retraining,1406,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15395,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,retraining,1819,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,17043,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,998,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16744,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15541,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,415,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,delayed previously,retraining,802,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13444,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1226,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,existing paid,retraining,1001,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,14754,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,retraining,485,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13280,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,751,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,delayed previously,retraining,378,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,849,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,no credits/all paid,retraining,653,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,4,existing paid,retraining,722,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,existing paid,retraining,873,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,17293,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,945,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,delayed previously,retraining,1105,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,existing paid,retraining,405,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,626,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,12937,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,delayed previously,retraining,1273,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,retraining,1116,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13542,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,14463,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,17115,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,647,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,17303,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,12682,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,existing paid,retraining,353,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,16500,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,13003,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,327,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,17963,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1047,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,17632,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,940,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13900,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,existing paid,retraining,850,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1801,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,delayed previously,retraining,661,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,14269,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,12933,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,21,critical/other existing credit,retraining,3027,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,14719,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,delayed previously,retraining,1537,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,16057,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1793,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,delayed previously,retraining,1448,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,13039,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1652,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1326,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16808,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,400,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,14419,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,17254,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,14840,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1561,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,17843,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,954,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,existing paid,retraining,1111,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,16376,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,971,no known savings,>=7,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1118,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1831,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,11792,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,delayed previously,retraining,1844,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,16714,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,15757,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1797,no known savings,unemployed,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,16673,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,11701,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,5,critical/other existing credit,retraining,2242,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,16287,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15216,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,36,critical/other existing credit,retraining,14483,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,431,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1013,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,retraining,838,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,685,no known savings,1<=X<4,2,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,1727,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,no credits/all paid,retraining,1232,no known savings,unemployed,2,male single,co applicant,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1558,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,12844,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,913,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,16912,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,1628,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,14535,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,950,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,existing paid,retraining,1801,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,37,critical/other existing credit,retraining,15906,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,15662,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,retraining,700,no known savings,unemployed,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,15381,no known savings,>=7,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,856,no known savings,>=7,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,16070,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,existing paid,retraining,1035,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,1673,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,7,existing paid,retraining,1443,no known savings,1<=X<4,1,male single,co applicant,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,existing paid,retraining,1833,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,36,critical/other existing credit,retraining,16407,no known savings,<1,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13841,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,13121,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,35,critical/other existing credit,retraining,13837,no known savings,unemployed,2,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,7,no credits/all paid,retraining,730,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,35,critical/other existing credit,retraining,15648,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,13415,no known savings,<1,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,7,no credits/all paid,retraining,1115,no known savings,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,37,critical/other existing credit,retraining,18165,no known savings,>=7,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good

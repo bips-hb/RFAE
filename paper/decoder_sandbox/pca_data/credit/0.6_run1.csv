@@ -1,0 +1,378 @@
+duration,credit_amount,age,checking_status,credit_history,purpose,savings_status,employment,installment_commitment,personal_status,other_parties,residence_since,property_magnitude,other_payment_plans,housing,existing_credits,job,num_dependents,own_telephone,foreign_worker,class
+40.5509891526865,7788.43077689133,21.3355976694942,>=200,no credits/all paid,radio/tv,500<=X<1000,1<=X<4,2,male mar/wid,guarantor,2,real estate,bank,rent,1,unskilled resident,1,none,no,bad
+13.4266552980985,1744.09014156737,49.1272481842642,>=200,critical/other existing credit,domestic appliance,>=1000,4<=X<7,4,male single,none,3,real estate,stores,own,3,unskilled resident,2,none,no,good
+24.8313886560263,4664.92322733133,53.0741543504154,<0,no credits/all paid,repairs,<100,>=7,3,male single,guarantor,4,no known property,bank,for free,3,unskilled resident,2,none,no,bad
+40.1531870608178,8030.54267483908,35.3704367222433,>=200,all paid,education,no known savings,>=7,3,male single,none,4,no known property,bank,for free,3,skilled,2,yes,yes,good
+20.7330267317474,3640.8569591872,52.7086076664917,no checking,existing paid,used car,500<=X<1000,4<=X<7,3,female div/dep/mar,none,4,life insurance,none,rent,1,skilled,2,none,yes,good
+35.909821667965,6970.24408664268,34.9919566912717,0<=X<200,existing paid,other,500<=X<1000,unemployed,3,female div/dep/mar,none,2,car,bank,rent,1,high qualif/self emp/mgmt,1,yes,yes,bad
+14.7794949537886,2373.38822187415,61.2479125031201,>=200,critical/other existing credit,radio/tv,>=1000,1<=X<4,1,male div/sep,guarantor,1,real estate,stores,own,1,unskilled resident,1,none,no,good
+17.0960530161987,2901.98109777053,59.3842137486777,<0,no credits/all paid,repairs,<100,>=7,4,male div/sep,guarantor,3,no known property,none,for free,4,unskilled resident,2,none,no,bad
+18.6319005109412,2606.13704541302,31.5212011522035,0<=X<200,all paid,domestic appliance,100<=X<500,1<=X<4,3,male mar/wid,guarantor,2,real estate,bank,rent,1,unskilled resident,1,none,no,bad
+35.6555054465105,6676.969172512,25.5044335517655,>=200,no credits/all paid,domestic appliance,>=1000,unemployed,2,male single,none,3,no known property,stores,for free,3,unemp/unskilled non res,2,none,no,bad
+23.0067191347726,3675.01036033855,30.9114059389587,no checking,existing paid,used car,500<=X<1000,4<=X<7,3,male single,none,2,car,bank,own,1,skilled,2,yes,yes,good
+12.048666920587,1381.99217732414,48.2719208561368,>=200,critical/other existing credit,repairs,>=1000,unemployed,2,male single,none,3,no known property,stores,for free,3,unemp/unskilled non res,2,yes,no,good
+13.082994732418,1536.86012151887,44.0965959425879,0<=X<200,existing paid,retraining,100<=X<500,unemployed,3,male mar/wid,none,4,life insurance,none,rent,4,skilled,1,yes,yes,good
+9.60125669149359,485.686099527884,36.3212081963125,<0,all paid,other,>=1000,1<=X<4,1,male div/sep,guarantor,2,real estate,stores,own,1,unskilled resident,2,none,no,bad
+10.3713161515447,810.743787238123,41.8547322098529,>=200,all paid,domestic appliance,>=1000,1<=X<4,2,male mar/wid,co applicant,3,real estate,bank,own,3,unemp/unskilled non res,1,none,no,good
+12.2966620631402,1108.4842640058,34.4724271035155,0<=X<200,existing paid,radio/tv,<100,1<=X<4,3,male mar/wid,guarantor,2,real estate,none,own,1,unskilled resident,1,none,no,good
+24.9547520383011,4150.48693353281,30.6203177250042,0<=X<200,delayed previously,business,100<=X<500,4<=X<7,3,male mar/wid,none,2,car,bank,own,4,high qualif/self emp/mgmt,1,yes,yes,bad
+12.9560954265669,1238.16208830563,33.0852773667025,>=200,all paid,other,<100,<1,1,male div/sep,co applicant,1,life insurance,stores,own,1,unemp/unskilled non res,1,yes,yes,bad
+40.4312688434221,7976.96191671248,30.3249194124592,>=200,all paid,education,500<=X<1000,>=7,2,male single,co applicant,4,no known property,bank,for free,3,unemp/unskilled non res,2,yes,yes,bad
+12.6618639941096,994.739494971759,26.0590338756619,>=200,delayed previously,business,100<=X<500,<1,1,male div/sep,none,1,car,none,own,1,high qualif/self emp/mgmt,1,yes,yes,good
+31.9081158931347,5716.32933784281,24.1701912740174,no checking,no credits/all paid,retraining,100<=X<500,4<=X<7,3,male mar/wid,co applicant,3,life insurance,none,rent,2,skilled,1,none,no,good
+39.1779198594227,8319.12269585358,57.2131290012254,<0,all paid,education,<100,>=7,4,male div/sep,co applicant,4,no known property,stores,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+12.1940696359069,1098.46152452469,35.106503086805,no checking,critical/other existing credit,furniture/equipment,>=1000,unemployed,2,male div/sep,co applicant,3,car,none,own,2,unemp/unskilled non res,1,yes,yes,good
+26.3515010141291,4678.97357646992,38.139417924944,no checking,existing paid,education,500<=X<1000,>=7,4,male mar/wid,none,4,car,none,own,1,skilled,1,yes,yes,good
+14.4068527844896,1479.30702890401,28.2146752947441,no checking,existing paid,other,500<=X<1000,1<=X<4,2,male mar/wid,co applicant,2,real estate,bank,own,1,skilled,1,none,no,good
+29.6643311994886,5307.79540651525,30.2376406605473,0<=X<200,delayed previously,other,no known savings,unemployed,3,male div/sep,none,4,car,stores,for free,4,high qualif/self emp/mgmt,1,yes,yes,good
+8.89983800068791,67.7034727591208,26.2586463042192,<0,all paid,other,>=1000,1<=X<4,1,male single,guarantor,2,real estate,stores,own,4,unskilled resident,2,none,no,good
+13.755382465512,1844.00701209901,49.8889883761143,no checking,critical/other existing credit,retraining,no known savings,>=7,4,male mar/wid,guarantor,4,real estate,none,own,2,high qualif/self emp/mgmt,1,yes,no,good
+22.7496578628238,3489.41908698793,25.8884777795472,>=200,existing paid,retraining,no known savings,<1,4,female div/dep/mar,co applicant,1,life insurance,none,own,1,skilled,1,yes,yes,good
+12.5532867430126,870.52200165959,22.0493495054619,>=200,existing paid,radio/tv,100<=X<500,<1,4,male mar/wid,guarantor,1,real estate,none,own,3,unemp/unskilled non res,1,none,no,good
+25.4825748463836,4413.30964285349,36.0619154776096,>=200,all paid,education,no known savings,>=7,4,male single,none,4,no known property,stores,for free,4,high qualif/self emp/mgmt,2,yes,yes,bad
+8.31659637460905,405.238129056735,46.1174316587203,no checking,critical/other existing credit,retraining,no known savings,>=7,4,male single,guarantor,4,life insurance,none,own,2,skilled,2,yes,no,good
+9.44736926907694,806.980672865067,51.1290957330025,<0,all paid,other,>=1000,unemployed,4,male single,co applicant,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+18.2150400545207,2991.2822731207,51.6435336885897,0<=X<200,delayed previously,domestic appliance,100<=X<500,4<=X<7,4,male mar/wid,none,3,car,stores,own,4,skilled,1,none,yes,good
+27.2630577312748,4507.11540286508,21.7558829139769,>=200,existing paid,domestic appliance,<100,<1,1,male div/sep,co applicant,1,life insurance,stores,rent,1,unemp/unskilled non res,1,none,yes,bad
+27.4322794275567,5096.36734173798,44.3061365458259,>=200,existing paid,furniture/equipment,<100,<1,1,male div/sep,co applicant,1,car,stores,own,1,skilled,1,yes,yes,good
+17.6703416795215,2330.31607757344,29.9705966656666,0<=X<200,all paid,retraining,100<=X<500,4<=X<7,4,male mar/wid,none,3,life insurance,stores,for free,4,high qualif/self emp/mgmt,2,yes,no,bad
+12.4634035181854,993.693294870061,28.0413325183381,<0,no credits/all paid,repairs,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,real estate,none,rent,4,unskilled resident,2,none,no,bad
+11.7986714785854,1458.66125423843,53.9820428320529,<0,critical/other existing credit,retraining,no known savings,>=7,4,male single,co applicant,3,no known property,none,for free,2,skilled,2,yes,no,good
+11.5926600345587,897.477634480774,32.963667978488,<0,all paid,retraining,>=1000,4<=X<7,4,male single,co applicant,3,life insurance,stores,own,4,unskilled resident,2,none,no,good
+23.9210252907654,3636.48051416734,19.9929559800701,<0,critical/other existing credit,other,>=1000,>=7,4,female div/dep/mar,co applicant,3,no known property,bank,for free,2,skilled,1,yes,yes,good
+61.9253305507199,13990.0765115771,58.7068868868444,0<=X<200,no credits/all paid,business,100<=X<500,<1,3,male div/sep,none,4,no known property,none,for free,4,high qualif/self emp/mgmt,1,none,yes,bad
+26.5746760566649,4661.92348992894,35.1593236575857,>=200,critical/other existing credit,repairs,no known savings,>=7,4,male mar/wid,guarantor,1,real estate,none,for free,2,skilled,1,yes,yes,good
+39.7502411802748,8052.92337958733,40.4048169831807,<0,all paid,other,>=1000,unemployed,2,male mar/wid,co applicant,3,no known property,bank,for free,4,high qualif/self emp/mgmt,1,yes,no,bad
+31.6974048857438,5822.29842348663,30.6865574302096,<0,existing paid,retraining,no known savings,<1,1,female div/dep/mar,guarantor,1,life insurance,stores,rent,1,unskilled resident,2,none,no,good
+13.7317063632863,1476.17938884056,34.9760699881976,0<=X<200,delayed previously,business,100<=X<500,1<=X<4,3,male mar/wid,guarantor,2,real estate,none,own,1,high qualif/self emp/mgmt,1,yes,yes,good
+9.99671102812776,463.140266412496,31.3564800986166,0<=X<200,delayed previously,business,100<=X<500,1<=X<4,3,male div/sep,none,2,car,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,bad
+25.8460068640789,4324.64310721759,28.6998117404459,0<=X<200,no credits/all paid,domestic appliance,100<=X<500,4<=X<7,3,male mar/wid,guarantor,3,life insurance,none,rent,3,unskilled resident,2,none,no,bad
+38.2252806983238,7306.09500762817,25.1984802697031,>=200,all paid,business,>=1000,1<=X<4,2,male div/sep,co applicant,2,real estate,stores,own,4,unskilled resident,2,yes,yes,good
+13.2732028389058,1365.94191505646,35.1135612433268,>=200,existing paid,radio/tv,500<=X<1000,<1,4,male mar/wid,guarantor,1,real estate,none,own,1,unskilled resident,1,none,no,good
+39.6161800957907,7762.01150224396,29.7873790853139,0<=X<200,all paid,retraining,100<=X<500,4<=X<7,4,male mar/wid,co applicant,3,life insurance,stores,rent,4,high qualif/self emp/mgmt,1,yes,yes,bad
+18.58438058939,2430.85541507321,24.7845427803877,0<=X<200,no credits/all paid,other,<100,1<=X<4,3,male div/sep,guarantor,2,real estate,bank,rent,2,unskilled resident,1,none,no,bad
+17.1624575679967,2130.59471076891,26.9252967736084,<0,existing paid,domestic appliance,100<=X<500,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,1,skilled,1,none,yes,bad
+13.6845933217147,1444.46514855318,34.1502545441057,no checking,delayed previously,other,no known savings,unemployed,1,male div/sep,co applicant,4,no known property,stores,for free,3,unemp/unskilled non res,1,yes,yes,good
+17.2298452257062,2208.96582323996,29.4664674850617,<0,no credits/all paid,other,<100,1<=X<4,2,male div/sep,co applicant,3,real estate,bank,rent,2,unskilled resident,1,none,no,bad
+17.237984428503,2155.96140703459,27.1996133581238,<0,all paid,domestic appliance,>=1000,<1,2,female div/dep/mar,co applicant,3,life insurance,stores,rent,4,unskilled resident,2,none,no,bad
+16.30565756433,2401.93964349183,46.8488758996317,>=200,all paid,education,500<=X<1000,>=7,2,male single,co applicant,4,no known property,bank,for free,2,skilled,2,yes,yes,bad
+35.1438819778317,6604.1669218692,27.7263802236759,no checking,delayed previously,business,>=1000,1<=X<4,2,male single,none,2,car,stores,own,2,unskilled resident,2,yes,yes,good
+16.8872086787822,2262.48647345419,35.1683264892527,>=200,critical/other existing credit,other,>=1000,unemployed,4,male mar/wid,guarantor,3,real estate,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+13.2380678863096,1575.6085749081,44.1104274387364,>=200,existing paid,radio/tv,500<=X<1000,1<=X<4,2,female div/dep/mar,none,2,real estate,bank,own,1,unemp/unskilled non res,1,none,no,good
+18.4903647650442,2341.04282465634,22.0437372826233,<0,all paid,furniture/equipment,500<=X<1000,<1,2,female div/dep/mar,co applicant,2,car,bank,rent,1,unskilled resident,1,none,yes,bad
+35.3566947651816,6684.6957082315,28.8723010832587,0<=X<200,all paid,domestic appliance,100<=X<500,4<=X<7,3,male mar/wid,none,3,car,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,bad
+10.4811846675225,1056.64276714204,50.8645317523105,no checking,critical/other existing credit,retraining,100<=X<500,4<=X<7,4,male mar/wid,co applicant,3,car,none,rent,4,skilled,1,yes,yes,good
+9.25157558547131,543.941152644698,42.2900189623945,>=200,all paid,other,no known savings,>=7,4,male single,none,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+31.8208023684683,5828.86024354619,29.6975636667128,no checking,no credits/all paid,used car,500<=X<1000,>=7,2,female div/dep/mar,co applicant,4,no known property,none,for free,3,unemp/unskilled non res,1,yes,yes,good
+13.2048830582306,984.794201924644,20.1074675723105,<0,no credits/all paid,furniture/equipment,500<=X<1000,<1,1,female div/dep/mar,co applicant,1,life insurance,bank,rent,1,skilled,1,none,yes,bad
+10.3448761648426,956.26241670992,48.1199540283238,<0,no credits/all paid,retraining,<100,>=7,4,male mar/wid,guarantor,4,real estate,none,rent,3,unskilled resident,2,none,no,good
+10.083695122976,811.690620422539,44.8290783229677,<0,all paid,retraining,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,life insurance,stores,own,4,unskilled resident,2,yes,no,bad
+15.2657008256694,1729.46343670656,29.7561186604554,>=200,critical/other existing credit,furniture/equipment,>=1000,<1,1,male div/sep,co applicant,1,life insurance,stores,own,3,unemp/unskilled non res,1,none,yes,good
+15.2721146083758,1803.88136333031,32.7566907273062,<0,all paid,other,<100,<1,1,male div/sep,co applicant,1,life insurance,stores,rent,1,unemp/unskilled non res,1,none,yes,bad
+11.8663588540162,795.964961351646,25.9880800967185,>=200,existing paid,furniture/equipment,>=1000,<1,1,male div/sep,guarantor,1,real estate,stores,own,1,skilled,1,none,yes,good
+20.109035671872,3023.77543258204,33.6529518052111,0<=X<200,delayed previously,other,100<=X<500,unemployed,1,male div/sep,none,1,life insurance,stores,rent,4,unemp/unskilled non res,1,yes,yes,bad
+21.7155054013263,3237.50788952024,26.0638183331821,>=200,no credits/all paid,domestic appliance,<100,<1,4,male div/sep,none,1,no known property,stores,for free,4,skilled,2,none,yes,bad
+33.10463367175,6719.1869845036,53.2769127189043,>=200,all paid,other,no known savings,unemployed,1,male div/sep,co applicant,1,no known property,stores,for free,4,unemp/unskilled non res,1,yes,yes,bad
+14.0834916861343,2277.07957284757,64.3830933614022,<0,critical/other existing credit,retraining,>=1000,>=7,4,male div/sep,guarantor,4,real estate,none,for free,2,unskilled resident,2,none,no,good
+14.6280267195627,1715.75707638622,35.6992423622616,<0,all paid,other,no known savings,>=7,4,male single,co applicant,4,no known property,stores,for free,4,high qualif/self emp/mgmt,2,yes,yes,bad
+14.327670021372,1525.84212592511,30.940032627979,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,4,male mar/wid,guarantor,2,real estate,none,own,2,unskilled resident,1,none,no,good
+19.5275636236098,2867.19931153107,33.1362485371985,<0,no credits/all paid,other,<100,1<=X<4,2,male div/sep,co applicant,2,car,bank,rent,2,high qualif/self emp/mgmt,1,none,yes,bad
+25.2424693510134,4348.52613816404,35.843239930367,0<=X<200,delayed previously,business,100<=X<500,1<=X<4,3,male div/sep,guarantor,2,no known property,stores,for free,4,high qualif/self emp/mgmt,2,yes,yes,bad
+11.4581901186089,894.643763989009,34.2192542442355,0<=X<200,no credits/all paid,other,100<=X<500,>=7,2,male div/sep,co applicant,3,no known property,bank,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+10.0084226789932,393.251379795281,28.3575247001467,>=200,critical/other existing credit,furniture/equipment,>=1000,<1,2,male div/sep,co applicant,1,real estate,none,own,2,unemp/unskilled non res,1,none,yes,good
+21.306066671887,3481.49995873335,40.2948792056601,0<=X<200,delayed previously,other,100<=X<500,unemployed,4,male div/sep,co applicant,1,no known property,stores,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+12.633121553371,1011.82932827965,27.0564702407038,<0,existing paid,domestic appliance,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,real estate,none,rent,3,unskilled resident,2,none,no,good
+29.8152717538617,5133.55997627714,21.5186836460553,>=200,all paid,business,>=1000,1<=X<4,2,male div/sep,guarantor,2,real estate,stores,own,4,unskilled resident,2,none,no,bad
+27.3333292653196,5210.77841870673,50.0297307582502,0<=X<200,no credits/all paid,business,100<=X<500,unemployed,2,male div/sep,none,1,life insurance,stores,rent,4,high qualif/self emp/mgmt,2,yes,yes,bad
+19.3433760574637,2772.63244482816,31.1198202287014,<0,no credits/all paid,business,100<=X<500,4<=X<7,2,male div/sep,none,3,life insurance,stores,rent,4,unskilled resident,2,none,yes,bad
+22.5251915554072,3384.78768693716,23.8684568746479,<0,no credits/all paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,real estate,none,rent,1,unskilled resident,1,none,no,bad
+10.2169596654545,1310.48304656532,64.0193513622558,no checking,existing paid,used car,500<=X<1000,1<=X<4,2,female div/dep/mar,none,2,car,bank,rent,1,skilled,1,none,yes,good
+21.0165023311967,3172.92288168485,30.5366320780406,no checking,existing paid,used car,500<=X<1000,1<=X<4,3,female div/dep/mar,none,2,car,bank,rent,1,high qualif/self emp/mgmt,1,yes,yes,good
+11.9984513026347,738.378751031359,22.267441956283,>=200,existing paid,domestic appliance,500<=X<1000,4<=X<7,4,male mar/wid,none,3,car,stores,own,1,skilled,1,none,yes,good
+22.8807391222866,3425.08556709549,21.9001693579403,>=200,all paid,education,<100,<1,4,female div/dep/mar,co applicant,1,no known property,bank,for free,1,unemp/unskilled non res,2,none,yes,bad
+12.6532200111611,1605.86842416352,51.3258429795603,>=200,all paid,education,500<=X<1000,>=7,3,male single,none,4,no known property,bank,for free,3,unemp/unskilled non res,2,none,yes,good
+14.2016278251921,1597.92940872449,35.1963705903975,>=200,existing paid,domestic appliance,100<=X<500,4<=X<7,3,male mar/wid,none,3,car,none,for free,1,skilled,1,none,yes,good
+19.8192040850575,2854.26753920453,29.6271007512013,>=200,all paid,other,100<=X<500,unemployed,1,male div/sep,none,1,life insurance,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,bad
+12.4897813211935,1170.1867414407,35.043685243304,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,2,male mar/wid,co applicant,2,real estate,none,own,2,unskilled resident,1,none,no,good
+23.7938093846969,4052.86710135811,38.4464489859271,<0,all paid,retraining,no known savings,>=7,4,male mar/wid,guarantor,3,real estate,none,own,4,unskilled resident,2,none,no,good
+9.31310961192443,777.762692531192,51.2955073891694,no checking,existing paid,retraining,500<=X<1000,4<=X<7,3,male mar/wid,none,2,life insurance,stores,own,1,unskilled resident,2,none,no,good
+16.8318296301592,2255.14343633935,35.430967135461,<0,all paid,retraining,no known savings,4<=X<7,1,male mar/wid,guarantor,3,life insurance,stores,own,4,unskilled resident,2,none,no,good
+18.925738701034,2509.65663895782,24.547409568635,>=200,delayed previously,business,100<=X<500,<1,4,male div/sep,none,1,real estate,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,good
+10.502790653372,1086.31326713475,51.8664588628551,>=200,critical/other existing credit,repairs,>=1000,unemployed,4,male single,none,3,real estate,none,for free,3,unemp/unskilled non res,2,yes,no,good
+23.7778519676734,3684.80328157851,23.4450256902337,0<=X<200,all paid,other,<100,1<=X<4,3,male mar/wid,guarantor,2,no known property,bank,for free,1,unskilled resident,1,none,no,bad
+13.0123809389542,1040.27500470006,24.3578777506653,>=200,existing paid,domestic appliance,no known savings,<1,4,female div/dep/mar,none,1,car,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,good
+49.2746249572097,10063.604175007,26.0433677276026,>=200,delayed previously,repairs,>=1000,1<=X<4,1,male div/sep,guarantor,1,real estate,stores,own,3,unskilled resident,2,none,no,good
+21.3087948398853,3347.83353299948,34.7599623605201,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,4,male mar/wid,guarantor,2,real estate,none,own,2,unskilled resident,2,none,no,good
+13.617936777436,1257.90716863468,27.1443092227376,>=200,all paid,furniture/equipment,>=1000,1<=X<4,1,female div/dep/mar,guarantor,2,real estate,stores,rent,1,unskilled resident,2,none,no,bad
+14.3486877725272,2168.65446177915,57.2094873617026,>=200,no credits/all paid,education,>=1000,unemployed,2,male single,none,4,no known property,bank,for free,3,unemp/unskilled non res,2,none,yes,bad
+12.9106022716801,1317.3870453238,36.8136395894027,0<=X<200,all paid,domestic appliance,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,no known property,stores,for free,4,skilled,2,none,yes,bad
+34.5639643876792,6658.22367947575,35.8719151539618,no checking,critical/other existing credit,repairs,>=1000,>=7,4,male div/sep,none,4,real estate,none,own,2,skilled,2,yes,yes,good
+18.8441078456431,2804.79233873239,37.5401286380961,>=200,all paid,domestic appliance,>=1000,<1,4,female div/dep/mar,co applicant,1,car,stores,own,4,skilled,1,yes,yes,good
+52.3893044544668,11086.3001276146,36.3914968267094,0<=X<200,all paid,other,no known savings,unemployed,4,male single,co applicant,4,no known property,bank,for free,3,unemp/unskilled non res,2,yes,yes,bad
+12.3264983395631,1493.46338782236,50.0291214850077,>=200,existing paid,furniture/equipment,>=1000,1<=X<4,1,female div/dep/mar,guarantor,2,real estate,stores,own,1,unskilled resident,1,none,no,good
+38.0132531023081,7251.4084292495,25.1092484560697,<0,all paid,retraining,no known savings,4<=X<7,4,male single,none,3,life insurance,stores,rent,4,unskilled resident,2,none,no,good
+43.3957842009349,8717.71157111453,30.589334507661,0<=X<200,all paid,other,100<=X<500,unemployed,2,male single,co applicant,4,no known property,bank,for free,3,unemp/unskilled non res,1,yes,yes,bad
+17.3301957665684,2669.22563136919,47.4050977280685,0<=X<200,delayed previously,domestic appliance,100<=X<500,<1,4,male div/sep,guarantor,1,real estate,stores,own,4,unskilled resident,1,none,yes,bad
+42.7572120723119,8922.2267239915,45.5323781118187,no checking,delayed previously,business,>=1000,>=7,4,male div/sep,none,2,car,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,good
+17.5705853905589,2620.92273734148,42.9616990667467,no checking,existing paid,used car,no known savings,1<=X<4,1,male div/sep,guarantor,2,real estate,none,own,1,unskilled resident,1,none,yes,good
+20.0748906375828,2973.19464883834,31.9174863845735,no checking,delayed previously,business,>=1000,4<=X<7,2,male single,co applicant,3,car,stores,own,2,skilled,1,yes,yes,good
+7.30760026816662,349.457178429642,54.1166292657304,>=200,critical/other existing credit,other,>=1000,unemployed,1,male div/sep,none,1,real estate,none,for free,3,unemp/unskilled non res,1,yes,no,good
+29.2358308606165,5472.50241079783,41.396681004732,0<=X<200,no credits/all paid,business,100<=X<500,<1,2,male div/sep,co applicant,1,car,stores,rent,4,skilled,1,none,yes,bad
+9.57769895227447,133.500296825342,22.0515269125109,0<=X<200,existing paid,retraining,100<=X<500,1<=X<4,3,male mar/wid,guarantor,2,real estate,none,rent,1,unskilled resident,1,none,no,bad
+27.4910130322172,4649.87965537894,25.3113751935625,>=200,all paid,domestic appliance,>=1000,<1,4,male div/sep,none,1,life insurance,stores,own,4,skilled,2,yes,yes,good
+11.7581535744349,744.655714661048,24.9784289039091,0<=X<200,all paid,domestic appliance,100<=X<500,4<=X<7,2,male mar/wid,co applicant,3,car,bank,rent,1,unemp/unskilled non res,1,none,no,bad
+9.1828352872014,215.561659197104,29.4622745105394,>=200,all paid,new car,>=1000,1<=X<4,1,male mar/wid,guarantor,2,real estate,stores,own,3,unemp/unskilled non res,2,none,no,good
+27.6427853725173,4807.45536372271,30.2545919198065,<0,all paid,other,<100,<1,4,male single,co applicant,3,no known property,stores,for free,4,high qualif/self emp/mgmt,2,yes,yes,bad
+11.1690105790351,912.978294252665,37.9258812587024,<0,all paid,retraining,<100,1<=X<4,1,male mar/wid,guarantor,2,real estate,stores,rent,4,unskilled resident,2,none,no,bad
+24.030564376925,4343.46075378468,48.0027261395742,<0,existing paid,retraining,no known savings,unemployed,1,male div/sep,guarantor,1,life insurance,stores,rent,1,high qualif/self emp/mgmt,1,none,no,good
+19.1210155829014,2626.47834104676,27.3675672399266,<0,no credits/all paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,life insurance,stores,rent,4,unskilled resident,2,none,no,bad
+19.9530432246154,2936.25373922262,31.6390383141956,<0,existing paid,domestic appliance,<100,<1,4,male div/sep,guarantor,1,life insurance,stores,rent,4,skilled,1,none,yes,bad
+21.8128264276164,3449.50519319626,33.8049186330241,>=200,all paid,other,no known savings,unemployed,4,male single,none,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+18.5938194983157,2512.52387793651,28.05296475823,>=200,all paid,furniture/equipment,>=1000,1<=X<4,2,female div/dep/mar,guarantor,2,real estate,stores,own,1,unskilled resident,2,none,no,good
+14.9180336567107,1788.22171649077,35.7251090563574,no checking,critical/other existing credit,repairs,>=1000,4<=X<7,2,male mar/wid,co applicant,3,real estate,none,own,2,unemp/unskilled non res,1,none,no,good
+20.8882921184685,3608.5449442573,49.7927766677715,no checking,critical/other existing credit,retraining,no known savings,>=7,1,female div/dep/mar,co applicant,4,life insurance,none,rent,4,skilled,2,yes,yes,good
+31.1208546812296,5676.52781830989,30.5648126191363,>=200,existing paid,radio/tv,>=1000,<1,4,male mar/wid,guarantor,1,real estate,stores,own,1,skilled,1,none,yes,good
+9.37604644104547,235.238206233976,28.3011209366322,>=200,existing paid,retraining,no known savings,>=7,4,male single,guarantor,4,no known property,none,for free,4,skilled,2,yes,yes,good
+16.8949759100633,2136.57381062725,29.9014391849243,no checking,no credits/all paid,education,500<=X<1000,1<=X<4,2,male mar/wid,none,3,car,none,rent,2,skilled,1,none,yes,good
+49.4011310206961,10022.3992084312,23.054651228879,0<=X<200,all paid,domestic appliance,100<=X<500,unemployed,1,male mar/wid,guarantor,1,life insurance,stores,rent,4,high qualif/self emp/mgmt,1,yes,yes,bad
+13.2582156981929,1593.63223405894,44.6473846694602,<0,no credits/all paid,furniture/equipment,<100,unemployed,1,male div/sep,guarantor,1,life insurance,none,rent,4,high qualif/self emp/mgmt,1,yes,no,bad
+15.2087853449045,1556.16387941123,23.1970089936533,>=200,existing paid,radio/tv,<100,<1,1,male mar/wid,guarantor,1,real estate,none,rent,1,unskilled resident,1,none,no,bad
+22.088083758079,3330.60482298789,26.0970498499024,<0,no credits/all paid,furniture/equipment,500<=X<1000,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,1,unskilled resident,1,none,no,bad
+11.4621967218871,628.655464156295,23.2196116066572,>=200,existing paid,domestic appliance,500<=X<1000,<1,1,female div/dep/mar,none,1,life insurance,none,rent,1,unemp/unskilled non res,1,none,yes,bad
+9.81395436071788,772.891460024746,45.9834059637107,>=200,existing paid,education,no known savings,>=7,4,male single,none,4,no known property,bank,for free,1,skilled,2,yes,yes,good
+11.7947764130942,826.622041295687,27.9816954180616,>=200,existing paid,radio/tv,500<=X<1000,1<=X<4,3,male mar/wid,guarantor,2,real estate,none,own,1,unskilled resident,1,none,no,good
+24.3423016673104,3801.57174179707,22.495370857341,<0,no credits/all paid,domestic appliance,<100,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,1,skilled,1,none,no,bad
+11.1239471910052,502.087453636297,21.4570220831831,<0,existing paid,retraining,500<=X<1000,<1,1,female div/dep/mar,guarantor,2,life insurance,none,rent,1,unskilled resident,1,none,no,good
+20.8829219965151,2938.87610551885,22.2571375089139,<0,no credits/all paid,furniture/equipment,<100,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,1,skilled,1,none,yes,bad
+28.5148413918736,5292.34726387124,41.3323735291326,<0,all paid,furniture/equipment,<100,<1,4,male div/sep,guarantor,1,life insurance,stores,for free,4,unskilled resident,2,none,yes,bad
+18.6960042375551,2829.31819779242,40.0620789587976,<0,no credits/all paid,domestic appliance,500<=X<1000,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,1,skilled,1,none,yes,bad
+43.3099288502347,8841.88931765978,36.5816767801774,<0,all paid,other,100<=X<500,1<=X<4,3,female div/dep/mar,guarantor,2,life insurance,bank,rent,4,unskilled resident,2,none,no,bad
+18.1581562373386,2666.32346456575,38.8357197601906,<0,existing paid,retraining,no known savings,4<=X<7,4,male single,none,3,life insurance,stores,rent,4,skilled,2,yes,yes,good
+13.0082611690364,1081.2944817633,26.0899302047208,>=200,existing paid,domestic appliance,>=1000,<1,1,male div/sep,guarantor,1,real estate,stores,own,3,unemp/unskilled non res,1,none,yes,good
+17.8925974286923,2264.49275106228,24.9904204034412,>=200,critical/other existing credit,furniture/equipment,>=1000,<1,2,female div/dep/mar,co applicant,1,car,none,own,2,unemp/unskilled non res,1,none,yes,good
+15.8486266595452,1656.67443038573,20.8081117761157,>=200,existing paid,radio/tv,no known savings,<1,3,male mar/wid,guarantor,1,car,none,rent,1,skilled,1,none,yes,good
+27.5029510163617,5029.92841430067,40.8476001621383,<0,all paid,other,>=1000,unemployed,1,male div/sep,co applicant,1,life insurance,stores,own,4,unemp/unskilled non res,2,yes,yes,good
+12.6515976876097,822.271861740261,19.0581181892568,>=200,existing paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,real estate,none,rent,1,unemp/unskilled non res,1,none,no,bad
+28.2647412244804,5157.03891049298,38.3100662540485,<0,all paid,other,no known savings,unemployed,4,male single,none,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+11.0197910563998,718.779413447984,31.4477320472324,no checking,critical/other existing credit,retraining,500<=X<1000,<1,1,female div/dep/mar,co applicant,3,life insurance,none,rent,1,skilled,1,none,no,good
+26.1080112506245,4788.03464960994,45.1177002540153,<0,critical/other existing credit,retraining,>=1000,1<=X<4,1,male div/sep,co applicant,3,real estate,none,rent,2,unskilled resident,1,none,no,good
+15.6675902158587,2048.33028338242,38.7919645268288,>=200,existing paid,radio/tv,100<=X<500,<1,3,male mar/wid,guarantor,1,real estate,none,own,1,skilled,1,none,no,good
+12.8982871196528,1073.75704199405,26.9017345228441,no checking,delayed previously,business,>=1000,1<=X<4,2,male single,guarantor,2,real estate,stores,own,2,unskilled resident,2,none,no,good
+19.9369529989559,3199.22267905098,42.6376031728532,no checking,critical/other existing credit,retraining,no known savings,>=7,4,male single,none,4,life insurance,stores,for free,4,skilled,2,yes,yes,good
+13.9049185883647,1323.12127249968,26.9023260058419,>=200,existing paid,radio/tv,<100,<1,1,male mar/wid,guarantor,1,real estate,none,own,1,unskilled resident,1,none,no,good
+22.8584104642543,3516.59332702714,25.8981777898331,no checking,delayed previously,other,no known savings,unemployed,3,male div/sep,none,2,car,none,own,1,high qualif/self emp/mgmt,1,yes,yes,good
+12.1230481544492,908.647988080696,28.0109750787395,>=200,critical/other existing credit,domestic appliance,>=1000,unemployed,2,male mar/wid,none,3,real estate,none,for free,3,unemp/unskilled non res,2,none,no,good
+20.5980291359447,2806.15651296939,19.6965667768887,0<=X<200,existing paid,radio/tv,no known savings,>=7,4,male mar/wid,co applicant,1,no known property,none,for free,1,high qualif/self emp/mgmt,1,yes,yes,good
+35.0206726750415,6754.56520922726,35.1802305919545,no checking,delayed previously,other,no known savings,unemployed,3,male single,co applicant,4,car,bank,own,4,high qualif/self emp/mgmt,1,yes,yes,good
+11.8593704742305,1138.35326085258,40.1658435061614,<0,all paid,new car,500<=X<1000,1<=X<4,3,male single,guarantor,2,real estate,bank,rent,3,unskilled resident,2,none,no,good
+18.6846348461087,2692.1291853868,34.5259047049169,<0,all paid,retraining,<100,<1,1,female div/dep/mar,guarantor,1,life insurance,bank,rent,1,unskilled resident,2,none,no,bad
+33.6824072757034,6413.67539250636,34.7932861102302,no checking,critical/other existing credit,used car,>=1000,>=7,3,male single,none,4,life insurance,stores,for free,4,high qualif/self emp/mgmt,2,yes,no,good
+30.5432307684082,5376.98943565299,24.1187729385047,no checking,no credits/all paid,used car,500<=X<1000,1<=X<4,3,male div/sep,none,4,car,none,rent,2,skilled,1,none,yes,bad
+11.2325585425518,1147.30306080655,46.9315493152975,<0,no credits/all paid,domestic appliance,>=1000,4<=X<7,4,male mar/wid,guarantor,3,real estate,stores,own,3,unemp/unskilled non res,2,none,no,good
+15.941100855382,1789.85750283567,25.3515200402774,<0,all paid,other,no known savings,<1,1,male div/sep,co applicant,1,life insurance,stores,rent,4,high qualif/self emp/mgmt,1,yes,yes,bad
+19.1776646255564,2488.50811158585,21.1050398687574,0<=X<200,existing paid,retraining,100<=X<500,unemployed,3,male mar/wid,co applicant,3,car,none,rent,1,high qualif/self emp/mgmt,1,none,no,bad
+10.6041973491304,736.292979889446,36.4106638467273,>=200,critical/other existing credit,other,no known savings,unemployed,1,male div/sep,co applicant,4,no known property,bank,for free,3,unemp/unskilled non res,2,yes,yes,bad
+13.1769764563142,1105.67459807766,25.3725585784378,>=200,existing paid,furniture/equipment,500<=X<1000,1<=X<4,1,male div/sep,guarantor,2,real estate,bank,rent,1,unskilled resident,2,none,no,good
+13.3672892881936,1146.73382190781,25.1219531301769,>=200,existing paid,radio/tv,100<=X<500,<1,4,male mar/wid,guarantor,1,real estate,none,own,1,high qualif/self emp/mgmt,1,none,yes,bad
+18.3975611393893,2668.94101191982,36.5002996355082,no checking,critical/other existing credit,repairs,>=1000,>=7,4,male single,co applicant,4,real estate,none,own,2,skilled,2,yes,no,good
+19.4867861065689,2755.59331852882,28.954224726768,0<=X<200,all paid,other,100<=X<500,unemployed,2,male mar/wid,co applicant,3,car,bank,own,4,high qualif/self emp/mgmt,1,yes,yes,bad
+38.438018472379,7454.63250934232,29.1471347080269,0<=X<200,no credits/all paid,other,100<=X<500,unemployed,2,male div/sep,co applicant,1,car,stores,rent,4,unemp/unskilled non res,1,yes,yes,bad
+10.5984356136648,849.717476906864,41.1425698483531,no checking,critical/other existing credit,retraining,no known savings,>=7,4,female div/dep/mar,co applicant,4,life insurance,none,rent,2,skilled,2,none,yes,good
+25.6755408329665,4388.71115630162,33.0791267629496,<0,existing paid,domestic appliance,<100,<1,1,male div/sep,co applicant,1,life insurance,none,rent,4,skilled,1,none,yes,bad
+12.5720241189943,1201.56132409,35.4969875713941,>=200,existing paid,radio/tv,<100,1<=X<4,3,male mar/wid,guarantor,2,real estate,bank,own,1,unskilled resident,1,none,no,good
+44.4234563076793,8976.20494978723,30.7513163984389,no checking,delayed previously,other,no known savings,>=7,3,male single,none,4,car,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,good
+8.21949924473132,-29.4788941980373,29.1979646024126,>=200,existing paid,radio/tv,500<=X<1000,<1,1,male mar/wid,guarantor,1,real estate,none,own,1,unskilled resident,1,none,no,good
+15.4951227418261,1896.86592253921,34.3117417523846,<0,no credits/all paid,furniture/equipment,>=1000,>=7,2,male div/sep,co applicant,4,life insurance,stores,rent,2,skilled,2,none,yes,bad
+25.8000498418855,4372.98574801222,31.1605524994512,<0,all paid,other,100<=X<500,4<=X<7,4,male mar/wid,co applicant,3,life insurance,bank,rent,4,unemp/unskilled non res,1,yes,no,bad
+16.708979469284,2224.44660962839,35.4200097164343,<0,no credits/all paid,used car,no known savings,>=7,3,male single,none,4,no known property,bank,for free,1,high qualif/self emp/mgmt,2,yes,yes,bad
+16.872647252031,2228.08157055889,33.8994476168171,no checking,delayed previously,business,>=1000,4<=X<7,4,male div/sep,none,1,car,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,good
+20.4234490166622,3806.21979892483,62.6809953888899,<0,all paid,other,no known savings,>=7,3,male single,guarantor,4,no known property,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+19.5378002180129,2759.68079911816,28.6020013938624,0<=X<200,no credits/all paid,domestic appliance,100<=X<500,<1,2,male div/sep,guarantor,1,car,stores,rent,4,skilled,1,none,yes,bad
+25.326599281623,4351.7707344479,35.1183238516394,no checking,delayed previously,retraining,100<=X<500,4<=X<7,3,male single,none,3,car,stores,own,4,skilled,2,yes,yes,good
+8.37181451852789,-137.050160719335,23.2115501139599,<0,no credits/all paid,domestic appliance,<100,<1,4,female div/dep/mar,co applicant,1,no known property,none,rent,1,skilled,1,none,yes,bad
+10.0456762940444,396.06537690359,28.0932673855574,<0,all paid,domestic appliance,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,life insurance,bank,rent,4,unskilled resident,2,none,no,bad
+17.6721674366507,2173.85919682321,23.5059196907048,>=200,existing paid,repairs,<100,<1,1,male div/sep,guarantor,1,real estate,none,own,3,unemp/unskilled non res,1,none,no,good
+25.1292675498469,4823.4526349015,56.565562991183,<0,critical/other existing credit,retraining,no known savings,>=7,1,male div/sep,co applicant,4,life insurance,none,rent,4,skilled,2,yes,yes,good
+14.4079558694361,1444.02840807814,26.7499338622198,<0,existing paid,retraining,100<=X<500,4<=X<7,3,male mar/wid,guarantor,3,real estate,bank,rent,1,unskilled resident,2,none,no,bad
+33.8165433734822,6636.57855449787,42.607990429356,0<=X<200,no credits/all paid,business,<100,unemployed,2,male div/sep,co applicant,4,no known property,bank,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+9.76528361615557,308.225946389372,27.3358383093899,no checking,critical/other existing credit,retraining,>=1000,<1,1,male div/sep,none,1,real estate,none,own,2,unemp/unskilled non res,1,none,no,good
+22.6703703743147,3323.97675371648,19.8814058617818,<0,existing paid,domestic appliance,500<=X<1000,<1,3,female div/dep/mar,co applicant,3,life insurance,bank,rent,1,skilled,1,none,yes,bad
+18.8510689501987,2855.07525870475,39.5407495224235,no checking,critical/other existing credit,retraining,>=1000,4<=X<7,4,male mar/wid,co applicant,3,life insurance,stores,own,4,skilled,2,none,yes,good
+9.88960039224503,363.561006419112,28.3469265407602,no checking,delayed previously,repairs,>=1000,>=7,4,male div/sep,none,4,no known property,stores,for free,3,unemp/unskilled non res,2,yes,yes,good
+32.6373705609148,6322.45225202408,41.7000757708976,<0,all paid,education,no known savings,>=7,3,male single,none,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+9.9697365491772,886.797263226272,49.0864940643069,>=200,existing paid,repairs,<100,<1,1,male div/sep,guarantor,1,real estate,none,own,1,skilled,1,none,yes,good
+18.871909722168,2471.93451228682,23.5426083809685,<0,no credits/all paid,domestic appliance,<100,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,1,skilled,1,none,no,bad
+11.9148201477954,836.675614401898,27.1707892490388,<0,all paid,retraining,no known savings,1<=X<4,1,male mar/wid,guarantor,2,real estate,none,rent,1,unskilled resident,2,none,no,good
+16.0971980280301,2089.35662648765,36.0978627822931,>=200,all paid,used car,500<=X<1000,1<=X<4,2,female div/dep/mar,none,2,car,bank,for free,3,unemp/unskilled non res,1,none,yes,good
+19.091253511759,2623.82947230559,27.5621723912745,>=200,existing paid,radio/tv,100<=X<500,4<=X<7,3,male mar/wid,guarantor,2,real estate,none,own,1,unskilled resident,1,none,no,good
+17.2445735615429,2133.33608038537,26.2002010650607,>=200,delayed previously,domestic appliance,100<=X<500,4<=X<7,2,female div/dep/mar,none,1,car,stores,rent,4,skilled,1,none,yes,bad
+9.37954826417206,527.374419387652,40.3014332760144,<0,all paid,retraining,>=1000,1<=X<4,1,male single,guarantor,2,real estate,bank,rent,3,unemp/unskilled non res,2,none,no,good
+8.24386311067593,146.511325705209,36.2001376975584,no checking,critical/other existing credit,education,no known savings,>=7,4,male single,co applicant,4,no known property,none,for free,3,skilled,2,yes,yes,good
+26.5542028678587,4876.96051475476,44.2278179442579,no checking,no credits/all paid,repairs,no known savings,>=7,4,male single,none,4,no known property,none,for free,3,unemp/unskilled non res,2,yes,yes,good
+14.6740671962988,1612.39711271666,30.9709289570379,no checking,delayed previously,domestic appliance,500<=X<1000,4<=X<7,2,male mar/wid,none,3,car,none,rent,2,skilled,1,none,yes,good
+8.56549717291221,376.839065445225,42.4072120478512,>=200,critical/other existing credit,repairs,>=1000,1<=X<4,4,male mar/wid,guarantor,3,real estate,stores,own,3,unskilled resident,2,none,no,good
+17.0340294632375,2129.27052027932,28.1814219288162,0<=X<200,no credits/all paid,business,100<=X<500,unemployed,3,male mar/wid,co applicant,3,car,bank,rent,4,high qualif/self emp/mgmt,1,none,yes,bad
+43.2226068843203,8941.42883088625,41.5738882403501,<0,all paid,other,<100,>=7,4,male single,co applicant,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+18.196911376068,2764.4348384237,42.4824030082783,<0,no credits/all paid,repairs,<100,unemployed,4,male div/sep,guarantor,4,no known property,stores,for free,3,unemp/unskilled non res,2,yes,no,bad
+42.0750134587765,8460.50312392649,33.4715305230594,<0,existing paid,retraining,<100,<1,4,male mar/wid,guarantor,1,real estate,none,own,1,unskilled resident,1,none,no,bad
+9.23688135008419,1140.56900935737,67.0211282443099,0<=X<200,delayed previously,retraining,100<=X<500,>=7,4,male div/sep,co applicant,3,no known property,none,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+13.2058023515956,1033.56744189482,22.1075495671776,>=200,all paid,domestic appliance,100<=X<500,<1,2,male div/sep,none,1,car,stores,own,4,skilled,1,none,yes,bad
+24.7690059611501,4073.30776390913,29.3361703178593,<0,no credits/all paid,used car,500<=X<1000,1<=X<4,2,male div/sep,co applicant,4,life insurance,bank,rent,4,high qualif/self emp/mgmt,2,none,no,bad
+23.4479467020187,3688.17374722459,26.9507605096488,<0,all paid,other,500<=X<1000,4<=X<7,2,male single,co applicant,3,life insurance,bank,rent,4,unskilled resident,2,none,no,bad
+16.9749860707552,2180.83788397435,30.9085755602522,>=200,no credits/all paid,furniture/equipment,>=1000,<1,2,male div/sep,guarantor,1,real estate,stores,own,2,unskilled resident,1,none,no,bad
+12.6040284119654,1223.00566813348,36.0538753255738,<0,no credits/all paid,domestic appliance,100<=X<500,<1,2,male div/sep,co applicant,3,life insurance,stores,rent,4,skilled,1,none,yes,bad
+21.1441993225253,3282.43393962188,33.7452815327476,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,2,male single,co applicant,2,car,stores,own,2,skilled,1,yes,yes,good
+23.0030419613125,3479.91740045784,22.9110779594905,<0,no credits/all paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,life insurance,none,rent,1,unskilled resident,1,none,no,bad
+30.7545231980979,5767.88345721587,38.0672984617035,no checking,critical/other existing credit,other,500<=X<1000,4<=X<7,2,male mar/wid,co applicant,3,car,bank,own,2,skilled,1,none,no,good
+10.9565231686082,599.388823913694,27.1745088817236,0<=X<200,delayed previously,radio/tv,no known savings,>=7,4,male mar/wid,guarantor,3,real estate,none,own,2,skilled,1,yes,yes,good
+27.987343960714,4796.4638705739,26.2853242591313,0<=X<200,no credits/all paid,repairs,<100,<1,1,male div/sep,co applicant,1,real estate,none,rent,4,skilled,1,none,yes,bad
+15.267714762733,1729.96666337396,29.7562982902755,<0,no credits/all paid,other,<100,1<=X<4,4,male mar/wid,guarantor,3,real estate,bank,for free,2,unskilled resident,2,none,no,bad
+15.4969825994049,2261.40715564706,49.3119076393372,<0,all paid,domestic appliance,>=1000,1<=X<4,1,male mar/wid,guarantor,3,real estate,stores,own,3,unemp/unskilled non res,2,none,no,bad
+11.6216697214216,741.318617501889,26.2338355398364,>=200,existing paid,furniture/equipment,500<=X<1000,<1,1,female div/dep/mar,guarantor,2,real estate,none,rent,1,unskilled resident,1,none,no,good
+26.8159765327725,4649.40244339449,32.1808460586084,>=200,no credits/all paid,repairs,<100,<1,1,male div/sep,guarantor,1,no known property,none,for free,3,unemp/unskilled non res,1,none,yes,bad
+17.7362330099199,2104.06281108129,19.9764737350352,<0,no credits/all paid,furniture/equipment,<100,<1,1,female div/dep/mar,guarantor,1,life insurance,bank,rent,1,unskilled resident,1,none,no,bad
+13.1910459325145,1952.20737464993,60.1062333925299,<0,no credits/all paid,retraining,<100,4<=X<7,4,male div/sep,co applicant,3,life insurance,stores,rent,4,skilled,2,none,no,bad
+17.5170152165692,2431.14003452258,35.6893408729479,>=200,all paid,business,>=1000,1<=X<4,2,male single,guarantor,2,real estate,stores,own,2,unskilled resident,2,none,no,good
+22.110495870654,3184.07974018131,19.8314687717913,<0,no credits/all paid,retraining,100<=X<500,unemployed,1,male div/sep,guarantor,4,life insurance,none,rent,1,unskilled resident,1,none,no,bad
+8.9046098178465,214.526419337049,32.2590719186405,>=200,all paid,domestic appliance,100<=X<500,<1,1,male div/sep,none,1,life insurance,stores,own,4,unemp/unskilled non res,2,none,no,bad
+19.6518719584512,2909.5429790839,33.6121758360461,>=200,all paid,other,500<=X<1000,<1,2,male single,co applicant,3,no known property,bank,for free,3,unemp/unskilled non res,2,none,yes,bad
+29.0038348559463,5074.7283442586,27.3759885008103,>=200,all paid,other,500<=X<1000,<1,1,male div/sep,co applicant,1,car,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,bad
+13.5224884383255,1664.45445875711,44.8682157745441,<0,all paid,used car,no known savings,>=7,3,male single,none,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,good
+10.7493404515597,1055.16187366513,48.0668361951088,>=200,all paid,education,<100,unemployed,1,male single,none,4,no known property,bank,for free,3,unemp/unskilled non res,2,none,no,bad
+51.8732105152032,11248.603860581,48.3454646725033,0<=X<200,delayed previously,other,100<=X<500,1<=X<4,2,male div/sep,none,2,car,stores,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+26.5244901508094,4298.29620928057,20.6900075874731,0<=X<200,no credits/all paid,other,100<=X<500,<1,2,female div/dep/mar,co applicant,3,car,bank,rent,1,skilled,1,none,yes,bad
+10.4943629336022,1011.39211384361,48.8657071661842,>=200,no credits/all paid,repairs,<100,1<=X<4,1,male div/sep,guarantor,2,real estate,none,own,1,unskilled resident,2,none,no,good
+22.145940611072,3369.33340299367,27.1022102972091,no checking,delayed previously,domestic appliance,100<=X<500,4<=X<7,2,male mar/wid,co applicant,3,car,stores,own,4,unemp/unskilled non res,1,none,yes,good
+11.5737072034127,802.149424106036,29.2295576015443,0<=X<200,all paid,domestic appliance,100<=X<500,4<=X<7,2,male mar/wid,co applicant,3,no known property,bank,for free,4,unemp/unskilled non res,2,none,yes,bad
+23.6165700935057,3754.57979393697,27.9658005970615,>=200,existing paid,furniture/equipment,500<=X<1000,<1,2,female div/dep/mar,co applicant,1,car,none,rent,1,skilled,1,none,yes,good
+15.5842961240714,2148.87624994368,43.7845352466418,<0,all paid,other,>=1000,<1,2,male single,co applicant,3,life insurance,stores,rent,4,unskilled resident,2,none,no,bad
+12.1086211651863,1366.20666112237,47.0096882870453,>=200,all paid,education,>=1000,>=7,4,male single,none,4,no known property,stores,for free,3,unemp/unskilled non res,2,yes,yes,good
+34.1646278151547,6302.73366033898,25.3011368023623,<0,all paid,other,100<=X<500,4<=X<7,4,male single,guarantor,3,life insurance,stores,rent,4,unskilled resident,2,yes,no,bad
+14.7980954554152,1539.80660324989,26.7144113647993,>=200,existing paid,domestic appliance,<100,unemployed,1,male div/sep,co applicant,1,no known property,none,for free,3,unemp/unskilled non res,1,none,no,bad
+19.7289488887145,2904.53058579343,32.6190505866868,no checking,critical/other existing credit,other,>=1000,>=7,4,male mar/wid,guarantor,3,real estate,none,own,2,unskilled resident,1,none,no,good
+11.0229124667626,925.015987503177,39.9128502767015,<0,no credits/all paid,education,<100,<1,3,male single,guarantor,4,no known property,bank,for free,1,unskilled resident,2,none,no,bad
+42.2535524560965,8893.4633104163,49.4874550167052,>=200,all paid,education,no known savings,>=7,4,male single,none,4,no known property,stores,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+13.6628119855317,1511.83790183343,37.1483117934751,<0,all paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,real estate,stores,rent,4,unskilled resident,2,none,no,bad
+19.5288906049687,2609.20097112644,22.4931403482085,<0,existing paid,used car,no known savings,unemployed,1,male div/sep,none,4,no known property,none,for free,3,unemp/unskilled non res,2,yes,no,bad
+18.1799937528343,2936.60460788385,49.7484741583732,no checking,critical/other existing credit,furniture/equipment,>=1000,>=7,4,male div/sep,guarantor,2,real estate,stores,own,2,unskilled resident,1,none,yes,good
+54.4784842498805,11727.9798899902,41.5075174398992,no checking,existing paid,retraining,no known savings,unemployed,1,male div/sep,none,4,no known property,stores,for free,4,high qualif/self emp/mgmt,1,yes,yes,good
+28.4732585561215,4906.59788324105,25.8638247957769,no checking,critical/other existing credit,retraining,no known savings,unemployed,3,male mar/wid,co applicant,3,car,none,rent,2,high qualif/self emp/mgmt,1,yes,yes,good
+19.2870411909833,3546.53496516675,63.5796353528713,<0,all paid,other,<100,>=7,4,male mar/wid,guarantor,2,real estate,bank,for free,1,unskilled resident,2,none,no,bad
+14.3817875172111,1691.48982209262,37.2124396392543,>=200,existing paid,education,no known savings,>=7,4,male single,none,4,no known property,none,for free,1,high qualif/self emp/mgmt,2,yes,yes,good
+14.4675509721205,1609.33800594539,32.9525090804336,0<=X<200,delayed previously,other,100<=X<500,4<=X<7,4,male mar/wid,co applicant,3,real estate,bank,own,2,unskilled resident,1,none,no,good
+25.5939268600717,4709.82964103002,47.142167697456,>=200,critical/other existing credit,domestic appliance,100<=X<500,unemployed,4,male mar/wid,co applicant,3,no known property,none,for free,3,unemp/unskilled non res,2,yes,no,good
+41.9638918312627,8385.90019555215,31.5319395706082,0<=X<200,delayed previously,retraining,100<=X<500,4<=X<7,4,male mar/wid,none,3,life insurance,stores,own,4,unskilled resident,2,yes,no,bad
+17.4382000366146,2309.57140995158,31.4850513514001,<0,all paid,retraining,>=1000,4<=X<7,1,male single,guarantor,3,life insurance,stores,rent,3,unskilled resident,2,none,no,good
+17.1806748973592,2093.09782037742,25.1945017282937,0<=X<200,no credits/all paid,repairs,100<=X<500,1<=X<4,3,male mar/wid,guarantor,2,real estate,none,rent,3,unskilled resident,1,none,no,bad
+22.0290403655967,3382.17218668292,28.8242034813384,>=200,existing paid,domestic appliance,100<=X<500,<1,4,male mar/wid,none,1,car,stores,own,1,unemp/unskilled non res,1,none,yes,bad
+20.8453926940916,3062.13989960462,27.7186299645903,no checking,existing paid,domestic appliance,500<=X<1000,4<=X<7,4,male mar/wid,none,3,car,stores,own,1,skilled,1,yes,yes,good
+17.0593748062411,2032.02190411031,23.9161024753922,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,2,male mar/wid,co applicant,2,real estate,none,own,2,skilled,1,none,no,good
+22.6446658893961,3602.3204839545,31.6115331025112,>=200,delayed previously,retraining,100<=X<500,<1,1,male div/sep,none,1,life insurance,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,bad
+22.1153892957001,3568.86290200562,35.6346455022581,>=200,existing paid,used car,500<=X<1000,>=7,3,female div/dep/mar,none,4,no known property,none,for free,3,unemp/unskilled non res,2,none,yes,good
+11.3040149872335,637.673797402451,25.2055028457356,>=200,existing paid,radio/tv,no known savings,<1,4,male mar/wid,guarantor,1,real estate,none,own,1,skilled,1,none,yes,good
+12.5541438526837,1241.30731767221,37.3170060437659,>=200,all paid,repairs,>=1000,1<=X<4,3,male mar/wid,guarantor,2,real estate,bank,own,1,unskilled resident,2,none,no,good
+9.29568557968664,385.060639432802,35.2939532811323,<0,all paid,education,<100,>=7,4,male single,co applicant,4,no known property,bank,for free,1,skilled,2,yes,yes,bad
+18.848796208259,3006.63260818526,45.8081268987357,no checking,existing paid,retraining,no known savings,>=7,4,male single,none,4,no known property,none,for free,4,high qualif/self emp/mgmt,1,yes,yes,good
+16.0742088815091,1980.03057030121,31.8282322131865,>=200,all paid,other,no known savings,>=7,4,male single,guarantor,4,no known property,bank,for free,1,high qualif/self emp/mgmt,1,yes,yes,bad
+22.4387888828578,3533.10044013381,30.8607503296877,>=200,critical/other existing credit,radio/tv,>=1000,1<=X<4,2,male single,none,2,car,stores,own,2,skilled,1,yes,yes,good
+26.476067010375,4550.56309435164,31.5776221974165,0<=X<200,no credits/all paid,other,100<=X<500,4<=X<7,3,male mar/wid,co applicant,4,car,bank,rent,4,high qualif/self emp/mgmt,1,yes,yes,bad
+11.1279044401903,812.114590536607,34.1897949537375,>=200,no credits/all paid,business,<100,<1,2,male div/sep,co applicant,1,no known property,stores,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+8.29272365120106,-132.540994096258,24.2044957334991,<0,all paid,domestic appliance,500<=X<1000,<1,2,male single,co applicant,3,no known property,stores,for free,4,unskilled resident,2,none,no,bad
+12.9006032113044,1005.85022842131,24.0803278293879,<0,no credits/all paid,new car,<100,1<=X<4,1,male div/sep,guarantor,2,real estate,bank,rent,1,unskilled resident,2,none,no,bad
+17.1756358340764,2085.34405747048,24.9264721874821,<0,no credits/all paid,other,<100,<1,2,female div/dep/mar,co applicant,3,car,bank,rent,2,skilled,1,none,no,bad
+39.6788428663919,8468.56114268575,58.2578080089562,0<=X<200,all paid,other,100<=X<500,<1,2,male single,co applicant,3,no known property,bank,for free,4,high qualif/self emp/mgmt,1,yes,yes,bad
+21.487838617357,3222.66920650289,27.7759318772053,no checking,existing paid,used car,500<=X<1000,unemployed,3,female div/dep/mar,none,4,car,bank,rent,1,skilled,1,yes,yes,good
+21.7176325050294,3462.97993895711,35.331588146525,<0,all paid,retraining,100<=X<500,4<=X<7,3,male single,guarantor,2,life insurance,stores,rent,4,unskilled resident,2,none,no,bad
+20.010399350352,3305.08625647803,46.2496346388122,<0,critical/other existing credit,retraining,>=1000,unemployed,4,male single,co applicant,3,no known property,stores,for free,3,unemp/unskilled non res,2,yes,no,good
+21.5394570379771,3089.93660661196,21.7805358977471,>=200,all paid,other,>=1000,<1,4,male single,none,2,life insurance,stores,own,4,unskilled resident,2,yes,yes,bad
+52.2204094285027,10917.9512963596,31.1791727807332,<0,critical/other existing credit,retraining,no known savings,>=7,4,male div/sep,co applicant,3,life insurance,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,good
+12.3577807683657,1185.74702136296,37.0319116700438,>=200,no credits/all paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,real estate,none,rent,1,unemp/unskilled non res,1,none,no,bad
+25.4090659758361,4160.42559751844,26.3932594232637,no checking,existing paid,retraining,500<=X<1000,4<=X<7,3,female div/dep/mar,none,4,car,none,rent,1,skilled,1,yes,yes,good
+17.5911673576519,2389.84256707145,33.2311149314241,no checking,existing paid,used car,500<=X<1000,4<=X<7,3,female div/dep/mar,none,2,car,bank,rent,1,skilled,1,none,yes,good
+7.06060868153546,166.382038415983,49.0945992554194,<0,all paid,other,<100,<1,1,male div/sep,co applicant,1,life insurance,stores,rent,4,high qualif/self emp/mgmt,1,yes,yes,bad
+12.1700913790931,799.043941506371,23.0151710221645,0<=X<200,no credits/all paid,business,100<=X<500,4<=X<7,3,male mar/wid,none,2,car,none,rent,1,unskilled resident,1,none,no,bad
+18.6379423221318,2607.6467254152,31.5217400416638,<0,no credits/all paid,retraining,100<=X<500,4<=X<7,3,female div/dep/mar,co applicant,4,no known property,none,for free,1,skilled,2,none,yes,bad
+13.7573751317267,1577.51548559891,38.8891661087159,>=200,critical/other existing credit,education,500<=X<1000,>=7,4,male single,none,4,no known property,bank,for free,3,unemp/unskilled non res,2,yes,yes,bad
+18.9043293363667,2649.93763885964,30.5454999953948,>=200,existing paid,other,>=1000,1<=X<4,3,male mar/wid,guarantor,2,real estate,bank,own,1,unskilled resident,1,none,no,good
+20.3803373820019,3717.84426101829,59.4798903866275,no checking,critical/other existing credit,retraining,no known savings,unemployed,1,female div/dep/mar,none,4,life insurance,none,own,2,high qualif/self emp/mgmt,1,yes,yes,good
+14.8863451559427,1502.03172247051,24.2574428320163,<0,all paid,domestic appliance,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,life insurance,stores,own,4,unskilled resident,2,none,no,good
+40.1811189864782,7948.6364561168,31.710828513684,<0,all paid,other,no known savings,>=7,4,male single,co applicant,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,bad
+11.9714768236842,1162.03574784514,39.9974559219733,0<=X<200,existing paid,other,100<=X<500,1<=X<4,4,male mar/wid,guarantor,3,real estate,bank,own,2,unskilled resident,1,none,no,bad
+17.5163716105764,2256.28900335833,28.4920237369939,<0,critical/other existing credit,retraining,>=1000,unemployed,1,male div/sep,none,4,no known property,none,for free,3,unemp/unskilled non res,2,yes,yes,good
+20.9467500357568,3288.13504909234,35.9952504565951,no checking,critical/other existing credit,used car,no known savings,unemployed,1,male div/sep,none,4,no known property,none,for free,4,high qualif/self emp/mgmt,1,yes,yes,good
+19.5493790602424,3320.82467210891,51.6030341497436,no checking,critical/other existing credit,retraining,no known savings,>=7,4,male mar/wid,co applicant,3,car,bank,own,4,skilled,2,yes,yes,good
+28.9384908473972,5276.84660409935,36.3701602489182,no checking,critical/other existing credit,retraining,>=1000,>=7,4,male single,co applicant,3,car,none,own,4,skilled,2,yes,yes,good
+33.8439563959953,6204.82969647691,24.5401151297926,0<=X<200,no credits/all paid,other,<100,1<=X<4,4,male mar/wid,guarantor,2,real estate,bank,own,2,unskilled resident,1,none,no,bad
+12.924967077249,1181.84044832456,31.0825009245338,0<=X<200,no credits/all paid,retraining,100<=X<500,unemployed,1,male div/sep,guarantor,2,life insurance,stores,rent,4,unskilled resident,2,none,no,bad
+22.2167084840205,3501.88051337201,31.8409422319991,no checking,existing paid,domestic appliance,no known savings,4<=X<7,4,female div/dep/mar,co applicant,3,no known property,bank,for free,1,skilled,1,yes,yes,good
+13.655921505918,1152.53429829555,22.4152772982335,<0,no credits/all paid,domestic appliance,500<=X<1000,<1,1,female div/dep/mar,none,1,life insurance,none,rent,1,skilled,1,none,yes,bad
+13.0587849459581,996.831895175156,22.0944365903095,<0,no credits/all paid,furniture/equipment,>=1000,<1,1,female div/dep/mar,co applicant,1,life insurance,none,rent,2,unemp/unskilled non res,1,none,no,good
+11.5059772862843,930.856210657826,35.2235165424417,>=200,existing paid,domestic appliance,>=1000,unemployed,1,male mar/wid,guarantor,1,real estate,none,for free,3,unemp/unskilled non res,1,none,no,good
+25.4756262359713,4147.99753962128,25.2019364261543,>=200,existing paid,retraining,500<=X<1000,unemployed,1,male mar/wid,none,1,real estate,none,rent,3,unemp/unskilled non res,1,none,no,good
+10.2962957000425,1350.24891353098,64.8480408834694,no checking,delayed previously,retraining,no known savings,>=7,4,male single,guarantor,3,life insurance,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,good
+8.1999071959453,-58.6461675233572,28.196217121688,0<=X<200,all paid,other,100<=X<500,1<=X<4,4,male mar/wid,guarantor,3,real estate,bank,own,1,unskilled resident,1,none,no,bad
+41.8468868603958,8186.76154894883,24.5215035037372,<0,no credits/all paid,retraining,no known savings,>=7,4,male single,co applicant,3,no known property,none,for free,4,high qualif/self emp/mgmt,2,yes,yes,bad
+8.25782786148471,781.06667198492,62.2013832606503,>=200,existing paid,domestic appliance,500<=X<1000,<1,1,female div/dep/mar,none,1,life insurance,none,rent,1,unskilled resident,1,none,yes,good
+10.5503470994156,431.576100050952,24.4058607618423,no checking,critical/other existing credit,used car,500<=X<1000,4<=X<7,2,female div/dep/mar,co applicant,3,car,none,rent,2,skilled,1,none,yes,good
+53.4609324759418,11549.9509995159,44.5573992933577,0<=X<200,all paid,other,<100,unemployed,2,male div/sep,co applicant,3,car,bank,rent,4,unemp/unskilled non res,1,yes,no,bad
+12.4981877701146,978.113141564344,27.0444350427565,no checking,delayed previously,radio/tv,100<=X<500,1<=X<4,3,male mar/wid,guarantor,2,real estate,none,own,2,unskilled resident,1,none,no,good
+8.77086176606513,540.853259348159,47.0687557535315,<0,critical/other existing credit,retraining,>=1000,>=7,4,male div/sep,guarantor,4,real estate,none,for free,3,unskilled resident,2,none,no,good
+20.5092702669128,3161.04393852149,35.2238102544591,no checking,delayed previously,other,>=1000,unemployed,1,male div/sep,co applicant,1,car,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,good
+20.9816261834768,3230.5289653886,33.2659412673179,<0,no credits/all paid,other,<100,unemployed,1,male div/sep,co applicant,4,no known property,bank,for free,3,unemp/unskilled non res,2,none,no,bad
+38.1165706385909,7812.91027392396,47.1887840538542,<0,existing paid,used car,no known savings,>=7,3,male single,none,4,no known property,bank,for free,1,high qualif/self emp/mgmt,2,yes,yes,bad
+15.9321173725148,1726.07996371901,22.8155585936072,<0,no credits/all paid,domestic appliance,100<=X<500,<1,2,female div/dep/mar,co applicant,3,life insurance,none,rent,4,skilled,1,none,yes,bad
+25.8000711127343,4639.98050117972,42.1605543966697,no checking,existing paid,used car,no known savings,>=7,3,female div/dep/mar,none,4,car,none,for free,1,high qualif/self emp/mgmt,1,yes,yes,good
+11.4334049270553,1221.76073419721,47.9494634798319,<0,no credits/all paid,other,<100,1<=X<4,2,male div/sep,co applicant,3,no known property,bank,rent,4,unskilled resident,2,none,no,bad
+12.3584821696997,797.574008271105,21.0319742303878,no checking,existing paid,radio/tv,500<=X<1000,1<=X<4,3,male mar/wid,none,2,car,none,own,1,skilled,1,none,yes,good
+20.4899089397586,3822.82627894879,62.6869231729535,<0,critical/other existing credit,retraining,no known savings,>=7,4,male div/sep,co applicant,4,no known property,none,for free,4,high qualif/self emp/mgmt,2,yes,yes,good
+22.4074017286636,3628.83937630065,35.1255308936514,no checking,all paid,domestic appliance,100<=X<500,4<=X<7,4,male mar/wid,co applicant,3,car,stores,rent,4,skilled,1,yes,yes,good
+24.8997168779495,5059.06233294006,68.6154089539544,no checking,no credits/all paid,used car,500<=X<1000,4<=X<7,3,female div/dep/mar,co applicant,4,car,bank,rent,2,skilled,1,none,yes,bad
+10.2422700999942,1142.57528696545,56.8432221584984,<0,all paid,furniture/equipment,<100,<1,4,male div/sep,guarantor,1,real estate,stores,own,4,unskilled resident,2,yes,no,bad
+23.6526668811645,4127.6758803905,42.969020190956,no checking,critical/other existing credit,retraining,no known savings,>=7,3,male single,none,4,life insurance,none,rent,4,high qualif/self emp/mgmt,2,yes,yes,good
+43.329734402699,9066.99087583346,45.6537636632518,no checking,delayed previously,business,>=1000,>=7,2,male single,none,2,car,stores,own,4,unskilled resident,2,yes,yes,good
+18.9696946157646,2714.81413218638,32.5513301445054,0<=X<200,existing paid,retraining,100<=X<500,4<=X<7,4,male mar/wid,guarantor,3,life insurance,none,own,4,unemp/unskilled non res,1,none,no,good
+10.4435727185705,784.584913675516,40.0395637426241,no checking,existing paid,retraining,no known savings,4<=X<7,4,male mar/wid,none,3,life insurance,stores,rent,4,high qualif/self emp/mgmt,2,yes,yes,good
+18.4679526524692,2487.56790746292,28.3093183607345,>=200,critical/other existing credit,education,>=1000,>=7,4,male single,co applicant,4,no known property,bank,for free,3,high qualif/self emp/mgmt,2,yes,yes,good
+16.0301779534837,1842.88179242449,26.6270452160571,<0,all paid,retraining,100<=X<500,1<=X<4,1,male mar/wid,guarantor,2,real estate,bank,rent,3,unskilled resident,2,none,no,good
+27.983332969083,4821.44020219293,27.3552868645364,no checking,critical/other existing credit,business,>=1000,1<=X<4,2,male single,none,2,real estate,stores,own,2,unskilled resident,2,none,no,good
+17.6069903371871,2265.94281091409,27.9649461463762,0<=X<200,delayed previously,business,100<=X<500,1<=X<4,3,male mar/wid,none,2,car,stores,own,4,high qualif/self emp/mgmt,1,yes,yes,bad
+37.1355866674706,7397.88738700918,40.1012867941562,no checking,delayed previously,business,500<=X<1000,4<=X<7,2,female div/dep/mar,none,3,car,stores,rent,4,skilled,1,yes,yes,good
+9.05000652878505,590.661739178393,46.2720403402975,<0,critical/other existing credit,repairs,>=1000,1<=X<4,1,male single,guarantor,2,real estate,none,for free,3,unemp/unskilled non res,2,none,no,good
+19.1265850855375,2584.11431234848,25.5653237331694,0<=X<200,delayed previously,retraining,100<=X<500,4<=X<7,4,male div/sep,none,3,life insurance,stores,own,4,skilled,2,yes,yes,good
+13.691069288115,1196.87099913449,23.8832520675197,>=200,existing paid,domestic appliance,500<=X<1000,<1,4,male mar/wid,none,1,life insurance,stores,own,1,unemp/unskilled non res,1,none,yes,good
+29.4992633735741,5198.5221044372,27.4201774365573,>=200,existing paid,radio/tv,no known savings,>=7,4,male mar/wid,guarantor,2,car,none,own,1,skilled,1,yes,yes,good
+32.4392692269055,6140.31093785337,36.2175666262685,no checking,critical/other existing credit,retraining,>=1000,4<=X<7,4,male mar/wid,co applicant,3,car,none,own,2,skilled,1,none,yes,good
+31.4936465416605,5965.5590366259,38.6683835382065,no checking,existing paid,retraining,100<=X<500,unemployed,3,male mar/wid,none,3,car,bank,rent,4,high qualif/self emp/mgmt,1,yes,yes,good
+23.6828759371174,4135.22428040139,42.9717146382577,0<=X<200,no credits/all paid,domestic appliance,100<=X<500,<1,1,male div/sep,co applicant,1,life insurance,stores,rent,4,high qualif/self emp/mgmt,1,yes,yes,bad
+33.4205553526139,6486.92378452801,40.4834775626903,<0,all paid,other,no known savings,1<=X<4,3,male single,guarantor,2,no known property,bank,for free,4,unskilled resident,2,yes,no,bad
+14.5389793335578,1942.71893244181,45.9588800162231,no checking,critical/other existing credit,radio/tv,no known savings,>=7,4,male single,co applicant,3,car,none,own,2,skilled,1,yes,yes,good
+15.8934184130981,1965.62248645941,33.0796869930715,<0,existing paid,used car,500<=X<1000,1<=X<4,1,female div/dep/mar,guarantor,2,life insurance,bank,rent,1,unskilled resident,2,none,no,good
+42.6748328855368,8830.53396230926,42.5953507943255,no checking,critical/other existing credit,used car,no known savings,>=7,3,male single,none,4,no known property,none,for free,3,high qualif/self emp/mgmt,2,yes,yes,good
+22.5161330592453,3389.01886317235,24.1352290067188,<0,all paid,other,>=1000,1<=X<4,1,male mar/wid,guarantor,3,real estate,bank,rent,3,unskilled resident,2,none,no,good
+14.9186813155987,1735.05217191826,33.5279070926609,>=200,existing paid,new car,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,2,real estate,none,rent,1,unskilled resident,2,none,no,good
+22.4649700646836,3539.64238680992,30.8630855173492,<0,all paid,other,100<=X<500,1<=X<4,3,male div/sep,guarantor,2,life insurance,stores,rent,4,high qualif/self emp/mgmt,2,yes,no,bad
+11.7728903515196,682.017364283377,22.2473234164307,<0,no credits/all paid,domestic appliance,<100,<1,1,female div/dep/mar,guarantor,1,life insurance,none,rent,1,skilled,1,none,no,bad
+11.0958567975074,707.019710585361,30.1869365167018,>=200,critical/other existing credit,repairs,>=1000,1<=X<4,1,male div/sep,guarantor,2,real estate,none,own,3,unskilled resident,2,none,no,good
+13.4932480298308,1129.66386198337,23.1331878139768,>=200,all paid,other,500<=X<1000,<1,2,female div/dep/mar,co applicant,1,real estate,bank,own,1,skilled,1,none,yes,bad
+16.5041264815023,2415.97723607044,45.4017381894782,no checking,all paid,retraining,no known savings,unemployed,4,male single,none,3,life insurance,stores,own,4,unemp/unskilled non res,2,yes,no,good
+8.46882819386288,352.684185410375,42.3985898164859,>=200,critical/other existing credit,repairs,>=1000,unemployed,1,male single,none,3,real estate,stores,for free,3,unemp/unskilled non res,2,none,no,good
+14.5712023265742,1950.77055912009,45.9617540933449,<0,existing paid,furniture/equipment,<100,<1,1,male div/sep,guarantor,1,life insurance,none,rent,1,unskilled resident,1,none,no,bad
+15.5928991941747,2126.75414996186,42.7853025833988,<0,all paid,domestic appliance,<100,<1,1,male mar/wid,co applicant,1,life insurance,stores,rent,4,unskilled resident,1,none,no,bad
+44.4578685880927,8887.71654985994,26.7543857454668,0<=X<200,all paid,other,<100,unemployed,1,male div/sep,co applicant,1,car,stores,own,4,unemp/unskilled non res,1,yes,yes,bad
+25.5887959009982,4744.10180852111,48.6065498703401,>=200,critical/other existing credit,retraining,>=1000,>=7,4,male single,none,1,real estate,stores,own,4,unskilled resident,2,yes,yes,good
+10.612708523443,756.196810305649,37.1438428971799,>=200,critical/other existing credit,repairs,>=1000,unemployed,1,male mar/wid,guarantor,1,real estate,none,for free,3,unemp/unskilled non res,2,none,no,good
+22.328569666213,3481.28796677582,29.8509195070582,0<=X<200,existing paid,education,no known savings,>=7,4,male single,none,4,no known property,none,for free,1,high qualif/self emp/mgmt,2,yes,yes,bad
+10.6316485249882,597.521659989801,30.4131123094277,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,3,male mar/wid,co applicant,3,real estate,none,rent,2,skilled,1,none,no,good
+20.7307949026528,3203.40747945777,34.7084086021485,no checking,all paid,other,500<=X<1000,1<=X<4,2,male single,co applicant,2,car,bank,for free,2,high qualif/self emp/mgmt,1,yes,yes,good
+8.43277995228298,-146.088367348947,22.2169878260397,>=200,existing paid,retraining,100<=X<500,<1,1,male mar/wid,guarantor,1,real estate,none,own,3,unemp/unskilled non res,1,none,no,bad
+22.804025722291,3490.01481453062,25.3581668521675,>=200,existing paid,radio/tv,500<=X<1000,<1,4,male mar/wid,none,1,car,none,own,1,skilled,1,none,yes,good
+17.6501613960411,2914.29064010945,54.2363768081209,no checking,all paid,other,500<=X<1000,>=7,3,female div/dep/mar,co applicant,2,car,bank,rent,1,high qualif/self emp/mgmt,1,yes,yes,good
+24.7094068055705,4136.01874177864,32.528114199296,no checking,critical/other existing credit,radio/tv,>=1000,1<=X<4,2,male mar/wid,co applicant,2,car,none,own,2,skilled,1,yes,yes,good
+6.98191105657318,510.794204828131,64.0875799495677,>=200,existing paid,radio/tv,<100,<1,4,male mar/wid,guarantor,1,real estate,none,own,1,unskilled resident,1,none,no,bad
+17.4422407403424,2564.58122397696,41.9502515757362,0<=X<200,delayed previously,business,100<=X<500,>=7,4,male div/sep,none,2,car,stores,own,4,high qualif/self emp/mgmt,2,yes,yes,good
+38.9296113487092,7506.359347867,26.261301889265,<0,all paid,used car,500<=X<1000,1<=X<4,1,female div/dep/mar,guarantor,2,life insurance,bank,rent,4,unskilled resident,2,none,no,bad
+20.2320611830807,2957.42900602003,29.6639248643238,no checking,critical/other existing credit,furniture/equipment,>=1000,4<=X<7,2,female div/dep/mar,co applicant,3,life insurance,stores,own,2,unskilled resident,2,none,no,good
+29.4463705705691,5235.55600269021,29.4857801088032,0<=X<200,all paid,other,no known savings,unemployed,1,male single,none,4,no known property,bank,for free,3,unemp/unskilled non res,2,yes,yes,bad
+18.7782165152448,3031.04560522454,47.5342515687275,no checking,critical/other existing credit,repairs,>=1000,>=7,4,male mar/wid,guarantor,3,real estate,none,own,2,unskilled resident,2,none,no,good
+30.1345728419503,5405.81174463608,29.476842824759,<0,all paid,retraining,no known savings,unemployed,1,male div/sep,co applicant,1,life insurance,stores,own,4,unemp/unskilled non res,1,yes,yes,bad
+30.7294819611685,5365.07663624071,21.7271645005129,<0,all paid,education,<100,>=7,4,male single,guarantor,4,no known property,bank,for free,1,high qualif/self emp/mgmt,2,yes,yes,bad

@@ -1,0 +1,228 @@
+---
+title: "kernel pca"
+output: html_notebook
+---
+
+```{r}
+library(kernlab)
+library(dplyr, warn.conflicts=FALSE)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(RANN, include.only = c("nn2"))
+source("../utils.R")
+source("../errors.R")
+
+registerDoParallel()
+```
+
+```{r}
+plpn <- adult <- car <- forestfires <- mushroom <- obesity <- list()
+spambase <- student <- wq <- list()
+
+
+plpn$trn <- read.csv("original_data/plpn_trn.csv", row.names = 1)
+plpn$tst <- read.csv("original_data/plpn_tst.csv", row.names = 1)
+plpn$tst <- prep_x(plpn$tst)
+plpn$trn <- subset(subset(plpn$trn, y == 1), select = -y)
+plpn$trn <- prep_x(plpn$trn) 
+
+car$trn <- read.csv("original_data/car_trn.csv", row.names = 1)
+car$tst <- read.csv("original_data/car_tst.csv", row.names = 1)
+car$tst <- prep_x(car$tst)
+car$trn <- subset(subset(car$trn, y == 1), select = -y)
+car$trn <- prep_x(car$trn) 
+
+forestfires$trn <- read.csv("original_data/forestfires_trn.csv", row.names = 1)
+forestfires$tst <- read.csv("original_data/forestfires_tst.csv", row.names = 1)
+# explicitly fix tst$Y because not all values in trn are in tst -> issue
+forestfires$tst$Y <- as.numeric(forestfires$tst$Y)
+forestfires$tst <- prep_x(forestfires$tst)
+forestfires$trn <- subset(subset(forestfires$trn, y == 1), select = -y)
+forestfires$trn <- prep_x(forestfires$trn) 
+
+obesity$trn <- read.csv("original_data/obesity_trn.csv", row.names = 1)
+obesity$tst <- read.csv("original_data/obesity_tst.csv", row.names = 1)
+obesity$tst <- prep_x(obesity$tst)
+obesity$trn <- subset(subset(obesity$trn, y == 1), select = -y)
+obesity$trn <- prep_x(obesity$trn) 
+
+student$trn <- read.csv("original_data/student_trn.csv", row.names = 1)
+student$tst <- read.csv("original_data/student_tst.csv", row.names = 1)
+student$tst <- prep_x(student$tst)
+student$trn <- subset(subset(student$trn, y == 1), select = -y)
+student$trn <- prep_x(student$trn) 
+
+adult$trn <- read.csv("original_data/adult_trn.csv")
+adult$tst <- read.csv("original_data/adult_tst.csv")
+adult$tst <- prep_x(adult$tst)
+adult$trn <- subset(subset(adult$trn, y == 1), select = -y)
+adult$trn <- prep_x(adult$trn) 
+
+spambase$trn <- read.csv("original_data/spambase_trn.csv", row.names = 1)
+spambase$tst <- read.csv("original_data/spambase_tst.csv", row.names = 1)
+spambase$tst <- prep_x(spambase$tst)
+spambase$trn <- subset(subset(spambase$trn, y == 1), select = -y)
+spambase$trn <- prep_x(spambase$trn) 
+
+wq$trn <- read.csv("original_data/wq_trn.csv", row.names = 1)
+wq$tst <- read.csv("original_data/wq_tst.csv", row.names = 1)
+wq$tst <- prep_x(wq$tst)
+wq$trn <- subset(subset(wq$trn, y == 1), select = -y)
+wq$trn <- prep_x(wq$trn) 
+
+```
+
+
+```{r}
+make_meta <- function(x, pre_lvls) {
+  input_class <- class(x)
+  n <- nrow(x)
+  n_col <- ncol(x)
+  if (any(factor_cols)) {
+    factor_names <- colnames(x)[factor_cols]
+    lvls <- rbindlist(lapply(factor_names, function(j) {
+      data.table('variable' = j, 'val' = pre_lvls[[j]])[, number := .I]
+    }))
+  } else {
+    lvls <- NULL
+  }
+  deci <- rep(NA_integer_, n_col) 
+  if (any(!factor_cols)) {
+    deci[!factor_cols] <- sapply(which(!factor_cols), function(j) {
+      if (any(grepl('\\.', x[[j]]))) {
+        tmp <- x[grepl('\\.', x[[j]]), j]
+        out <- max(nchar(sub('.*[.]', '', tmp)))
+      } else {
+        out <- 0L
+      }
+      return(out)
+    })
+  }
+  extrema <- matrix(nrow = n_col, ncol = 2)
+  for (j in seq_len(n_col)) {
+    if (j %in% which(!factor_cols)) {
+      extrema[j, 1] <- min(x[[j]])
+      extrema[j, 2] <- max(x[[j]])
+    } else {
+      extrema[j, 1] <- 0.5
+      extrema[j, 2] <- length(unique(x[[j]])) + 0.5
+    }
+  }
+  metadata <- data.table(
+    'variable' = colnames(trn), 
+    'class' = sapply(x, class), 
+    'fctr' = factor_cols,
+    'decimals' = deci,
+    'min' = extrema[, 1],
+    'max' = extrema[, 2]
+  )
+  meta <- list('metadata' = metadata, 'levels' = lvls, 'input_class' = input_class)
+}
+```
+
+
+```{r}
+kpca_ed <- function(trn, tst, kernel = "rbfdot", npc, 
+                    kpar = list(sigma = 0.1), k) {
+  X <- X_enc <- trn
+  factor_cols <- sapply(X, is.factor)
+  factor_names <- colnames(X)[factor_cols]
+  lvls <- list()
+  lvl_names <- list()
+  if (any(factor_cols)) {
+    for (i in 1:sum(factor_cols)) {
+      factor_data <- X[[factor_names[i]]]
+      one_hot <- model.matrix(~factor_data - 1)
+      lvl_names[[i]] <- colnames(one_hot) <- paste(factor_names[i], 
+                                                   levels(factor_data), sep = "_")
+      lvls[[factor_names[i]]] <- levels(factor_data)
+      X_enc <- cbind(X_enc[, !colnames(X_enc) %in% factor_names[i]],
+                     one_hot)
+    }
+  }
+  trn_enc <- X_enc
+  trn_enc <- scale(trn_enc)
+  scaling_mean <- attr(trn_enc, "scaled:center")  
+  scaling_sd <- attr(trn_enc, "scaled:scale")  
+  
+  Xkpca <- kpca(trn_enc, kernel = kernel, kpar = kpar, features = npc)
+  X <- X_enc <- tst
+  if (any(factor_cols)) {
+    for (i in 1:sum(factor_cols)) {
+      factor_data <- factor(X[[factor_names[i]]], levels = lvls[[i]])
+      one_hot <- model.matrix(~factor_data - 1)
+      colnames(one_hot) <- lvl_names[[i]]
+      X_enc <- cbind(X_enc[, !colnames(X_enc) %in% factor_names[i]],
+                     one_hot)
+    }
+  }
+  tst_enc <- X_enc
+  
+  tst_enc <- scale(tst_enc, scaling_mean, scaling_sd)
+  pca_tst <- predict(Xkpca, tst_enc)
+  pca_trn <- predict(Xkpca, trn_enc)
+  
+  X <- as.data.frame(trn)
+  m <- nrow(tst_enc)
+  # Compute nearest neighbors and distances in embedding space
+  knn <- nn2(data = pca_trn, query = pca_tst, k = k)
+  if (k > 1) {
+    wts <- 1 / knn$nn.dists
+    wts <- wts / rowSums(wts)
+  } else {
+    wts <- matrix(rep(1L, m), ncol = 1)
+  }
+
+  # Loop of weighted means
+  loop <- function(i) {
+    
+    # Pick out neighbors, weights
+    x_tmp <- X[knn$nn.idx[i, ], ]
+    w_tmp <- wts[i, ]
+    
+    # Take most likely label or weighted mean of continuous outcomes
+    if (any(factor_cols)) {
+      x_tmp_cat <- x_tmp[, factor_cols, drop = FALSE]
+      out_cat <- t(as.data.frame(sapply(x_tmp_cat, function(vals) {
+        scores <- sapply(unique(vals), function(v) sum(w_tmp[vals == v]))
+        unique(vals)[which.max(scores)]
+      })))
+      row.names(out_cat) <- NULL
+    } else {
+      out_cat <- data.table()
+    }
+    if (any(!factor_cols)) {
+      x_tmp_cnt <- as.matrix(x_tmp[, !factor_cols, drop = FALSE])
+      out_cnt <- as.data.frame(t(crossprod(x_tmp_cnt, w_tmp)))
+    } else {
+      out_cnt <- data.table()
+    }
+    
+    # Export
+    out <- cbind(out_cat, out_cnt)
+    return(out) 
+    
+  }
+  
+  # Execute in parallel
+  if (isTRUE(parallel)) {
+    out <- foreach(i = seq_len(m), .combine = rbind, 
+                   .packages = c('data.table', 'RANN')) %dopar% loop(i)
+  } else {
+    out <- foreach(i = seq_len(m), .combine = rbind) %do% loop(i)
+  }
+  meta <- make_meta(X, lvls)
+  colnames(out) <- c(meta$metadata[fctr == TRUE, variable],
+                     meta$metadata[fctr == FALSE, variable])
+  
+  # Polish, export
+  out <- post_x(out, meta)
+  out
+}
+```
+
+```{r}
+plpn$kpca <- kpca_ed(plpn$trn_og, plpn$tst, 3)
+# Plot the first two principal components
+```

@@ -1,0 +1,521 @@
+---
+title: "MNIST and CIFAR tests"
+output: html_notebook
+---
+
+```{r}
+source('../eigenmap.R')
+source('../z_to_adj.R')
+source('../adj_to_leaves.R')
+source("../decode.R")
+source("../utils.R")
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table,warn.conflicts=FALSE)
+library(dslabs)
+library(RSpectra)
+cl <- makeCluster(detectCores()/2)
+registerDoParallel(cl)
+#registerDoSEQ()
+```
+
+```{r}
+#mnist <- read_mnist(download = TRUE, destdir = getwd())
+mnist <- read_mnist(paste0(getwd(), "/data"))
+x_trn <- as.data.table(mnist$train$images)
+y_trn <- as.factor(mnist$train$labels)
+x_tst <- as.data.table(mnist$test$images)
+y_tst <- as.factor(mnist$test$labels) 
+```
+
+```{r}
+set.seed(2025)
+rf <- ranger(x = x_trn, y = y_trn, classification = TRUE, num.threads = 7,
+             num.trees = 500, min.node.size = 30)
+```
+
+```{r}
+set.seed(1080)
+n_trn <- nrow(x_trn)
+trn_idx <- sample(n_trn, n_trn/10)
+n_tst <- nrow(x_tst)
+tst_idx <- sample(n_tst, n_tst/5)
+emap <- eigenmap(rf, x_trn[trn_idx, ], k = 20)
+new_z <- predict.eigenmap(emap, rf, x_tst[1:3, ])
+```
+
+```{r}
+sparse = TRUE
+m = nrow(new_z)
+  L_hat <- new_z %*% diag(sqrt(emap$lambda)) %*% t(emap$v) 
+  L_hat[L_hat < 0] <- 0
+  L_hat <- as(L_hat, 'sparseMatrix')
+  d_old <- 1 / emap$d # These are now square root of node degrees
+  A_hat <- sapply(seq_len(nrow(new_z)), function(i) {
+    L_hat[i, ] * d_old # Row-wise
+  })
+  d_hat <- colSums(A_hat)
+  A_hat <- sapply(seq_len(nrow(A_hat)), function(i) {
+    A_hat[i, ] * d_hat # Column-wise
+  })
+  A_hat[A_hat > rf$num.trees] <- rf$num.trees
+  if (isTRUE(sparse)) {
+    for (i in seq_len(m)) {
+      thresh <- quantile(A_hat[i, ], emap$sparsity, names = FALSE)
+      flag <- A_hat[i, ] < thresh
+      A_hat[i, ][flag] <- 0
+    }
+  }
+  A_hat <- as(A_hat, 'sparseMatrix')
+```
+```{r}
+matrices <- make_adj(rf, x_trn[trn_idx, ], x_tst[1:3, ])
+adj <- t(matrices$adj_matrix)
+```
+
+
+```{r}
+decode <- function(
+    z, 
+    rf,
+    emap,
+    sparse = TRUE,
+    num_trees = NULL,
+    exclusive = FALSE,
+    max_mem = 4,
+    round = TRUE,
+    parallel = TRUE) {
+  
+  # Preliminaries, metadata
+  m <- nrow(z)
+  n <- nrow(emap$leafIDs)
+  d <- emap$meta$metadata[, .N]
+  colnames_x <- emap$meta$metadata$variable
+  factor_cols <- emap$meta$metadata$fctr
+  factor_names <- emap$meta$metadata[fctr == TRUE, variable]
+  lvls <- emap$meta$levels
+  input_class <- emap$meta$input_class
+  keep_vars <- emap$meta$metadata[max > min, variable]
+  d_tmp <- length(keep_vars)
+  
+  # Use all trees?
+  if (is.null(num_trees)) {
+    num_trees <- rf$num.trees
+    trees <- seq_len(num_trees)
+  } else if (num_trees > rf$num.trees) {
+    warning('num_trees cannot exceed rf$num.trees. Proceeding with all trees.')
+    num_trees <- rf$num.trees
+    trees <- seq_len(num_trees)
+  } else {
+    trees <- sample(rf$num.trees, num_trees)
+  }
+  
+  A_hat <- z
+  
+  # Bound leaves, potentially write to disk
+  bnd_fn <- function(tree, ram) {
+    num_nodes <- length(rf$forest$split.varIDs[[tree]])
+    lb <- matrix(-Inf, nrow = num_nodes, ncol = d)
+    ub <- matrix(Inf, nrow = num_nodes, ncol = d)
+    for (j in seq_len(d)) {
+      lb[, j] <- emap$meta$metadata$min[j]
+      ub[, j] <- emap$meta$metadata$max[j]
+    }
+    for (i in 1:num_nodes) {
+      left_child <- rf$forest$child.nodeIDs[[tree]][[1]][i] + 1L
+      right_child <- rf$forest$child.nodeIDs[[tree]][[2]][i] + 1L
+      splitvarID <- rf$forest$split.varIDs[[tree]][i] + 1L
+      splitval <- rf$forest$split.value[[tree]][i]
+      if (left_child > 1) {
+        ub[left_child, ] <- ub[right_child, ] <- ub[i, ]
+        lb[left_child, ] <- lb[right_child, ] <- lb[i, ]
+        if (left_child != right_child) {
+          # If no pruned node, split changes bounds
+          ub[left_child, splitvarID] <- lb[right_child, splitvarID] <- splitval
+        }
+      }
+    }
+    leaves <- which(rf$forest$child.nodeIDs[[tree]][[1]] == 0L) 
+    colnames(lb) <- colnames(ub) <- emap$meta$metadata$variable
+    out <- merge(melt(data.table(tree = tree, leaf = leaves, lb[leaves, , drop = FALSE]), 
+                      id.vars = c('tree', 'leaf'), value.name = 'min'), 
+                 melt(data.table(tree = tree, leaf = leaves, ub[leaves, , drop = FALSE]), 
+                      id.vars = c('tree', 'leaf'), value.name = 'max'), 
+                 by = c('tree', 'leaf', 'variable'), sort = FALSE)
+    out <- out[variable %in% keep_vars]
+    if (isTRUE(ram)) {
+      return(out)
+    } else {
+      saveRDS(out, paste0('bnds', tree, '.rds'))
+    }
+  }
+  
+  # Write to disk if table expected to exceed max_mem
+  nl <- sapply(trees, function(b) sum(treeInfo(rf, tree = b)['terminal']))
+  Nl <- sum(nl)
+  bnds_nrow <- Nl * d_tmp
+  estimated_memory <- bnds_nrow * 28 / 1024^3 # Each row = 28 bits, converting to GB
+  ram_flag <- estimated_memory < max_mem
+  if (isTRUE(ram_flag)) {
+    if (isTRUE(parallel)) {
+      bnds <- foreach(tree = trees, .combine = rbind, .packages = 'data.table') %dopar%
+        bnd_fn(tree, ram_flag)
+    } else {
+      bnds <- foreach(tree = trees, .combine = rbind, .packages = 'data.table') %do%
+        bnd_fn(tree, ram_flag)
+    }
+  } else {
+    warning('Writing bound tables to disk. This will use an estimated ',
+            round(estimated_memory, 2), 'GB of space.')
+    if (isTRUE(parallel)) {
+      foreach(tree = trees, .packages = 'data.table') %dopar% bnd_fn(tree, ram_flag)
+    } else {
+      foreach(tree = trees, .packages = 'data.table') %do% bnd_fn(tree, ram_flag)
+    }
+  }
+  cat('Leaves bounded...\n')
+  
+  ### Big loop ###
+  
+  loop <- function(i) {
+    
+    # Who are my neighbors?
+    neighbors <- which(A_hat[i, ] > 0)
+    k <- length(neighbors)
+    y <- A_hat[i, ][neighbors]
+    
+    # Where do they live?
+    df <- emap$leafIDs[neighbors, ] + 1L
+    df <- unique(data.table(
+      'tree' = rep(trees, each = k),
+      'leaf' = as.integer(df)
+    ))
+    df[, n := .N, by = tree]
+    
+    # Function for updating candidate leaves
+    candidate_list <- function(dat, lo, hi, ooc) {
+      if (isTRUE(ram_flag)) {
+        if ('coef' %in% colnames(dat)) {
+          out <- merge(dat[tree %in% ooc, .(tree, leaf, variable, min, max, coef)],
+                       lo, by = 'variable')
+        } else {
+          out <- merge(dat[tree %in% ooc, .(tree, leaf, variable, min, max)], 
+                       lo, by = 'variable')
+        }
+        out <- merge(out, hi, by = 'variable')
+      } else {
+        # REVISIT
+        bnds <- rbindlist(lapply(ooc, function(b) {
+          readRDS(paste0('bnds', b, '.rds'))
+        }))
+        out <- merge(bnds, lo, by = 'variable')
+        out <- merge(out, hi, by = 'variable')
+      }
+      # Feasibility constraint
+      out[, feasible := all(min <= f_max & max >= f_min), by = .(tree, leaf)]
+      out <- out[feasible == TRUE][, feasible := NULL]
+      # Some variables may be uninformative
+      tmp <- unique(out[, .(variable, min, max)])
+      tmp[, n := .N, by = variable]
+      if (tmp[, any(n == 1)]) {
+        out <- out[variable %in% tmp[n > 1, unique(variable)]]
+      }
+      return(out)
+    }
+    
+    # Some trees might be singletons
+    if (df[, any(n == 1)]) {
+      if (df[, all(n == 1)]) {
+        # If all are, we're done
+        assignments <- df[, .(tree, leaf)]
+      } else {
+        # Otherwise, prepare to loop
+        singletons <- df[n == 1, tree]
+        leaf_cnt <- bnds[!tree %in% singletons, length(unique(leaf)), by = tree]
+        leaf_cnt <- rbind(leaf_cnt, data.table('tree' = singletons, 'V1' = 1))
+        cands <- merge(bnds[tree %in% df[n == 1, tree]], df[n == 1, .(tree, leaf)])
+        bnds_lo <- emap$meta$metadata[, .(variable, min)]
+        setnames(bnds_lo, 'min', 'f_min')
+        bnds_hi <- emap$meta$metadata[, .(variable, max)]
+        setnames(bnds_hi, 'max', 'f_max')
+        assignments <- data.table('tree' = integer(), 'leaf' = integer())
+        clique <- integer()
+        ooc <- trees
+        solo_flag <- TRUE
+        while (isTRUE(solo_flag)) {
+          # Find, append singletons
+          singletons <- leaf_cnt[V1 == 1, tree]
+          clique <- append(clique, singletons)
+          ooc <- setdiff(trees, clique)
+          new_assignments <- unique(cands[tree %in% singletons, .(tree, leaf)])
+          assignments <- rbind(assignments, new_assignments)
+          if (assignments[, .N] == num_trees) break
+          # Update the feasible region
+          singleton_lo <- cands[tree %in% singletons, max(min), by = variable]
+          singleton_hi <- cands[tree %in% singletons, min(max), by = variable]
+          bnds_lo[, f_min := pmax(f_min, singleton_lo$V1)]
+          bnds_hi[, f_max := pmin(f_max, singleton_hi$V1)]
+          cands <- candidate_list(cands, bnds_lo, bnds_hi, ooc)
+          # Check for singletons
+          leaf_cnt <- cands[, length(unique(leaf)), by = tree]
+          solo_flag <- any(leaf_cnt$V1 == 1)
+        }
+      }
+    } else {
+      assignments <- data.table('tree' = integer(), 'leaf' = integer())
+      clique <- integer()
+      ooc <- trees
+    }
+    
+    if (assignments[, .N] < num_trees) {
+      
+      # Continuing...
+      df <- df[n > 1]
+      df[, n := NULL]
+      trees_i <- df[, unique(tree)]
+      B <- length(trees_i)
+      
+      # Compute reduced Phi
+      phi <- function(b, sparse = TRUE) {
+        node <- factor(emap$leafIDs[neighbors, b] + 1L)
+        out <- model.matrix(~ 0 + node)
+        if (isTRUE(sparse)) {
+          out <- as(out, 'sparseMatrix') 
+        }
+        return(out)
+      }
+      x <- foreach(tree = trees_i, .combine = cbind, .packages = 'Matrix') %do% 
+        phi(tree, Nl > 2000)
+      
+      # Lasso
+      if (isTRUE(exclusive)) {
+        x <- as.matrix(x)
+        f <- cv.exclusive_lasso(x, y, family = 'gaussian', groups = df$tree, 
+                                standardize = FALSE, intercept = FALSE,
+                                lower.limits = 0, upper.limits = 1)
+      } else {
+        f <- cv.glmnet(x, y, family = 'gaussian',
+                       standardize = FALSE, intercept = FALSE,
+                       lower.limits = 0, upper.limits = 1)
+      }
+      df <- df[order(tree, leaf)]
+      df[, coef := coef(f, s = f$lambda.min)[-1]]
+      
+      # Start with top leaves
+      top_leaves <- df[, leaf[which.max(coef)], by = tree]
+      setnames(top_leaves, 'V1', 'leaf')
+      top_leaves <- merge(top_leaves, df, by = c('tree', 'leaf'))
+      top_leaves <- top_leaves[coef > 0]
+      trees_i <- top_leaves[, tree]
+      B <- length(trees_i)
+      if (!isTRUE(ram_flag)) {
+        bnds <- rbindlist(lapply(top_leaves[, unique(tree)], function(b) {
+          readRDS(paste0('bnds', b, '.rds'))
+        }))
+      }
+      extrema <- merge(top_leaves, bnds[tree %in% top_leaves[, tree]], 
+                       by = c('tree', 'leaf'))
+      
+      # Graph action
+      intersections <- matrix(0L, nrow = B, ncol = B)
+      for (b1 in 2:B) {
+        for (b2 in 1:(b1 - 1)) {
+          if (all(extrema[tree == trees_i[b1], max] >= extrema[tree == trees_i[b2], min] & 
+                  extrema[tree == trees_i[b2], max] >= extrema[tree == trees_i[b1], min])) {
+            intersections[b1, b2] <- 1L
+          }
+        }
+      }
+      intersection_graph <- graph_from_adjacency_matrix(intersections, mode = 'lower')
+      clique <- largest_cliques(intersection_graph)
+      if (length(clique) == B) {
+        stop('The edge set is empty. Consider increasing sample size.')
+      } else if (length(clique) == 1) {
+        clique <- as.integer(clique[[1]])
+      } else {
+        scores <- sapply(clique, function(cl) {
+          top_leaves[tree %in% top_leaves$tree[cl], sum(coef)]
+        })
+        clique <- as.integer(clique[[which.max(scores)]])
+      }
+      clique <- top_leaves[, tree][clique]
+      ooc <- setdiff(trees, clique)
+      assignments <- rbind(assignments, 
+                           unique(extrema[tree %in% clique, .(tree, leaf)]))
+      
+      # Search for consistent assignments till graph is complete
+      if (assignments[, .N] < num_trees) {
+        
+        # Prune the search space to only the feasible leaves
+        bnds_lo <- extrema[tree %in% clique, max(min), by = variable]
+        setnames(bnds_lo, 'V1', 'f_min')
+        bnds_hi <- extrema[tree %in% clique, min(max), by = variable]
+        setnames(bnds_hi, 'V1', 'f_max')
+        cands <- candidate_list(bnds, bnds_lo, bnds_hi, ooc)
+        cands <- merge(cands, df, by = c('tree', 'leaf'), all.x = TRUE)
+        cands[is.na(coef), coef := 0]
+        # In case any variables have been dropped
+        if (cands[, length(unique(variable))] < bnds_lo[, length(unique(variable))]) {
+          now_vars <- cands[, unique(variable)]
+          bnds_lo <- bnds_lo[variable %in% now_vars]
+          bnds_hi <- bnds_hi[variable %in% now_vars]
+        }
+        
+        # Greedy loop through remaining candidates, with special care for singletons
+        while (assignments[, .N] < num_trees) {
+          leaf_cnt <- cands[, length(unique(leaf)), by = tree]
+          solo_flag <- any(leaf_cnt$V1 == 1)
+          if (isTRUE(solo_flag)) {
+            while (isTRUE(solo_flag)) {
+              singletons <- leaf_cnt[V1 == 1, tree]
+              clique <- append(clique, singletons)
+              ooc <- setdiff(trees, clique)
+              new_assignments <- unique(cands[tree %in% singletons, .(tree, leaf)])
+              assignments <- rbind(assignments, new_assignments)
+              if (assignments[, .N] == num_trees) break
+              singleton_lo <- cands[tree %in% singletons, max(min), by = variable]
+              singleton_hi <- cands[tree %in% singletons, min(max), by = variable]
+              bnds_lo[, f_min := pmax(f_min, singleton_lo$V1)]
+              bnds_hi[, f_max := pmin(f_max, singleton_hi$V1)]
+              cands <- candidate_list(cands, bnds_lo, bnds_hi, ooc)
+              # In case any variables have been dropped
+              if (cands[, length(unique(variable))] < bnds_lo[, length(unique(variable))]) {
+                now_vars <- cands[, unique(variable)]
+                bnds_lo <- bnds_lo[variable %in% now_vars]
+                bnds_hi <- bnds_hi[variable %in% now_vars]
+              }
+              leaf_cnt <- cands[, length(unique(leaf)), by = tree]
+              solo_flag <- any(leaf_cnt$V1 == 1)
+            }
+          }
+          if (assignments[, .N] == num_trees) break
+          setorder(cands, -coef) 
+          top_tree <- cands[, head(tree, 1)]
+          top_leaf <- cands[tree == top_tree, head(leaf, 1)]
+          tmp <- cands[tree == top_tree & leaf == top_leaf]
+          clique <- append(clique, top_tree)
+          ooc <- setdiff(trees, clique)
+          new_assignments <- unique(tmp[, .(tree, leaf)])
+          assignments <- rbind(assignments, new_assignments)
+          if (assignments[, .N] == num_trees) break
+          bnds_hi[, f_max := pmin(f_max, tmp$max)]
+          bnds_lo[, f_min := pmax(f_min, tmp$min)]
+          cands <- candidate_list(cands, bnds_lo, bnds_hi, ooc) 
+          # In case any variables have been dropped
+          if (cands[, length(unique(variable))] < bnds_lo[, length(unique(variable))]) {
+            now_vars <- cands[, unique(variable)]
+            bnds_lo <- bnds_lo[variable %in% now_vars]
+            bnds_hi <- bnds_hi[variable %in% now_vars]
+          }
+        }
+      }
+    }
+    assignments[, idx := i]
+    return(assignments[order(tree)])
+  }
+  cat('Greedy leaf approximation underway...\n')
+  pkgs <- c('data.table', 'Matrix', 'glmnet', 
+            'ExclusiveLasso', 'igraph', 'foreach')
+  if (isTRUE(parallel)) {                                             
+    P_hat <- foreach(i = seq_len(m), .combine = rbind, .packages = pkgs,
+                     .export = ('bnds')) %dopar% loop(i)
+  } else {
+    P_hat <- foreach(i = seq_len(m), .combine = rbind, .packages = pkgs) %do% loop(i)
+  }
+  
+  ### Reconstruct data for output ###
+  if (isTRUE(ram_flag)) {
+    bnds <- merge(bnds, unique(P_hat[, .(tree, leaf)]), by = c('tree', 'leaf'), 
+                  sort = FALSE)
+  } else {
+    bnds <- rbindlist(lapply(trees, function(b) {
+      merge(readRDS(paste0('bnds', b, '.rds')), 
+            unique(P_hat[tree == b, .(tree, leaf)]),
+            by = c('tree', 'leaf'), sort = FALSE)
+    }))
+    file.remove(paste0('bnds', b, '.rds'))
+  }
+  df <- merge(bnds, P_hat, by = c('tree', 'leaf'), allow.cartesian = TRUE, 
+              sort = FALSE) 
+  lo <- df[, max(min), by = .(idx, variable)]
+  hi <- df[, min(max), by = .(idx, variable)]
+  setnames(lo, 'V1', 'min')
+  setnames(hi, 'V1', 'max')
+  df <- merge(lo, hi, by = c('idx', 'variable'))
+  
+  # Synthesize
+  df[, new := runif(.N, min, max)]
+  if (any(factor_cols)) {
+    df[variable %in% factor_names, new := round(new)]
+  }
+  if (d > d_tmp) {
+    tmp <- emap$meta$metadata[!variable %in% keep_vars, .(variable, min, max)]
+    tmp <- rbindlist(lapply(seq_len(m), function(i) {
+      tmp$idx <- i
+      return(tmp)
+    }))
+    tmp[, new := max]
+    setcolorder(tmp, c('idx', 'variable', 'min', 'max', 'new'))
+    df <- rbind(df, tmp)
+  }
+  recovered <- dcast(df, idx ~ variable, value.var = 'new')[, idx := NULL]
+  
+  # Fix factor columns
+  if (any(factor_cols)) {
+    for (j in factor_names) {
+      tmp <- lvls[variable == j, .(val, number)]
+      setnames(tmp, 'number', j)
+      recovered <- merge(recovered, tmp, by = j, sort = FALSE)[, c(j) := NULL]
+      setnames(recovered, 'val', j)
+    }
+  }
+  setcolorder(recovered, colnames_x)
+  recovered <- post_x(recovered, emap$meta$metadata, round, input_class, lvls)
+  
+  # Export
+  out <- list(
+    'recovered' = recovered, 
+    'bounds' = df[, .(idx, variable, min, max)],
+    'P_hat' = P_hat
+  )
+  cat('Done!')
+  return(out)
+}
+```
+
+```{r}
+
+results = decode(t(adj), rf, emap, max_mem = 20)
+```
+
+```{r}
+mnist_pt <- matrix(mnist_mat[1, ], nrow=28, ncol=28, byrow=TRUE)
+im <- mnist_pt
+im <- t(apply(im, 2, rev)) 
+image(1:28, 1:28, im, col=gray((0:255)/255), 
+          xaxt='n', main=paste(y_trn[1]))
+```
+
+```{r}
+mnist_pt <- matrix(mnist_mat[2, ], nrow=28, ncol=28, byrow=TRUE)
+im <- mnist_pt
+im <- t(apply(im, 2, rev)) 
+image(1:28, 1:28, im, col=gray((0:255)/255), 
+          xaxt='n', main=paste(y_trn[1]))
+
+```
+
+```{r}
+mnist_pt <- matrix(mnist_mat[3, ], nrow=28, ncol=28, byrow=TRUE)
+im <- mnist_pt
+im <- t(apply(im, 2, rev)) 
+image(1:28, 1:28, im, col=gray((0:255)/255), 
+          xaxt='n', main=paste(y_trn[1]))
+
+```
+

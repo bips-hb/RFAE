@@ -1,0 +1,276 @@
+---
+title: "pca"
+output: html_notebook
+---
+
+```{r}
+library(palmerpenguins, warn.conflicts=FALSE)
+library(dplyr, warn.conflicts=FALSE)
+library(FactoMineR)
+source("../utils.R")
+source("../errors.R")
+```
+
+```{r}
+plpn <- adult <- car <- forestfires <- obesity <- list()
+spambase <- student <- wq <- list()
+
+
+plpn$trn <- read.csv("original_data/plpn_trn.csv", row.names = 1)
+plpn$tst <- read.csv("original_data/plpn_tst.csv", row.names = 1)
+plpn$tst <- prep_x(plpn$tst)
+plpn$trn <- subset(subset(plpn$trn, y == 1), select = -y)
+plpn$trn <- prep_x(plpn$trn) 
+
+car$trn <- read.csv("original_data/car_trn.csv", row.names = 1)
+car$tst <- read.csv("original_data/car_tst.csv", row.names = 1)
+car$tst <- prep_x(car$tst)
+car$trn <- subset(subset(car$trn, y == 1), select = -y)
+car$trn <- prep_x(car$trn) 
+
+forestfires$trn <- read.csv("original_data/forestfires_trn.csv", row.names = 1)
+forestfires$tst <- read.csv("original_data/forestfires_tst.csv", row.names = 1)
+# explicitly fix tst$Y because not all values in trn are in tst -> issue
+forestfires$tst$Y <- as.numeric(forestfires$tst$Y)
+forestfires$tst <- prep_x(forestfires$tst)
+forestfires$trn <- subset(subset(forestfires$trn, y == 1), select = -y)
+forestfires$trn <- prep_x(forestfires$trn) 
+
+obesity$trn <- read.csv("original_data/obesity_trn.csv", row.names = 1)
+obesity$tst <- read.csv("original_data/obesity_tst.csv", row.names = 1)
+obesity$tst <- prep_x(obesity$tst)
+obesity$trn <- subset(subset(obesity$trn, y == 1), select = -y)
+obesity$trn <- prep_x(obesity$trn) 
+
+student$trn <- read.csv("original_data/student_trn.csv", row.names = 1)
+student$tst <- read.csv("original_data/student_tst.csv", row.names = 1)
+student$tst <- prep_x(student$tst)
+student$trn <- subset(subset(student$trn, y == 1), select = -y)
+student$trn <- prep_x(student$trn) 
+
+adult$trn <- read.csv("original_data/adult_trn.csv")
+adult$tst <- read.csv("original_data/adult_tst.csv")
+adult$tst <- prep_x(adult$tst)
+adult$trn <- subset(subset(adult$trn, y == 1), select = -y)
+adult$trn <- prep_x(adult$trn) 
+
+spambase$trn <- read.csv("original_data/spambase_trn.csv", row.names = 1)
+spambase$tst <- read.csv("original_data/spambase_tst.csv", row.names = 1)
+spambase$tst <- prep_x(spambase$tst)
+spambase$trn <- subset(subset(spambase$trn, y == 1), select = -y)
+spambase$trn <- prep_x(spambase$trn) 
+
+wq$trn <- read.csv("original_data/wq_trn.csv", row.names = 1)
+wq$tst <- read.csv("original_data/wq_tst.csv", row.names = 1)
+wq$tst <- prep_x(wq$tst)
+wq$trn <- subset(subset(wq$trn, y == 1), select = -y)
+wq$trn <- prep_x(wq$trn) 
+
+```
+```{r}
+  factor_cols <- sapply(trn, is.factor)
+  factor_names <- colnames(trn)[factor_cols]
+  trn_num <- trn[!colnames(trn) %in% factor_names]
+  lvls <- list()
+  lvl_names <- list()
+  if (any(factor_cols)) {
+    factor_cols <- sapply(trn, is.factor)
+    factor_names <- colnames(trn)[factor_cols]
+    lvls <- list()
+    lvl_names <- list()
+    xenc_colname <- c()
+    for (i in 1:sum(factor_cols)) {
+       factor_data <- trn[[factor_names[i]]]
+       one_hot <- model.matrix(~factor_data - 1)
+       lvl_names[[i]] <- colnames(one_hot) <- paste(factor_names[i], 
+                                                   levels(factor_data), sep = "_")
+       xenc_colname <- append(xenc_colname, lvl_names[[i]])
+       lvls[[factor_names[i]]] <- levels(factor_data)
+       #tst_cat <- cbind(tst_cat[, !colnames(tst_cat) %in% factor_names[i]],
+       #               one_hot)
+     }
+     ncp <- round(ncp_ratio * length(factor_names))
+     mca_res <- MCA(trn[factor_names], ncp = ncp, graph=FALSE)
+     if (ncp == 1) {
+       S <- mca_res$svd$vs[1]
+     } else {
+       S <- diag(mca_res$svd$vs[1:ncp])
+     }
+
+     V <- mca_res$svd$V
+     tst_preds <- predict(mca_res, tst[factor_names])
+     tst_cat <- data.frame(tst_preds$coord %*% S %*% t(V))
+     colnames(tst_cat) <- xenc_colname
+     for (j in 1:sum(factor_cols)) {
+      one_hot <- tst_cat[, lvl_names[[j]]]
+      one_hot <- t(apply(one_hot, 1, function(row) {
+        as.numeric(row == max(row))
+      }))
+      restored_factor <- apply(one_hot, 1, function(row) {
+        lvls[[j]][which(row == 1)]
+      })
+      restored_factor <- factor(restored_factor, levels = lvls[[j]])
+      names(restored_factor) <- factor_names[j]
+      tst_cat[[factor_names[j]]] <- restored_factor
+      tst_cat <- tst_cat[, !colnames(tst_cat) %in% lvl_names[[j]]]
+    }
+  }
+  
+  trn_num <- scale(trn_num)
+  scaling_mean <- attr(trn_num, "scaled:center")  
+  scaling_sd <- attr(trn_num, "scaled:scale")  
+  
+  mu = colMeans(trn_num)
+  Xpca = prcomp(trn_num)
+  
+
+  tst_num <- tst[, !colnames(tst) %in% factor_names]
+  
+  tst_num <- scale(tst_num, scaling_mean, scaling_sd)
+  pca_tst <- predict(Xpca, newdata = tst_num)
+  
+  Xhat = pca_tst[,1:npc] %*% t(Xpca$rotation[,1:npc])
+  # here is mu correct?
+  Xhat = as.data.frame(scale(Xhat, center = -mu, scale = FALSE))
+  
+  Xhat <- sweep(Xhat, 2, scaling_sd, "*") 
+  Xhat <- sweep(Xhat, 2, scaling_mean, "+")  
+
+  Xhat <- cbind(Xhat, tst_enc)
+  Xhat
+  
+new.tst <- tst
+
+for (m1 in seq_len(ncol(tst))) {
+  new.tst[, m1] <- as.factor(paste(colnames(new.tst)[m1],
+                                       as.character(new.tst[, m1]),
+                                       sep = "_"))
+}
+```
+
+
+```{r}
+pmca_ed <- function(trn, tst, npc) {
+  # Find the number of components for each type
+  factor_cols <- sapply(trn, is.factor)
+  num_pc <- round((1 - sum(factor_cols)/ncol(trn)) * npc)
+  factor_pc <- npc - num_pc
+  # If either type of npc is zero, go back to sampling randomly from the marginals/set error to 1.  
+  
+  #MCA
+  factor_names <- colnames(trn)[factor_cols]
+  trn_num <- trn[!colnames(trn) %in% factor_names]
+  if (any(factor_cols)) {
+    # if non zero factor_pc, do MCA, else, sample uniformly/don't sample at all.
+    if (factor_pc > 0) {
+      lvls <- list()
+      lvl_names <- list()
+      xenc_colname <- c()
+      # collect col names to reconstruct
+      for (i in 1:sum(factor_cols)) {
+        factor_data <- trn[[factor_names[i]]]
+        one_hot <- model.matrix(~factor_data - 1)
+        lvl_names[[i]] <- colnames(one_hot) <- paste(factor_names[i], 
+                                                     levels(factor_data), sep = "_")
+        xenc_colname <- append(xenc_colname, lvl_names[[i]])
+        lvls[[factor_names[i]]] <- levels(factor_data)
+        #tst_cat <- cbind(tst_cat[, !colnames(tst_cat) %in% factor_names[i]],
+        #               one_hot)
+      }
+      # find number of components
+      ncp <- round(ncp_ratio * length(factor_names))
+      # fit mca, get S and V to do X = USVt 
+      mca_res <- MCA(trn[factor_names], ncp = factor_pc, graph=FALSE)
+      # formatting issue
+      if (factor_pc == 1) {
+        S <- mca_res$svd$vs[1]
+      } else {
+        S <- diag(mca_res$svd$vs[1:ncp])
+      }
+      # have to copy factorminer MCA encoding scheme
+      V <- mca_res$svd$V
+      X <- tst[factor_names]
+      niveau <- unlist(lapply(X,levels))
+      if (sum(duplicated(niveau))>0){
+        for (j in 1:ncol(X)) {
+          if (sum(niveau %in% levels(X[, j])) != nlevels(X[, j])) levels(X[, j]) <- paste(attributes(X)$names[j], levels(X[, j]), sep = "_")
+        }
+      }
+      # fit MCA onto new test data 
+      tst_preds <- predict(mca_res, X)
+      tst_cat <- data.frame(tst_preds$coord %*% S %*% t(V))
+      colnames(tst_cat) <- xenc_colname
+      # get max probs for each factor and restore factor
+      for (j in 1:sum(factor_cols)) {
+        one_hot <- tst_cat[, lvl_names[[j]]]
+        one_hot <- t(apply(one_hot, 1, function(row) {
+          as.numeric(row == max(row))
+        }))
+        restored_factor <- apply(one_hot, 1, function(row) {
+          lvls[[j]][which(row == 1)]
+        })
+        restored_factor <- factor(restored_factor, levels = lvls[[j]])
+        names(restored_factor) <- factor_names[j]
+        tst_cat[[factor_names[j]]] <- restored_factor
+        tst_cat <- tst_cat[, !colnames(tst_cat) %in% lvl_names[[j]]]
+      }
+    } else {
+      tst_cat <- as.data.frame(lapply(trn[factor_names], sample,
+                                      nrow(tst), replace = TRUE))
+    }
+  }
+  # PCA
+  if (sum(factor_cols) != ncol(trn)) {
+    if (num_pc > 0) {
+      # PCA on training
+      trn_num <- scale(trn_num)
+      scaling_mean <- attr(trn_num, "scaled:center")  
+      scaling_sd <- attr(trn_num, "scaled:scale")  
+      
+      mu = colMeans(trn_num)
+      Xpca = prcomp(trn_num)
+      
+      # scaling test and predict 
+      tst_num <- tst[, !colnames(tst) %in% factor_names]
+      tst_num <- scale(tst_num, scaling_mean, scaling_sd)
+      pca_tst <- predict(Xpca, newdata = tst_num)
+      
+      npc <- round(ncp_ratio * (length(factor_cols) - sum(factor_cols)))
+      Xhat = pca_tst[,1:npc] %*% t(Xpca$rotation[,1:npc])
+      # here is mu correct?
+      Xhat = as.data.frame(scale(Xhat, center = -mu, scale = FALSE))
+      Xhat <- sweep(Xhat, 2, scaling_sd, "*") 
+      Xhat <- sweep(Xhat, 2, scaling_mean, "+")  
+    } else {
+      Xhat <- as.data.frame(lapply(trn_num, sample, 
+                                   nrow(tst), replace=TRUE))
+    }
+  }
+  Xhat <- cbind(Xhat, tst_cat)
+  Xhat
+}
+
+```
+
+```{r}
+plpn$pca <- pmca_ed(plpn$trn, plpn$tst, 0.2)
+car$pca <- pmca_ed(car$trn, car$tst, 0.2)
+obesity$pca <- pca_ed(obesity$trn, obesity$tst)
+forestfires$pca <- pca_ed(forestfires$trn, forestfires$tst)
+student$pca <- pmca_ed(student$trn, student$tst, 0.2)
+wq$pca <- pca_ed(wq$trn, wq$tst)
+spambase$pca <- pca_ed(spambase$trn, spambase$tst)
+adult$pca <- pca_ed(adult$trn, adult$tst)
+```
+
+
+```{r}
+write.csv(plpn$pca_tst, "pca_data/pca_plpn.csv")
+write.csv(car$pca_tst, "pca_data/pca_car.csv")
+write.csv(obesity$pca_tst, "pca_data/pca_obesity.csv")
+write.csv(forestfires$pca_tst, "pca_data/pca_forestfires.csv")
+write.csv(student$pca_tst, "pca_data/pca_student.csv")
+write.csv(wq$pca_tst, "pca_data/pca_wq.csv")
+write.csv(spambase$pca_tst, "pca_data/pca_spambase.csv")
+write.csv(adult$pca_tst, "pca_data/pca_adult.csv")
+```

@@ -1,0 +1,162 @@
+---
+title: "adult script"
+output: html_notebook
+---
+
+```{r}
+source('../eigenmap.R')
+source('../z_to_adj.R')
+source('../adj_to_leaves.R')
+source("../decode.R")
+source("../utils.R")
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table,warn.conflicts=FALSE)
+library(dslabs)
+library(RSpectra)
+cl <- makeCluster(detectCores())
+registerDoParallel(cl)
+#registerDoSEQ()
+```
+
+```{r}
+trn <- read.csv('original_data/adult_trn.csv', row.names = 1)
+tst <- read.csv('original_data/adult_tst.csv', row.names = 1)
+trn <- trn %>% mutate_if(is.character, as.factor)
+tst <- tst %>% mutate_if(is.character, as.factor)
+trn <- trn %>% mutate_if(is.integer, as.numeric)
+tst <- tst %>% mutate_if(is.integer, as.numeric)
+```
+
+```{r}
+rf <- ranger(y ~ ., data = trn, classification = TRUE,
+                   respect.unordered.factors = 'order', 
+             min.node.size = 10,
+             max.depth = 15)
+```
+```{r}
+trn_og <- subset(trn, y == 1)
+set.seed(1080)
+n_trn <- nrow(trn_og)
+trn_idx <- sample(n_trn, n_trn/10)
+n_tst <- nrow(tst)
+tst_idx <- sample(n_tst, n_tst/5)
+```
+
+
+
+```{r}
+emap <- list()
+z <- list()
+result <- list()
+for (i in 1:(ncol(trn) - 1)) {
+  emap[[i]] <- eigenmap(rf, trn_og[trn_idx, ], k=i)
+  z[[i]] <- predict.eigenmap(emap[[i]], rf, tst[tst_idx, ])
+  print(paste0('encoded dz = ', i))
+}
+
+for (i in 1:(ncol(trn) - 1)) {
+  result[[i]] <- decode(z=z[[i]],
+                             rf=rf,
+                             emap=emap[[i]],
+                             max_mem = 20)
+  print(paste0('decoded dz = ', i))
+  write.csv(result[[i]]$recovered, paste0('vary_param/adult_k', i, '.csv'))
+}
+
+results_tree <- list()
+num_trees <- seq(0.1, 1, 0.1)
+for (i in num_trees) {
+  results_tree[[i]] <- decode(z = z[[round(0.2 * ncol(trn))]],
+                              rf = rf,
+                              emap = emap[[round(0.2 * ncol(trn))]],
+                              max_mem = 20,
+                              num_trees = round(i * rf$num.trees))
+  print(paste0('decoded tree propoprtion = ', i))
+  write.csv(results_tree[[i]]$recovered, paste0("vary_param/adult_nt", i, ".csv"))
+}
+
+full_emap <- eigenmap(rf, trn_og, k=round(0.2 * ncol(trn)))
+full_z <- predict.eigenmap(full_emap, rf, tst)
+full <- decode(z = full_z,
+               rf = rf,
+               emap = full_emap,
+               max_mem = 30)
+write.csv(full$recovered, "aurf_data/aurf_adult.csv")
+```
+
+```{r}
+emap_subsample <- list()
+z_subsample <- list()
+result_subsample <- list()
+subsample <- seq(0.05, 1, 0.05)
+for (i in seq_along(subsample)) {
+  sub_idx <- sample(n_trn, n_trn * subsample[i])
+  emap_subsample[[i]] <- eigenmap(rf, trn_og[sub_idx, ], k = round(0.2*ncol(trn)))  
+  # also subsample in test - but this is constant, and can change to original set.
+  z_subsample[[i]] <- predict.eigenmap(emap_subsample[[i]], rf, tst[tst_idx, ])
+  result_subsample[[i]] <- decode(z = z_subsample[[i]],
+                                  rf = rf,
+                                  emap = emap_subsample[[i]],
+                                  max_mem = 20)
+  print(paste0('subsample proportion = ', subsample[i]))
+  write.csv(results_subsample[[i]]$recovered, paste0("vary_param/adult_subsample", i, ".csv"))
+}
+
+```
+
+```{r}
+wq <- list()
+spambase <- list()
+
+wq$trn <- read.csv('original_data/adult_trn.csv', row.names = 1)
+wq$tst <- read.csv('original_data/adult_tst.csv', row.names = 1)
+wq$trn <- trn %>% mutate_if(is.character, as.factor)
+wq$tst <- tst %>% mutate_if(is.character, as.factor)
+wq$trn <- trn %>% mutate_if(is.integer, as.numeric)
+wq$tst <- tst %>% mutate_if(is.integer, as.numeric)
+
+spambase$trn <- read.csv('original_data/adult_trn.csv', row.names = 1)
+spambase$tst <- read.csv('original_data/adult_tst.csv', row.names = 1)
+spambase$trn <- trn %>% mutate_if(is.character, as.factor)
+spambase$tst <- tst %>% mutate_if(is.character, as.factor)
+spambase$trn <- trn %>% mutate_if(is.integer, as.numeric)
+spambase$tst <- tst %>% mutate_if(is.integer, as.numeric)
+```
+
+```{r}
+wq$rf <- ranger(y ~ ., data = wq$trn, classification = TRUE, 
+                respect.unordered.factors = 'order',
+                min.node.size = 5, max.depth = 10)
+
+spambase$rf <- ranger(y ~ ., data = spambase$trn, 
+                      classification = TRUE, respect.unordered.factors = 'order',
+                      min.node.size = 5, max.depth = 10)
+
+wq$emap <- eigenmap(wq$rf, subset(wq$trn, y==1), k=round(0.2*ncol(wq$trn)))
+wq$z <- predict.eigenmap(wq$emap, wq$rf, wq$tst)
+
+spambase$emap <- eigenmap(spambase$rf, subset(spambase$trn, y==1), k=round(0.2*ncol(spambase$trn)))
+spambase$z <- predict.eigenmap(spambase$emap, spambase$rf, spambase$tst)
+```
+
+```{r}
+wq$result <- decode(z = wq$z, 
+                    rf = wq$rf,
+                    emap = wq$emap,
+                    max_mem = 30)
+spambase$result <- decode(z = spambase$z, 
+                    rf = spambase$rf,
+                    emap = spambase$emap,
+                    max_mem = 30)
+```
+
+```{r}
+write.csv(wq$result$recovered, "aurf_data/aurf_wq_new.csv")
+write.csv(spambase$result$recovered, "aurf_data/aurf_spambase_new.csv")
+```

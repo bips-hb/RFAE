@@ -1,0 +1,371 @@
+checking_status,duration,credit_history,purpose,credit_amount,savings_status,employment,installment_commitment,personal_status,other_parties,residence_since,property_magnitude,age,other_payment_plans,housing,existing_credits,job,num_dependents,own_telephone,foreign_worker,class
+>=200,4,existing paid,other,326,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,352,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,378,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,268,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,362,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,378,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,366,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,346,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,263,>=1000,unemployed,1,male div/sep,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,383,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,331,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,295,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,372,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,281,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,380,>=1000,unemployed,1,male div/sep,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,343,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,277,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,305,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,396,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,319,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,389,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,291,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,276,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,387,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,331,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,286,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,341,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,344,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,360,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,396,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,326,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,368,>=1000,>=7,1,male div/sep,guarantor,1,car,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,317,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,366,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,273,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,266,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,391,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,333,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,339,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,302,>=1000,unemployed,1,male mar/wid,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,368,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,391,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,361,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,386,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,348,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,375,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,366,>=1000,>=7,1,male single,guarantor,1,real estate,22,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,368,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,299,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,276,>=1000,>=7,1,male single,guarantor,1,real estate,22,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,392,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,257,>=1000,unemployed,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,373,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,323,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,326,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,276,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,363,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,363,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,390,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,369,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,289,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,302,>=1000,unemployed,1,male mar/wid,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,359,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,276,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,322,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,374,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,255,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,269,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,389,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,326,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,375,>=1000,>=7,1,male single,guarantor,1,real estate,20,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,389,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,381,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,310,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,358,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,266,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,390,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,260,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,285,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,400,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,299,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,355,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,307,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,388,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,359,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,298,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,381,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,325,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,304,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,272,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,350,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,306,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,329,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,297,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,251,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,303,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,341,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,267,>=1000,>=7,1,male single,guarantor,1,real estate,22,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,364,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,345,>=1000,unemployed,1,male div/sep,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,298,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,359,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,397,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,377,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,396,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,372,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,346,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,346,>=1000,unemployed,1,male mar/wid,guarantor,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,371,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,327,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,304,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,260,>=1000,>=7,1,male single,guarantor,1,real estate,22,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,313,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,340,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,255,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,334,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,379,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,394,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,331,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,292,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,267,>=1000,>=7,1,male single,guarantor,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,323,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,260,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,326,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,266,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,369,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,364,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,337,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,275,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,253,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,322,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,347,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,325,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,287,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,316,>=1000,>=7,1,male single,guarantor,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,384,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,339,>=1000,unemployed,1,male div/sep,guarantor,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,346,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,285,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,377,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,367,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,397,>=1000,>=7,1,male single,guarantor,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,274,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,279,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,297,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,351,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,255,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,288,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,274,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,400,>=1000,unemployed,1,male div/sep,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,349,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,328,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,388,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,358,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,363,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,374,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,284,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,354,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,386,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,364,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,378,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,298,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,395,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,306,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,317,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,285,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,274,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,262,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,388,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,280,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,269,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,278,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,341,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,328,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,314,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,263,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,291,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,337,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,292,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,256,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,381,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,275,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,388,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,393,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,327,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,384,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,314,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,337,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,379,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,252,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,374,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,351,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,378,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,343,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,270,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,296,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,398,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,337,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,269,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,258,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,276,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,376,>=1000,>=7,1,male mar/wid,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,270,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,347,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,309,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,349,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,331,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,395,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,313,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,376,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,386,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,258,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,251,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,323,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,339,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,306,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,261,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,287,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,308,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,294,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,299,>=1000,unemployed,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,355,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,280,>=1000,>=7,1,male div/sep,guarantor,1,car,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,397,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,373,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,385,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,264,>=1000,>=7,1,male single,guarantor,1,real estate,22,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,355,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,other,360,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,297,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,263,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,400,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,323,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,272,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,363,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,386,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,301,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,282,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,357,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,265,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,339,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,327,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,329,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,397,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,321,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,359,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,308,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,327,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,298,>=1000,>=7,1,male single,guarantor,1,real estate,20,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,367,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,281,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,382,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,299,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,315,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,255,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,310,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,275,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,308,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,302,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,280,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,critical/other existing credit,repairs,392,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,393,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,376,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,348,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,312,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,392,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,260,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,267,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,358,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,313,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,272,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,331,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,269,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,340,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,370,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,310,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,357,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,303,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,258,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,333,>=1000,>=7,1,male div/sep,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,354,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,387,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,262,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,360,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,385,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,319,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,341,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,280,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,271,>=1000,>=7,1,male single,guarantor,1,real estate,22,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,312,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,363,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,353,>=1000,>=7,1,male single,guarantor,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,291,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,306,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,274,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,261,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,275,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,332,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,399,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,356,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,322,>=1000,>=7,1,male single,guarantor,1,real estate,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,289,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,339,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,327,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,343,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,349,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,351,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,253,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,370,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,327,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,262,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,376,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,278,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,374,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,306,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,365,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,300,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,325,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,397,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,310,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,386,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,336,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,370,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,394,>=1000,>=7,1,male single,guarantor,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,292,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,384,>=1000,>=7,1,male div/sep,guarantor,1,car,21,stores,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,359,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,378,>=1000,unemployed,1,male mar/wid,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,263,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,373,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,340,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,352,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,325,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,303,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,280,>=1000,unemployed,1,male mar/wid,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,292,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,385,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,359,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,358,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,341,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,296,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,326,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,286,>=1000,>=7,1,male single,guarantor,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,repairs,369,>=1000,>=7,1,male single,guarantor,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,295,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,255,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,343,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,393,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,343,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,269,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,repairs,303,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,296,>=1000,unemployed,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,253,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,365,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,repairs,319,>=1000,1<=X<4,1,male mar/wid,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,267,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,256,>=1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,repairs,313,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,277,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,repairs,386,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,378,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,all paid,other,254,>=1000,unemployed,1,male mar/wid,guarantor,1,car,20,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,existing paid,other,282,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,309,>=1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,existing paid,other,351,>=1000,4<=X<7,1,male single,guarantor,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+>=200,4,no credits/all paid,other,382,>=1000,unemployed,1,male div/sep,guarantor,1,car,21,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,337,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,stores,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,279,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,all paid,repairs,289,>=1000,1<=X<4,1,male div/sep,guarantor,1,car,20,bank,for free,1,unskilled resident,1,yes,no,good
+>=200,4,no credits/all paid,other,269,>=1000,unemployed,1,male div/sep,guarantor,1,car,22,bank,for free,1,unskilled resident,1,yes,no,good

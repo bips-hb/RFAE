@@ -1,0 +1,389 @@
+checking_status,duration,credit_history,purpose,credit_amount,savings_status,employment,installment_commitment,personal_status,other_parties,residence_since,property_magnitude,age,other_payment_plans,housing,existing_credits,job,num_dependents,own_telephone,foreign_worker,class
+0<=X<200,6,existing paid,radio/tv,1244,no known savings,unemployed,2,male single,none,1,real estate,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,critical/other existing credit,retraining,748,100<=X<500,unemployed,1,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,4,no credits/all paid,domestic appliance,876,<100,>=7,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,critical/other existing credit,radio/tv,15005,no known savings,1<=X<4,2,male single,none,1,car,20,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+no checking,5,delayed previously,domestic appliance,387,>=1000,unemployed,1,male single,none,1,life insurance,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,furniture/equipment,15414,100<=X<500,1<=X<4,1,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,existing paid,domestic appliance,18033,<100,1<=X<4,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,delayed previously,furniture/equipment,14533,100<=X<500,1<=X<4,1,male single,none,1,car,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+no checking,6,delayed previously,retraining,16579,>=1000,1<=X<4,1,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,no credits/all paid,radio/tv,730,no known savings,>=7,1,male single,none,1,car,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,no credits/all paid,furniture/equipment,15029,no known savings,1<=X<4,1,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,no credits/all paid,retraining,14620,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,retraining,1007,>=1000,unemployed,1,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+no checking,6,existing paid,domestic appliance,1317,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,delayed previously,furniture/equipment,1009,no known savings,unemployed,1,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+no checking,4,existing paid,domestic appliance,1116,no known savings,>=7,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,existing paid,domestic appliance,845,100<=X<500,>=7,2,male single,none,1,life insurance,20,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,16194,no known savings,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,domestic appliance,16573,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,critical/other existing credit,radio/tv,16210,100<=X<500,1<=X<4,1,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,delayed previously,radio/tv,517,no known savings,>=7,1,male single,none,1,real estate,20,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+no checking,5,no credits/all paid,retraining,714,no known savings,>=7,2,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,existing paid,radio/tv,1312,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,5,delayed previously,retraining,1059,no known savings,unemployed,1,male single,none,1,car,22,bank,for free,2,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,domestic appliance,365,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,existing paid,radio/tv,13463,>=1000,1<=X<4,2,male single,none,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,6,existing paid,domestic appliance,5733,>=1000,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,delayed previously,radio/tv,15558,no known savings,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,existing paid,domestic appliance,16841,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,4,existing paid,domestic appliance,15338,no known savings,1<=X<4,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,existing paid,radio/tv,17685,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,existing paid,retraining,855,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,no credits/all paid,retraining,17688,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,delayed previously,retraining,1329,<100,>=7,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,delayed previously,domestic appliance,1009,>=1000,unemployed,2,male single,none,1,life insurance,20,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+no checking,4,delayed previously,domestic appliance,365,>=1000,>=7,1,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,domestic appliance,1289,>=1000,unemployed,1,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,existing paid,domestic appliance,1181,100<=X<500,unemployed,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,6,existing paid,domestic appliance,1089,<100,unemployed,2,male single,none,1,real estate,22,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,existing paid,retraining,13239,100<=X<500,1<=X<4,1,male single,none,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,critical/other existing credit,retraining,13674,no known savings,1<=X<4,1,male single,none,1,car,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,no credits/all paid,furniture/equipment,15663,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,no credits/all paid,retraining,572,no known savings,>=7,2,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,critical/other existing credit,furniture/equipment,17399,>=1000,1<=X<4,1,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,no credits/all paid,radio/tv,2027,<100,unemployed,1,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,1570,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,1342,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,critical/other existing credit,radio/tv,15911,>=1000,1<=X<4,1,male single,none,1,real estate,20,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,delayed previously,radio/tv,1274,no known savings,>=7,1,male single,none,1,car,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+no checking,5,no credits/all paid,domestic appliance,1166,100<=X<500,unemployed,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,768,no known savings,>=7,2,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,4,delayed previously,retraining,13055,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,critical/other existing credit,furniture/equipment,15006,>=1000,1<=X<4,1,male single,none,1,real estate,20,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,15567,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,6,delayed previously,domestic appliance,16477,100<=X<500,1<=X<4,2,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,1154,100<=X<500,unemployed,1,male single,none,1,life insurance,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,existing paid,radio/tv,15857,100<=X<500,1<=X<4,1,male single,none,1,real estate,20,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,no credits/all paid,furniture/equipment,865,<100,>=7,2,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+no checking,5,no credits/all paid,domestic appliance,12851,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,existing paid,furniture/equipment,15695,100<=X<500,1<=X<4,2,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,existing paid,furniture/equipment,1186,>=1000,unemployed,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,no credits/all paid,retraining,949,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,no credits/all paid,furniture/equipment,700,<100,unemployed,2,male single,none,1,real estate,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,domestic appliance,270,100<=X<500,unemployed,2,male single,none,1,life insurance,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,5,existing paid,retraining,1094,<100,>=7,2,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,1131,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,no credits/all paid,furniture/equipment,1427,<100,>=7,2,male single,none,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,delayed previously,domestic appliance,433,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,critical/other existing credit,retraining,273,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,existing paid,furniture/equipment,1042,>=1000,unemployed,2,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,781,no known savings,>=7,2,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,existing paid,domestic appliance,786,100<=X<500,unemployed,1,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,delayed previously,domestic appliance,1875,no known savings,unemployed,1,male single,none,1,real estate,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,existing paid,retraining,15130,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,existing paid,radio/tv,16362,no known savings,1<=X<4,2,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,existing paid,retraining,987,no known savings,>=7,1,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,existing paid,radio/tv,640,no known savings,>=7,2,male single,none,1,real estate,20,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,delayed previously,radio/tv,783,100<=X<500,>=7,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,existing paid,furniture/equipment,704,no known savings,unemployed,1,male single,none,1,car,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,no credits/all paid,domestic appliance,418,>=1000,>=7,1,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,critical/other existing credit,domestic appliance,1096,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,6,existing paid,retraining,595,no known savings,unemployed,2,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,existing paid,radio/tv,380,no known savings,>=7,2,male single,none,1,car,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+no checking,6,no credits/all paid,retraining,18366,100<=X<500,1<=X<4,2,male single,none,1,real estate,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,existing paid,retraining,18288,>=1000,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,critical/other existing credit,radio/tv,10212,no known savings,1<=X<4,1,male single,none,1,real estate,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,no credits/all paid,domestic appliance,14791,100<=X<500,1<=X<4,2,male single,none,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,5,existing paid,domestic appliance,14988,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,retraining,1948,100<=X<500,unemployed,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,delayed previously,furniture/equipment,901,>=1000,>=7,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,critical/other existing credit,furniture/equipment,13051,100<=X<500,1<=X<4,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+no checking,5,existing paid,domestic appliance,1288,no known savings,unemployed,2,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,retraining,970,>=1000,>=7,1,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,4,delayed previously,retraining,666,no known savings,unemployed,1,male single,none,1,life insurance,20,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,4,no credits/all paid,domestic appliance,725,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,furniture/equipment,2342,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+no checking,6,delayed previously,retraining,18376,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,critical/other existing credit,domestic appliance,770,no known savings,unemployed,1,male single,none,1,car,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,existing paid,radio/tv,14056,>=1000,1<=X<4,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+no checking,6,existing paid,retraining,1060,no known savings,unemployed,2,male single,none,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1130,no known savings,>=7,2,male single,none,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,no credits/all paid,domestic appliance,405,no known savings,unemployed,2,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,delayed previously,retraining,465,<100,unemployed,1,male single,none,1,real estate,20,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,critical/other existing credit,radio/tv,1028,>=1000,>=7,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,existing paid,retraining,1256,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,delayed previously,domestic appliance,478,<100,>=7,2,male single,none,1,real estate,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,critical/other existing credit,furniture/equipment,548,>=1000,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,critical/other existing credit,radio/tv,14318,no known savings,1<=X<4,2,male single,none,1,car,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,critical/other existing credit,radio/tv,1320,>=1000,>=7,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,delayed previously,retraining,643,no known savings,unemployed,1,male single,none,1,real estate,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,delayed previously,furniture/equipment,14725,<100,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,existing paid,domestic appliance,17528,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,retraining,981,100<=X<500,>=7,1,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,5,delayed previously,domestic appliance,18275,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,no credits/all paid,domestic appliance,16657,100<=X<500,1<=X<4,1,male single,none,1,car,20,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,delayed previously,domestic appliance,1207,<100,unemployed,2,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,retraining,14867,no known savings,1<=X<4,1,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,989,>=1000,unemployed,2,male single,none,1,life insurance,20,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,existing paid,domestic appliance,1349,>=1000,unemployed,1,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,furniture/equipment,916,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,4,no credits/all paid,retraining,16769,>=1000,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,5,existing paid,retraining,1303,<100,unemployed,1,male single,none,1,car,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,furniture/equipment,536,no known savings,unemployed,2,male single,none,1,car,21,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,existing paid,retraining,748,100<=X<500,unemployed,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,delayed previously,domestic appliance,11104,<100,1<=X<4,1,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,existing paid,domestic appliance,17723,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,delayed previously,domestic appliance,1162,no known savings,>=7,2,male single,none,1,car,20,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+no checking,5,existing paid,retraining,18056,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,critical/other existing credit,retraining,13377,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,delayed previously,radio/tv,16896,no known savings,1<=X<4,2,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,critical/other existing credit,radio/tv,2624,>=1000,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,no credits/all paid,retraining,883,>=1000,>=7,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,1325,>=1000,unemployed,1,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,5,delayed previously,retraining,955,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,6,delayed previously,retraining,13406,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,no credits/all paid,domestic appliance,16813,<100,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+no checking,4,no credits/all paid,domestic appliance,304,100<=X<500,>=7,2,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,existing paid,radio/tv,15168,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+no checking,6,no credits/all paid,domestic appliance,1036,>=1000,unemployed,2,male single,none,1,life insurance,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,5198,100<=X<500,1<=X<4,2,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,delayed previously,radio/tv,15961,100<=X<500,1<=X<4,1,male single,none,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,delayed previously,radio/tv,1605,<100,unemployed,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,existing paid,domestic appliance,8052,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,15806,100<=X<500,1<=X<4,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,domestic appliance,289,100<=X<500,unemployed,1,male single,none,1,life insurance,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,retraining,14349,100<=X<500,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,no credits/all paid,retraining,6987,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,delayed previously,domestic appliance,4422,100<=X<500,1<=X<4,2,male single,none,1,real estate,20,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+no checking,5,delayed previously,domestic appliance,10197,>=1000,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,16173,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,no credits/all paid,furniture/equipment,897,no known savings,unemployed,1,male single,none,1,car,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,furniture/equipment,492,<100,>=7,2,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+no checking,6,existing paid,domestic appliance,314,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,critical/other existing credit,domestic appliance,17133,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,critical/other existing credit,domestic appliance,13616,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,existing paid,retraining,1919,no known savings,1<=X<4,2,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,delayed previously,domestic appliance,262,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,existing paid,domestic appliance,376,>=1000,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,delayed previously,retraining,12649,100<=X<500,1<=X<4,1,male single,none,1,car,21,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,delayed previously,domestic appliance,14023,>=1000,1<=X<4,1,male single,none,1,car,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1113,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,delayed previously,radio/tv,717,no known savings,>=7,2,male single,none,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+no checking,5,delayed previously,domestic appliance,879,<100,unemployed,2,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+no checking,6,no credits/all paid,retraining,319,no known savings,unemployed,2,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,critical/other existing credit,domestic appliance,16663,<100,1<=X<4,1,male single,none,1,car,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,no credits/all paid,retraining,963,<100,>=7,1,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,1,yes,no,good
+no checking,4,no credits/all paid,domestic appliance,15429,>=1000,1<=X<4,1,male single,none,1,real estate,20,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1040,no known savings,>=7,2,male single,none,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,delayed previously,retraining,457,100<=X<500,>=7,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,existing paid,retraining,492,no known savings,>=7,2,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,no credits/all paid,domestic appliance,17715,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,4,no credits/all paid,domestic appliance,17442,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,critical/other existing credit,retraining,1054,100<=X<500,>=7,1,male single,none,1,life insurance,20,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,6,existing paid,retraining,15746,no known savings,1<=X<4,1,male single,none,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,delayed previously,domestic appliance,16217,>=1000,1<=X<4,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,delayed previously,furniture/equipment,14123,100<=X<500,1<=X<4,1,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,delayed previously,radio/tv,1097,>=1000,unemployed,1,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+no checking,5,no credits/all paid,retraining,1054,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,6,existing paid,retraining,534,>=1000,unemployed,2,male single,none,1,life insurance,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,domestic appliance,14580,>=1000,1<=X<4,1,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+no checking,6,no credits/all paid,domestic appliance,15396,>=1000,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,existing paid,retraining,391,no known savings,unemployed,2,male single,none,1,real estate,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+no checking,5,delayed previously,retraining,724,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,critical/other existing credit,retraining,1249,>=1000,unemployed,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,existing paid,furniture/equipment,15804,>=1000,1<=X<4,1,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,existing paid,retraining,15137,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,existing paid,domestic appliance,16617,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+no checking,5,no credits/all paid,domestic appliance,1055,100<=X<500,unemployed,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,delayed previously,retraining,14479,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,domestic appliance,16563,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,delayed previously,retraining,18277,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,no credits/all paid,domestic appliance,284,>=1000,unemployed,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,no credits/all paid,radio/tv,885,no known savings,>=7,1,male single,none,1,car,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,no credits/all paid,domestic appliance,1044,>=1000,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,4,existing paid,domestic appliance,17852,no known savings,1<=X<4,2,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,existing paid,furniture/equipment,16971,100<=X<500,1<=X<4,2,male single,none,1,car,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,6,delayed previously,domestic appliance,566,<100,>=7,2,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1046,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,retraining,704,100<=X<500,>=7,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,5,no credits/all paid,retraining,1197,>=1000,>=7,1,male single,none,1,life insurance,20,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,delayed previously,radio/tv,608,<100,unemployed,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,existing paid,radio/tv,16318,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,critical/other existing credit,domestic appliance,833,no known savings,unemployed,1,male single,none,1,real estate,22,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+no checking,6,no credits/all paid,domestic appliance,1371,>=1000,unemployed,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,existing paid,retraining,15767,>=1000,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,existing paid,retraining,12711,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,4,no credits/all paid,domestic appliance,505,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,6,delayed previously,domestic appliance,14368,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,delayed previously,furniture/equipment,18394,<100,1<=X<4,1,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,existing paid,retraining,11646,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,no credits/all paid,retraining,17110,no known savings,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,4,no credits/all paid,retraining,1239,>=1000,>=7,2,male single,none,1,life insurance,20,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,5,no credits/all paid,retraining,14063,no known savings,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,delayed previously,domestic appliance,13219,100<=X<500,1<=X<4,1,male single,none,1,real estate,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,1023,100<=X<500,>=7,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,no credits/all paid,furniture/equipment,18327,>=1000,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,delayed previously,domestic appliance,827,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,domestic appliance,556,no known savings,unemployed,1,male single,none,1,real estate,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,retraining,940,100<=X<500,>=7,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,existing paid,radio/tv,13274,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,existing paid,domestic appliance,440,<100,>=7,1,male single,none,1,car,21,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+no checking,5,delayed previously,retraining,504,100<=X<500,unemployed,2,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,no credits/all paid,domestic appliance,620,no known savings,unemployed,1,male single,none,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,no credits/all paid,domestic appliance,14956,>=1000,1<=X<4,1,male single,none,1,real estate,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,delayed previously,domestic appliance,1015,>=1000,>=7,1,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,delayed previously,domestic appliance,16606,<100,1<=X<4,1,male single,none,1,real estate,22,bank,for free,2,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,1127,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,existing paid,domestic appliance,983,<100,>=7,2,male single,none,1,car,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,delayed previously,retraining,18269,>=1000,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,critical/other existing credit,radio/tv,13162,100<=X<500,1<=X<4,1,male single,none,1,car,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,existing paid,retraining,15524,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,delayed previously,domestic appliance,772,no known savings,>=7,2,male single,none,1,car,20,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,delayed previously,domestic appliance,1367,100<=X<500,>=7,1,male single,none,1,life insurance,20,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,15871,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,5,delayed previously,domestic appliance,15790,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,existing paid,retraining,14482,no known savings,1<=X<4,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,delayed previously,retraining,13177,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,retraining,13386,no known savings,1<=X<4,1,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,retraining,12659,100<=X<500,1<=X<4,2,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,delayed previously,furniture/equipment,849,<100,unemployed,2,male single,none,1,car,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,retraining,2101,100<=X<500,>=7,2,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,12937,no known savings,1<=X<4,2,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,5,existing paid,domestic appliance,13167,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,existing paid,radio/tv,14914,no known savings,1<=X<4,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,existing paid,retraining,1015,<100,>=7,1,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,existing paid,retraining,264,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,delayed previously,retraining,15173,<100,1<=X<4,1,male single,none,1,car,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,no credits/all paid,domestic appliance,697,no known savings,>=7,2,male single,none,1,life insurance,20,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,4,existing paid,domestic appliance,883,100<=X<500,>=7,1,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,domestic appliance,13779,>=1000,1<=X<4,1,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+0<=X<200,4,delayed previously,furniture/equipment,16317,>=1000,1<=X<4,2,male single,none,1,car,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,existing paid,domestic appliance,595,<100,>=7,1,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,radio/tv,17667,no known savings,1<=X<4,1,male single,none,1,car,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,domestic appliance,1975,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,no credits/all paid,radio/tv,13302,100<=X<500,1<=X<4,1,male single,none,1,real estate,20,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+no checking,5,no credits/all paid,domestic appliance,14748,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,delayed previously,retraining,17148,<100,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,4,existing paid,retraining,347,no known savings,>=7,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,no credits/all paid,radio/tv,2395,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,critical/other existing credit,retraining,1058,<100,unemployed,1,male single,none,1,car,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,18179,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,existing paid,furniture/equipment,723,no known savings,unemployed,2,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,5,existing paid,domestic appliance,669,>=1000,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,16776,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,critical/other existing credit,domestic appliance,14783,<100,1<=X<4,1,male single,none,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,delayed previously,domestic appliance,1384,no known savings,>=7,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,existing paid,retraining,6552,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,retraining,716,100<=X<500,unemployed,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,918,>=1000,unemployed,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,no credits/all paid,radio/tv,16573,100<=X<500,1<=X<4,1,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,no credits/all paid,radio/tv,15500,100<=X<500,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,delayed previously,retraining,614,>=1000,unemployed,2,male single,none,1,life insurance,20,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,4,delayed previously,retraining,16884,<100,1<=X<4,2,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,existing paid,furniture/equipment,1235,>=1000,>=7,2,male single,none,1,life insurance,20,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,existing paid,radio/tv,15093,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+no checking,4,delayed previously,retraining,1163,<100,>=7,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,6,existing paid,retraining,16728,<100,1<=X<4,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,existing paid,domestic appliance,1323,100<=X<500,>=7,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,existing paid,domestic appliance,16601,>=1000,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,existing paid,domestic appliance,17765,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,delayed previously,retraining,1066,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,498,<100,>=7,2,male single,none,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+no checking,6,no credits/all paid,retraining,15436,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,no credits/all paid,retraining,921,>=1000,unemployed,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,delayed previously,radio/tv,983,no known savings,unemployed,1,male single,none,1,car,21,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+no checking,6,existing paid,domestic appliance,17292,no known savings,1<=X<4,2,male single,none,1,car,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,domestic appliance,459,<100,unemployed,1,male single,none,1,real estate,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,no credits/all paid,retraining,16935,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,delayed previously,retraining,1288,no known savings,>=7,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,5,delayed previously,retraining,925,100<=X<500,>=7,2,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,existing paid,retraining,758,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,6,existing paid,domestic appliance,1027,no known savings,unemployed,1,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+no checking,4,existing paid,domestic appliance,335,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,1262,no known savings,>=7,1,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,domestic appliance,16066,<100,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,313,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,999,>=1000,>=7,1,male single,none,1,life insurance,20,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,5,delayed previously,retraining,765,<100,unemployed,1,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,316,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,delayed previously,retraining,12796,>=1000,1<=X<4,2,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,1326,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,275,no known savings,>=7,1,male single,none,1,real estate,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,4,existing paid,domestic appliance,12622,<100,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,delayed previously,retraining,13318,100<=X<500,1<=X<4,2,male single,none,1,real estate,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,no credits/all paid,furniture/equipment,16614,<100,1<=X<4,2,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,4,existing paid,retraining,435,no known savings,>=7,1,male single,none,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,existing paid,retraining,15818,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,5,no credits/all paid,domestic appliance,14512,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,radio/tv,440,<100,>=7,2,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,existing paid,retraining,14448,>=1000,1<=X<4,1,male single,none,1,real estate,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,critical/other existing credit,retraining,17605,<100,1<=X<4,2,male single,none,1,car,22,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,critical/other existing credit,radio/tv,1322,>=1000,unemployed,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,delayed previously,domestic appliance,14567,100<=X<500,1<=X<4,2,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,6,existing paid,domestic appliance,819,<100,>=7,1,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,retraining,17708,no known savings,1<=X<4,2,male single,none,1,real estate,20,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,delayed previously,retraining,360,>=1000,unemployed,1,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,no credits/all paid,retraining,14362,>=1000,1<=X<4,1,male single,none,1,car,21,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,domestic appliance,267,<100,>=7,2,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,delayed previously,retraining,461,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,domestic appliance,753,>=1000,>=7,2,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,delayed previously,furniture/equipment,15427,>=1000,1<=X<4,1,male single,none,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,critical/other existing credit,furniture/equipment,14284,no known savings,1<=X<4,1,male single,none,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,delayed previously,retraining,3658,>=1000,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,delayed previously,furniture/equipment,15971,no known savings,1<=X<4,2,male single,none,1,real estate,21,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,delayed previously,domestic appliance,1198,no known savings,>=7,2,male single,none,1,car,20,bank,for free,3,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,delayed previously,radio/tv,13553,>=1000,1<=X<4,2,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,4,existing paid,radio/tv,1061,<100,unemployed,1,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,595,<100,unemployed,1,male single,none,1,real estate,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,critical/other existing credit,furniture/equipment,17929,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,no credits/all paid,domestic appliance,297,<100,unemployed,1,male single,none,1,car,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,788,100<=X<500,>=7,1,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,no credits/all paid,furniture/equipment,16742,100<=X<500,1<=X<4,2,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,critical/other existing credit,domestic appliance,1390,100<=X<500,unemployed,1,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,5,delayed previously,radio/tv,17831,>=1000,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,13668,no known savings,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,no credits/all paid,domestic appliance,16410,no known savings,1<=X<4,2,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,existing paid,radio/tv,1245,<100,unemployed,2,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,no credits/all paid,domestic appliance,17180,>=1000,1<=X<4,1,male single,none,1,real estate,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,5,no credits/all paid,retraining,802,<100,>=7,1,male single,none,1,car,21,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,4,existing paid,domestic appliance,397,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,4,critical/other existing credit,retraining,15504,no known savings,1<=X<4,2,male single,none,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,5,delayed previously,domestic appliance,1068,<100,unemployed,1,male single,none,1,real estate,20,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,good
+no checking,5,no credits/all paid,retraining,1092,100<=X<500,unemployed,1,male single,none,1,life insurance,22,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,retraining,385,no known savings,>=7,1,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,delayed previously,furniture/equipment,11499,100<=X<500,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,critical/other existing credit,furniture/equipment,548,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,2,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,4,critical/other existing credit,radio/tv,14659,<100,1<=X<4,1,male single,none,1,real estate,22,bank,for free,2,unemp/unskilled non res,2,yes,no,good
+0<=X<200,6,critical/other existing credit,retraining,15142,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+no checking,4,existing paid,retraining,1481,no known savings,unemployed,1,male single,none,1,real estate,20,bank,for free,2,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,delayed previously,furniture/equipment,17336,no known savings,1<=X<4,1,male single,none,1,real estate,20,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,existing paid,retraining,5478,>=1000,1<=X<4,2,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,delayed previously,retraining,2556,>=1000,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+no checking,5,delayed previously,retraining,17636,<100,1<=X<4,1,male single,none,1,car,20,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,6,delayed previously,domestic appliance,14709,100<=X<500,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+no checking,6,delayed previously,domestic appliance,15052,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,delayed previously,retraining,330,no known savings,>=7,2,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,existing paid,radio/tv,684,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+no checking,5,existing paid,domestic appliance,377,100<=X<500,unemployed,1,male single,none,1,life insurance,22,bank,for free,2,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,existing paid,furniture/equipment,333,100<=X<500,>=7,1,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,delayed previously,retraining,790,100<=X<500,>=7,1,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,existing paid,domestic appliance,405,100<=X<500,unemployed,1,male single,none,1,life insurance,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,4,delayed previously,domestic appliance,524,100<=X<500,>=7,1,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,2,yes,no,bad
+0<=X<200,6,delayed previously,radio/tv,15522,<100,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,4,existing paid,domestic appliance,1113,no known savings,>=7,2,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,good
+0<=X<200,6,critical/other existing credit,radio/tv,15940,100<=X<500,1<=X<4,1,male single,none,1,car,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,existing paid,domestic appliance,854,>=1000,>=7,1,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,5,existing paid,retraining,18356,100<=X<500,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+no checking,4,existing paid,domestic appliance,689,100<=X<500,>=7,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,radio/tv,944,<100,unemployed,2,male single,none,1,car,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+no checking,5,existing paid,domestic appliance,16227,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,delayed previously,retraining,14222,no known savings,1<=X<4,2,male single,none,1,real estate,21,bank,for free,3,unemp/unskilled non res,1,yes,no,bad
+no checking,5,delayed previously,retraining,1150,<100,>=7,1,male single,none,1,car,21,bank,for free,3,unemp/unskilled non res,1,yes,no,good
+0<=X<200,6,no credits/all paid,retraining,17315,>=1000,1<=X<4,1,male single,none,1,car,20,bank,for free,1,unemp/unskilled non res,1,yes,no,good
+no checking,6,delayed previously,retraining,1181,<100,>=7,2,male single,none,1,car,21,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,5,existing paid,retraining,13049,no known savings,1<=X<4,2,male single,none,1,life insurance,22,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,5,existing paid,domestic appliance,1353,no known savings,>=7,1,male single,none,1,life insurance,21,bank,for free,3,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,5,delayed previously,retraining,698,>=1000,>=7,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,1,yes,no,bad
+0<=X<200,6,existing paid,retraining,380,100<=X<500,unemployed,2,male single,none,1,life insurance,22,bank,for free,1,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,no credits/all paid,furniture/equipment,1267,no known savings,unemployed,1,male single,none,1,real estate,20,bank,for free,3,unemp/unskilled non res,2,yes,no,bad
+no checking,5,delayed previously,domestic appliance,14679,no known savings,1<=X<4,2,male single,none,1,life insurance,21,bank,for free,1,unemp/unskilled non res,1,yes,no,bad
+0<=X<200,6,no credits/all paid,domestic appliance,13546,no known savings,1<=X<4,1,male single,none,1,real estate,20,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,good
+0<=X<200,4,no credits/all paid,furniture/equipment,18021,>=1000,1<=X<4,1,male single,none,1,real estate,22,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,5,critical/other existing credit,furniture/equipment,14851,<100,1<=X<4,2,male single,none,1,real estate,22,bank,for free,2,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,4,delayed previously,retraining,391,100<=X<500,unemployed,1,male single,none,1,life insurance,22,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,bad
+0<=X<200,5,critical/other existing credit,radio/tv,14801,<100,1<=X<4,1,male single,none,1,real estate,21,bank,for free,1,unemp/unskilled non res,2,yes,no,good
+0<=X<200,4,delayed previously,retraining,14584,<100,1<=X<4,1,male single,none,1,car,21,bank,for free,3,high qualif/self emp/mgmt,2,yes,no,good
+no checking,5,existing paid,retraining,809,>=1000,unemployed,1,male single,none,1,life insurance,22,bank,for free,2,high qualif/self emp/mgmt,1,yes,no,bad
+no checking,6,no credits/all paid,retraining,16584,no known savings,1<=X<4,2,male single,none,1,life insurance,20,bank,for free,3,unemp/unskilled non res,1,yes,no,bad

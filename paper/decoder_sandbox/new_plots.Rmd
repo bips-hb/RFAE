@@ -1,0 +1,329 @@
+---
+title: "new plots"
+output: html_notebook
+---
+Plots:
+1, dz change: AE, VAE, kPCA, PCA, AURF
+2, subsample change: AURF
+3, k value change: AURF
+4, tree_depth change: AURF
+5, min.bucket change: AURF
+```{r}
+source('../eigenmap.R')
+source("../decode.R")
+source("../utils.R")
+source("../errors.R")
+source("../pca.R")
+library(arf)
+library(glmnet)
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table, warn.conflicts=FALSE)
+library(RANN, include.only = c("nn2"))
+library(caret)
+library(ranger)
+cl <- makeCluster(12)
+registerDoParallel()
+```
+
+```{r}
+trn <- read.csv("original_data/student_trn.csv", row.names = 1)
+tst <- read.csv("original_data/student_tst.csv", row.names = 1)
+trn <- prep_x(trn) 
+tst <- prep_x(tst)
+trn_og <- subset(subset(trn, y == 1), select = -y)
+
+
+rf <- ranger(y ~ ., data = trn,
+              classification = TRUE, respect.unordered.factors ='order')
+
+aurf <- list()
+for (i in seq_len(ncol(trn_og))) {
+  aurf$emap[[i]] <- eigenmap(rf, trn_og, k=i)
+  aurf$z[[i]] <- predict.eigenmap(aurf$emap[[i]], rf, tst)
+  aurf$result[[i]] <- decode(aurf$z[[i]], aurf$emap[[i]], trn_og, k = 3)
+} 
+```
+
+```{r}
+pca <- list()
+ratios <- c(0.2, 0.4, 0.6, 0.8, 1)
+for (i in seq_along(ratios)) {
+  pca[[i]] <- pmca_ed(trn_og, tst, ncp_ratio = ratios[i])
+}
+
+kpca <- list()
+for (i in seq_len(ncol(trn_og))) {
+  kpca[[i]] <- kpca_ed(trn_og, tst, npc = i, k = 3)
+}
+
+
+```
+
+```{r}
+
+vae <- list()
+
+for (i in 1:33) {
+  vae[[i]] <- read.csv(paste0("vary_param/vae_", i, ".csv"))
+}
+```
+
+```{r}
+results_dz <- list()
+for (i in 1:33) {
+  results_dz$pca[[i]] <- reconstruction_error(pca[[i]], tst)
+  results_dz$vae[[i]] <- reconstruction_error(vae[[i]], tst)
+  results_dz$kpca[[i]] <- reconstruction_error(kpca[[i]], tst)
+  results_dz$aurf[[i]] <- reconstruction_error(aurf$result[[i]], tst)
+}
+
+row_names <- c("PCA", 
+               "Variational Autoencoder", 
+               "Kernel PCA",
+               "Autoencoding Random Forest")
+dz_num <- data.frame(row.names = row_names)
+dz_cat <- data.frame(row.names = row_names)
+dz <- c(1:33)
+for (k in dz) {
+  num_errors <- c()
+  cat_errors <- c()
+  for (j in names(results_dz)) {
+    #i <- k + 1
+    num_errors <- append(num_errors, results_dz[[j]][[k]]$num_avg)
+    cat_errors <- append(cat_errors, results_dz[[j]][[k]]$cat_avg)
+  }
+  dz_num[[k]] <- num_errors
+  dz_cat[[k]] <- cat_errors
+}
+```
+
+```{r}
+library(ggplot2)
+library(tidyr)
+```
+
+```{r}
+data_long <- data.frame(Method = rownames(dz_num), dz_num, row.names = NULL)
+data_long <- data_long %>%
+  pivot_longer(
+    cols = starts_with("V"),
+    names_to = "dz",
+    values_to = "Value"
+  )
+
+data_long <- data_long %>%
+  mutate(dz = as.numeric(gsub("^V", "", dz)) + 1)
+
+plot <- ggplot(data_long, aes(x = dz/33, y = Value, color = Method, group = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "dz / num_features",  
+    y = "Numeric Error",   
+    color = "Method" 
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), # Rotate x-axis labels
+    text = element_text(size = 11),
+    legend.position = "top"
+  )
+plot
+
+ggsave("dz_num.png", plot = plot, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+data_long <- data.frame(Method = rownames(dz_cat), dz_cat, row.names = NULL)
+data_long <- data_long %>%
+  pivot_longer(
+    cols = starts_with("V"),
+    names_to = "dz",
+    values_to = "Value"
+  )
+
+data_long <- data_long %>%
+  mutate(dz = as.numeric(gsub("^V", "", dz)) + 1)
+
+plot <- ggplot(data_long, aes(x = dz/33, y = Value, color = Method, group = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "dz / num_features",  
+    y = "Categorical Error",   
+    color = "Method" 
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), # Rotate x-axis labels
+    text = element_text(size = 11),
+    legend.position = "top"
+  )
+plot
+
+ggsave("dz_cat.png", plot = plot, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+
+aurf_k <- list()
+rf <- ranger(y ~ ., data = trn,
+              classification = TRUE, respect.unordered.factors ='order')
+
+for (i in seq_len(50)) {
+  aurf_k$emap[[i]] <- eigenmap(rf, trn_og, k=round(ncol(trn_og) * 0.2))
+  aurf_k$z[[i]] <- predict.eigenmap(aurf_k$emap[[i]], rf, tst)
+  aurf_k$result[[i]] <- decode(aurf_k$z[[i]], aurf_k$emap[[i]], trn_og, k = i)
+} 
+
+row_names <- c("Numeric Error", 
+               "Categorical Error")
+results_k <- data.frame(row.names = row_names)
+for (i in seq_len(50)) {
+  error <- reconstruction_error(aurf_k$result[[i]], tst)
+  error <- c(error$num_avg, error$cat_avg)
+  results_k[[i]] <- error
+}
+
+data_long <- data.frame(Method = rownames(results_k), results_k, row.names = NULL)
+data_long <- data_long %>%
+  pivot_longer(
+    cols = starts_with("V"),
+    names_to = "k",
+    values_to = "Value"
+  )
+
+data_long <- data_long %>%
+  mutate(k = as.numeric(gsub("^V", "", k)) + 1)
+
+plot <- ggplot(data_long, aes(x = k, y = Value, color = Method, group = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "k-value",  
+    y = "Error",   
+    color = "Error Type" 
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), # Rotate x-axis labels
+    text = element_text(size = 11),
+    legend.position = "top"
+  )
+plot
+
+ggsave("results_k.png", plot = plot, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+
+aurf_depth <- list()
+
+
+for (i in seq_len(15)) {
+  rf <- ranger(y ~ ., data = trn,
+               max.depth = i,
+              classification = TRUE, respect.unordered.factors ='order')
+  aurf_k$emap[[i]] <- eigenmap(rf, trn_og, k=round(ncol(trn_og) * 0.2))
+  aurf_k$z[[i]] <- predict.eigenmap(aurf_k$emap[[i]], rf, tst)
+  aurf_k$result[[i]] <- decode(aurf_k$z[[i]], aurf_k$emap[[i]], trn_og, k = 3)
+} 
+
+row_names <- c("Numeric Error", 
+               "Categorical Error")
+results_depth <- data.frame(row.names = row_names)
+for (i in seq_len(15)) {
+  error <- reconstruction_error(aurf_k$result[[i]], tst)
+  error <- c(error$num_avg, error$cat_avg)
+  results_depth[[i]] <- error
+}
+
+data_long <- data.frame(Method = rownames(results_depth), results_depth, row.names = NULL)
+data_long <- data_long %>%
+  pivot_longer(
+    cols = starts_with("V"),
+    names_to = "max_depth",
+    values_to = "Value"
+  )
+
+data_long <- data_long %>%
+  mutate(max_depth = as.numeric(gsub("^V", "", max_depth)) + 1)
+
+plot <- ggplot(data_long, aes(x = max_depth, y = Value, color = Method, group = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "Max Depth",  
+    y = "Error",   
+    color = "Error Type" 
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), # Rotate x-axis labels
+    text = element_text(size = 11),
+    legend.position = "top"
+  )
+plot
+
+ggsave("results_depth.png", plot = plot, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+
+aurf_bucket <- list()
+
+
+for (i in seq_len(15)) {
+  rf <- ranger(y ~ ., data = trn,
+               min.bucket = i,
+              classification = TRUE, respect.unordered.factors ='order')
+  aurf_k$emap[[i]] <- eigenmap(rf, trn_og, k=round(ncol(trn_og) * 0.2))
+  aurf_k$z[[i]] <- predict.eigenmap(aurf_k$emap[[i]], rf, tst)
+  aurf_k$result[[i]] <- decode(aurf_k$z[[i]], aurf_k$emap[[i]], trn_og, k = 3)
+} 
+
+row_names <- c("Numeric Error", 
+               "Categorical Error")
+results_bucket <- data.frame(row.names = row_names)
+for (i in seq_len(15)) {
+  error <- reconstruction_error(aurf_k$result[[i]], tst)
+  error <- c(error$num_avg, error$cat_avg)
+  results_bucket[[i]] <- error
+}
+
+data_long <- data.frame(Method = rownames(results_bucket), results_bucket, row.names = NULL)
+data_long <- data_long %>%
+  pivot_longer(
+    cols = starts_with("V"),
+    names_to = "min_bucket",
+    values_to = "Value"
+  )
+
+data_long <- data_long %>%
+  mutate(min_bucket = as.numeric(gsub("^V", "", min_bucket)) + 1)
+
+plot <- ggplot(data_long, aes(x = min_bucket, y = Value, color = Method, group = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "min bucket",  
+    y = "Error",   
+    color = "Error Type" 
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), # Rotate x-axis labels
+    text = element_text(size = 11),
+    legend.position = "top"
+  )
+plot
+
+ggsave("results_bucket.png", plot = plot, width = 8, height = 6, dpi = 300)
+```

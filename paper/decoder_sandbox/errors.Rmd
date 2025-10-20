@@ -1,0 +1,341 @@
+---
+title: "reconstruction error"
+output: html_notebook
+---
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+library(caret)
+```
+```{r}
+f1_score <- function(y, yhat) {
+  y <- as.factor(y)
+  yhat <- as.factor(yhat)
+  levels(y) <- levels(yhat) <- union(levels(y), levels(yhat))
+  cm <- suppressWarnings(confusionMatrix(yhat, y))
+  
+  if (nlevels(as.factor(y)) > 2) {
+    f1 <- cm$byClass[, "F1"]
+    prevalence <- cm$byClass[, "Prevalence"]
+    f1[is.na(f1)] <- 0
+    
+    weighted_f1 <- sum(f1 * prevalence)
+  } else {
+    weighted_f1 <- cm$byClass["F1"]
+  }
+
+  return(1 - weighted_f1)
+}
+
+reconstruction_error <- function(Xhat, X) {
+  num_error <-  list()
+  cat_error <-  list()
+  for (i in colnames(X)) {
+    if (is.numeric(X[[i]])) {
+      min <- min(X[[i]])
+      max <- max(X[[i]])
+      error <- sqrt(mean((Xhat[[i]] - X[[i]])^2))/(max - min)
+      #error <- 1 - cor(Xhat[[i]], X[[i]]) ^ 2
+      num_error[[i]] <- error
+    }
+    else {
+      #error <- sum(Xhat[[i]] != X[[i]]) / nrow(X)
+      error <- f1_score(X[[i]], Xhat[[i]])
+      cat_error[[i]] <- error
+    }
+  }
+  if (length(num_error)) {
+    num_E = mean(unlist(num_error))
+  } else {
+    num_E = 'No variables'
+  }
+  
+  if (length(cat_error)) {
+    num_C = mean(unlist(cat_error))
+  } else {
+    num_C = 'No variables'
+  }
+  out <- list(num_error = num_error, cat_error = cat_error,
+              num_E = num_E, 
+              num_C = num_C)
+}
+```
+
+```{r}
+  num_error <-  list()
+  cat_error <-  list()
+  for (i in colnames(X)) {
+    if (is.numeric(X[[i]])) {
+      min <- min(X[[i]])
+      max <- max(X[[i]])
+      error <- sqrt(mean((Xhat[[i]] - X[[i]])^2))/(max - min)
+      #error <- 1 - cor(Xhat[[i]], X[[i]]) ^ 2
+      num_error[[i]] <- error
+    }
+    else {
+      #error <- sum(Xhat[[i]] != X[[i]]) / nrow(X)
+      error <- f1_score(X[[i]], Xhat[[i]])
+      cat_error[[i]] <- error
+    }
+  }
+  if (length(num_error)) {
+    num_E = mean(unlist(num_error))
+  } else {
+    num_E = 'No variables'
+  }
+  
+  if (length(cat_error)) {
+    num_C = mean(unlist(cat_error))
+  } else {
+    num_C = 'No variables'
+  }
+  out <- list(num_error = num_error, cat_error = cat_error,
+              num_E = num_E, 
+              num_C = num_C)
+
+```
+
+```{r}
+tst <- list()
+tst$plpn <- read.csv('original_data/plpn_tst.csv', row.names = 1)
+
+tst$car <- read.csv('original_data/car_tst.csv', row.names = 1)
+
+tst$adult <- read.csv('original_data/adult_tst.csv')
+
+tst$obesity <- read.csv('original_data/obesity_tst.csv', row.names = 1)
+
+tst$forestfires <- read.csv('original_data/forestfires_tst.csv', row.names = 1)
+
+tst$student <- read.csv('original_data/student_tst.csv', row.names = 1)
+
+tst$spambase <- read.csv('original_data/spambase_tst.csv', row.names = 1)
+
+tst$wq <- read.csv('original_data/wq_tst.csv', row.names = 1)
+
+```
+
+PCA
+```{r}
+pca <- list()
+pca$plpn <- read.csv('pca_data/pca_plpn.csv', row.names = 1)
+
+pca$car <- read.csv('pca_data/pca_car.csv', row.names = 1)
+
+pca$adult <- read.csv('pca_data/pca_adult.csv', row.names = 1)
+
+pca$obesity <- read.csv('pca_data/pca_obesity.csv', row.names = 1)
+
+pca$forestfires <- read.csv('pca_data/pca_forestfires.csv', row.names = 1)
+
+pca$student <- read.csv('pca_data/pca_student.csv', row.names = 1)
+
+pca$spambase <- read.csv('pca_data/pca_spambase.csv', row.names = 1)
+
+pca$wq <- read.csv('pca_data/pca_wq.csv', row.names = 1)
+
+```
+
+
+```{r}
+ae <- list()
+ae$plpn <- read.csv('ae_data/ae_plpn.csv')
+
+ae$car <- read.csv('ae_data/ae_car.csv')
+
+ae$adult <- read.csv('ae_data/ae_adult.csv')
+
+ae$obesity <- read.csv('ae_data/ae_obesity.csv')
+
+ae$forestfires <- read.csv('ae_data/ae_forestfires.csv')
+
+ae$student <- read.csv('ae_data/ae_student.csv')
+
+ae$spambase <- read.csv('ae_data/ae_spambase.csv')
+
+ae$wq <- read.csv('ae_data/ae_wq.csv')
+
+```
+
+```{r}
+vae <- list()
+vae$plpn <- read.csv('vae_data/vae_plpn.csv')
+
+vae$car <- read.csv('vae_data/vae_car.csv')
+
+vae$adult <- read.csv('vae_data/vae_adult.csv')
+
+vae$obesity <- read.csv('vae_data/vae_obesity.csv')
+
+vae$forestfires <- read.csv('vae_data/vae_forestfires.csv')
+
+vae$student <- read.csv('vae_data/vae_student.csv')
+
+vae$spambase <- read.csv('vae_data/vae_spambase.csv')
+
+vae$wq <- read.csv('vae_data/vae_wq.csv')
+```
+
+```{r}
+ef <- list()
+ef$plpn <- read.csv('eforest_data/ef_plpn.csv')
+
+ef$car <- read.csv('eforest_data/ef_car.csv')
+ef$adult <- read.csv('eforest_data/ef_adult.csv')
+ef$obesity <- read.csv('eforest_data/ef_obesity.csv')
+
+ef$forestfires <- read.csv('eforest_data/ef_forestfires.csv')
+
+ef$student <- read.csv('eforest_data/ef_student.csv')
+
+ef$spambase <- read.csv('eforest_data/ef_spambase.csv')
+
+ef$wq <- read.csv('eforest_data/ef_wq.csv')
+```
+
+```{r}
+aurf <- list()
+aurf$plpn <- read.csv('aurf_data/aurf_plpn_v2.csv', row.names=1)
+
+aurf$car <- read.csv('aurf_data/aurf_car_new.csv', row.names=1)
+
+# aurf$adult <- read.csv('aurf_data/aurf_adult_new.csv', row.names=1)
+
+aurf$obesity <- read.csv('aurf_data/aurf_obesity_new.csv', row.names=1)
+
+aurf$forestfires <- read.csv('aurf_data/aurf_forestfires_v2.csv', row.names=1)
+
+aurf$student <- read.csv('aurf_data/aurf_student_v2.csv', row.names=1)
+
+# aurf$spambase <- read.csv('aurf_data/aurf_spambase_new.csv', row.names=1)
+# aurf$wq <- read.csv('aurf_data/aurf_wq_new.csv', row.names=1)
+```
+
+```{r}
+methods <- list(aurf = aurf, ef = ef, pca = pca, ae = ae, vae = vae)
+results <- list()
+
+for (i in names(methods)) {
+  method <- methods[[i]]
+  results[[i]]$plpn <- reconstruction_error(method$plpn, tst$plpn)
+  results[[i]]$student <- reconstruction_error(method$student, tst$student)
+  results[[i]]$car <- reconstruction_error(method$car, tst$car)
+  results[[i]]$obesity <- reconstruction_error(method$obesity, tst$obesity)
+}
+
+for (i in names(methods)[names(methods) != "ef"]) {
+  method <- methods[[i]]
+  results[[i]]$forestfires <- reconstruction_error(method$forestfires, tst$forestfires)
+}
+
+for (i in names(methods)[names(methods) != "aurf"]) {
+  method <- methods[[i]]
+  results[[i]]$wq <- reconstruction_error(method$wq, tst$wq)
+  results[[i]]$adult <- reconstruction_error(method$adult, tst$adult)
+  results[[i]]$spambase <- reconstruction_error(method$spambase, tst$spambase)
+}
+```
+
+```{r}
+results_dz <- list()
+pca_dz <- list()
+vae_dz <- list()
+aurf_dz <- list()
+for (i in 1:13) {
+  pca_dz[[i]] <- read.csv(paste0("vary_param/pca_", i, ".csv"), row.names=1)
+  vae_dz[[i]] <- read.csv(paste0("vary_param/vae_", i, ".csv"))
+}
+for (i in 2:12) {
+  aurf_dz[[i]] <- readRDS(paste0("vary_param/adult_res_k/adult_res_k=", 
+                                 i, ".rds"))
+}
+
+tst$adult_dz <- readRDS("vary_param/adult_groundtruth.rds")
+```
+
+```{r}
+for (i in 1:13) {
+  results_dz$pca[[i]] <- reconstruction_error(tst$adult, pca_dz[[i]])
+  results_dz$vae[[i]] <- reconstruction_error(tst$adult, vae_dz[[i]])
+}
+
+for (i in 2:12) {
+  results_dz$aurf[[i]] <- reconstruction_error(tst$adult_dz, aurf_dz[[i]])
+}
+```
+
+```{r}
+row_names <- c("AURF", "eForest", "PCA", 
+               "Autoencoder", "Variational Autoencoder")
+results_table <- data.frame(row.names = row_names)
+datasets = c("plpn", "forestfires", "car", 
+             "obesity", "student", "spambase",
+             "wq", "adult")
+for (i in datasets) {
+  errors_numeric <- c()
+  errors_categorical <- c()
+  for (j in names(results)) {
+    if (i %in% names(results[[j]])) {
+      errors_numeric <- append(errors_numeric, results[[j]][[i]]$num_E)
+      errors_categorical <- append(errors_categorical, results[[j]][[i]]$num_C)
+    } else {
+      errors_numeric <- append(errors_numeric, 9999)
+      errors_categorical <- append(errors_categorical, 9999)
+    }
+  }
+  results_table[[paste0(i, "_numeric")]] <- errors_numeric
+  results_table[[paste0(i, "_categorical")]] <- errors_categorical
+}
+
+```
+
+```{r}
+
+row_names <- c("PCA", "Variational Autoencoder", "Autoencoding Random Forest")
+dz_table <- data.frame(row.names = row_names)
+dz <- c(1:11)
+for (k in dz) {
+  overall_errors <- c()
+  for (j in names(results_dz)) {
+    i <- k + 1
+    overall_errors <- append(overall_errors,
+                             mean(unlist(c(results_dz[[j]][[i]]$num_error, 
+                             results_dz[[j]][[i]]$cat_error))))
+  }
+  dz_table[[k]] <- overall_errors
+}
+```
+
+```{r}
+library(ggplot2)
+library(tidyr)
+
+```
+
+```{r}
+dz_table <- data.frame(Method = rownames(dz_table), dz_table, row.names = NULL)
+data_long <- dz_table %>%
+  pivot_longer(
+    cols = starts_with("V"),
+    names_to = "dz",
+    values_to = "Value"
+  )
+
+data_long <- data_long %>%
+  mutate(dz = as.numeric(gsub("^V", "", dz)) + 1)
+
+plot <- ggplot(data_long, aes(x = dz/13, y = Value, color = Method, group = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "dz / num_features",  # Rename the x-axis
+    y = "Error",     # Label the y-axis
+    color = "Method" # Legend title
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), # Rotate x-axis labels
+    text = element_text(size = 14),
+    legend.position = "top"
+  )
+ggsave("dz.png", plot = plot, width = 8, height = 6, dpi = 300)
+```

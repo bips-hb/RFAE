@@ -1,0 +1,49 @@
+Package: RFAE
+Title: Autoencoding Random Forests
+Version: 0.0.1
+Date: 2025-03-31
+Authors@R: 
+    c(person(given = "Binh Duc",
+             family = "Vu",
+             role = c("aut", "cre"),
+             email = "vuducbinh2210@gmail.com",
+             comment = c(ORCID = "0009-0001-4552-5367")),
+      person(given = "Jan",
+             family = "Kapar",
+             role = c("aut"), 
+             comment = c(ORCID = "0009-0000-6408-2840"),
+      person(given = "Marvin N.",
+             family = "Wright",
+             role = c("aut"),
+             comment = c(ORCID = "0000-0002-8542-6291")),       
+      person(given = "David S.",
+             family = "Watson",
+             role = c("aut"),
+             comment = c(ORCID = "0000-0001-9632-2159"))
+))
+Maintainer: Binh Duc Vu <vuducbinh2210@gmail.com>
+Description: Autoencoding random forests (RFAEs) provide a method to autoencode
+    data using random forests, which involves projecting the data to a latent
+    feature space of chosen dimensionality (usually a lower dimension), and then 
+    decoding the latent representations back into the input space. The encoding
+    stage is useful for feature engineering and data visualisation tasks, akin
+    to PCA's usage, and the decoding stage is useful for compression and 
+    denoising tasks. At its core, RFAE is a post-processing pipeline on a 
+    trained random forest model. This means that it can accept any trained RF
+    of ranger object type: RF, URF or ARFs. Because of this, it inherits RFs'
+    robust performance and capacity to seamlessly handle mixed-type tabular 
+    data. For more details, see Vu et al. (2025) <https://arxiv.org/abs/2505.21441>.
+License: GPL (>= 3)
+URL: https://github.com/bips-hb/RFAE
+Imports:
+    ranger,
+    foreach,
+    data.table,
+    stats,
+    arf,
+    glmnet,
+    Matrix,
+    RSpectra
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2 

@@ -1,0 +1,311 @@
+
+```{r}
+library(data.table)
+set.seed(1234)
+data = 'credit'
+full <- fread(paste0('original_data/full/', data, '.csv'
+    ),header=TRUE)
+n_samples <- nrow(full)
+n_bootstraps <- 10L          # Or whatever
+bootstrap_idx <- matrix(     # Doing all the sampling in one go is faster
+  sample(n_samples, size = n_samples * n_bootstraps, replace = TRUE), 
+  nrow = n_samples, ncol = n_bootstraps
+)
+
+fwrite(bootstrap_idx, paste0('original_data/full/bootstrap_', data, '.csv'))
+
+```
+
+```{r}
+churn <- diabetes <- list()
+churn$data <- read.csv("original_data/full/churn_modelling.csv")
+churn$data <- subset(churn$data, select=-c(RowNumber, CustomerId, Surname))
+set.seed(1234)
+
+idx <- sample(nrow(churn$data), nrow(churn$data) * 0.8)
+churn$trn <- churn$data[idx, ]
+churn$tst <- churn$data[-idx, ]
+synth <- as.data.frame(lapply(churn$trn, sample,
+                              nrow(churn$trn) , replace = TRUE))
+churn$trn <- rbind(data.frame(y = 1, churn$trn),
+                  data.frame(y = 0, synth))
+write.csv(churn$trn, 'original_data/churn_trn.csv')
+write.csv(churn$tst, 'original_data/churn_tst.csv')
+
+diabetes$data <- read.csv("original_data/full/diabetes.csv")
+set.seed(2345)
+
+idx <- sample(nrow(diabetes$data), nrow(diabetes$data) * 0.8)
+diabetes$trn <- diabetes$data[idx, ]
+diabetes$tst <- diabetes$data[-idx, ]
+synth <- as.data.frame(lapply(diabetes$trn, sample,
+                              nrow(diabetes$trn) , replace = TRUE))
+diabetes$trn <- rbind(data.frame(y = 1, diabetes$trn),
+                  data.frame(y = 0, synth))
+write.csv(diabetes$trn, 'original_data/diabetes_trn.csv')
+write.csv(diabetes$tst, 'original_data/diabetes_tst.csv')
+
+```
+
+```{r}
+sick <- soybean <- credit <- banknote <- marketing <- list()
+sick$data <- read.csv("original_data/full/sick.csv")
+set.seed(2345)
+
+idx <- sample(nrow(sick$data), nrow(sick$data) * 0.8)
+sick$trn <- sick$data[idx, ]
+sick$tst <- sick$data[-idx, ]
+synth <- as.data.frame(lapply(sick$trn, sample,
+                              nrow(sick$trn) , replace = TRUE))
+sick$trn <- rbind(data.frame(y = 1, sick$trn),
+                  data.frame(y = 0, synth))
+write.csv(sick$trn, 'original_data/sick_trn.csv')
+write.csv(sick$tst, 'original_data/sick_tst.csv')
+
+soybean$data <- read.csv("original_data/full/soybean.csv")
+set.seed(1000)
+
+idx <- sample(nrow(soybean$data), nrow(soybean$data) * 0.8)
+soybean$trn <- soybean$data[idx, ]
+soybean$tst <- soybean$data[-idx, ]
+synth <- as.data.frame(lapply(soybean$trn, sample,
+                              nrow(soybean$trn) , replace = TRUE))
+soybean$trn <- rbind(data.frame(y = 1, soybean$trn),
+                  data.frame(y = 0, synth))
+write.csv(soybean$trn, 'original_data/soybean_trn.csv')
+write.csv(soybean$tst, 'original_data/soybean_tst.csv')
+
+banknote$data <- read.csv("original_data/full/banknote.csv")
+set.seed(1212)
+
+idx <- sample(nrow(banknote$data), nrow(banknote$data) * 0.8)
+banknote$trn <- banknote$data[idx, ]
+banknote$tst <- banknote$data[-idx, ]
+synth <- as.data.frame(lapply(banknote$trn, sample,
+                              nrow(banknote$trn) , replace = TRUE))
+banknote$trn <- rbind(data.frame(y = 1, banknote$trn),
+                  data.frame(y = 0, synth))
+write.csv(banknote$trn, 'original_data/banknote_trn.csv')
+write.csv(banknote$tst, 'original_data/banknote_tst.csv')
+
+marketing$data <- read.csv("original_data/full/marketing.csv")
+set.seed(7777)
+
+idx <- sample(nrow(marketing$data), nrow(marketing$data) * 0.8)
+marketing$trn <- marketing$data[idx, ]
+marketing$tst <- marketing$data[-idx, ]
+synth <- as.data.frame(lapply(marketing$trn, sample,
+                              nrow(marketing$trn) , replace = TRUE))
+marketing$trn <- rbind(data.frame(y = 1, marketing$trn),
+                  data.frame(y = 0, synth))
+write.csv(marketing$trn, 'original_data/marketing_trn.csv')
+write.csv(marketing$tst, 'original_data/marketing_tst.csv')
+
+credit$data <- read.csv("original_data/full/credit.csv")
+set.seed(10000)
+
+idx <- sample(nrow(credit$data), nrow(credit$data) * 0.8)
+credit$trn <- credit$data[idx, ]
+credit$tst <- credit$data[-idx, ]
+synth <- as.data.frame(lapply(credit$trn, sample,
+                              nrow(credit$trn) , replace = TRUE))
+credit$trn <- rbind(data.frame(y = 1, credit$trn),
+                  data.frame(y = 0, synth))
+write.csv(credit$trn, 'original_data/credit_trn.csv')
+write.csv(credit$tst, 'original_data/credit_tst.csv')
+```
+
+```{r}
+abalone <- king <- bc <- hd <- dry_bean <- list()
+abalone$data <- read.csv("original_data/full/abalone.csv")
+set.seed(2000)
+idx <- sample(nrow(abalone$data), nrow(abalone$data) * 0.8)
+abalone$trn <- abalone$data[idx, ]
+abalone$tst <- abalone$data[-idx, ]
+synth <- as.data.frame(lapply(abalone$trn, sample,
+                              nrow(abalone$trn) , replace = TRUE))
+abalone$trn <- rbind(data.frame(y = 1, abalone$trn),
+                  data.frame(y = 0, synth))
+write.csv(abalone$trn, 'original_data/abalone_trn.csv')
+write.csv(abalone$tst, 'original_data/abalone_tst.csv')
+
+king$data <- read.csv("original_data/king.csv")
+set.seed(2048)
+idx <- sample(nrow(king$data), nrow(king$data) * 0.8)
+king$trn <- king$data[idx, ]
+king$tst <- king$data[-idx, ]
+synth <- as.data.frame(lapply(king$trn, sample,
+                              nrow(king$trn) , replace = TRUE))
+king$trn <- rbind(data.frame(y = 1, king$trn),
+                  data.frame(y = 0, synth))
+write.csv(king$trn, 'original_data/king_trn.csv')
+write.csv(king$tst, 'original_data/king_tst.csv')
+
+bc$data <- read.csv("original_data/breast_cancer.csv")
+set.seed(2000)
+idx <- sample(nrow(bc$data), nrow(bc$data) * 0.8)
+bc$trn <- bc$data[idx, ]
+bc$tst <- bc$data[-idx, ]
+synth <- as.data.frame(lapply(bc$trn, sample,
+                              nrow(bc$trn) , replace = TRUE))
+bc$trn <- rbind(data.frame(y = 1, bc$trn),
+                  data.frame(y = 0, synth))
+write.csv(bc$trn, 'original_data/bc_trn.csv')
+write.csv(bc$tst, 'original_data/bc_tst.csv')
+
+hd$data <- read.csv("original_data/heart_disease.csv")
+set.seed(1999)
+idx <- sample(nrow(hd$data), nrow(hd$data) * 0.8)
+hd$trn <- hd$data[idx, ]
+hd$tst <- hd$data[-idx, ]
+synth <- as.data.frame(lapply(hd$trn, sample,
+                              nrow(hd$trn) , replace = TRUE))
+hd$trn <- rbind(data.frame(y = 1, hd$trn),
+                  data.frame(y = 0, synth))
+write.csv(hd$trn, 'original_data/hd_trn.csv')
+write.csv(hd$tst, 'original_data/hd_tst.csv')
+
+dry_bean$data <- read.csv("original_data/dry_bean.csv")
+set.seed(1212)
+idx <- sample(nrow(dry_bean$data), nrow(dry_bean$data) * 0.8)
+dry_bean$trn <- dry_bean$data[idx, ]
+dry_bean$tst <- dry_bean$data[-idx, ]
+synth <- as.data.frame(lapply(dry_bean$trn, sample,
+                              nrow(dry_bean$trn) , replace = TRUE))
+dry_bean$trn <- rbind(data.frame(y = 1, dry_bean$trn),
+                  data.frame(y = 0, synth))
+write.csv(dry_bean$trn, 'original_data/dry_bean_trn.csv')
+write.csv(dry_bean$tst, 'original_data/dry_bean_tst.csv')
+```
+
+```{r}
+# plpn <- adult <- car <- forestfires <- mushroom <- obesity <- list()
+# spambase <- student <- wq <- list()
+# 
+# penguins = penguins[complete.cases(penguins), ]
+# penguins <- penguins %>% mutate_if(is.character, as.numeric)
+# penguins <- penguins %>% mutate_if(is.integer, as.double)
+# plpn$data <- penguins
+# set.seed(1)
+# idx <- sample(nrow(plpn$data), nrow(plpn$data) * 0.8)
+# plpn$trn <- plpn$data[idx, ]
+# plpn$tst <- plpn$data[-idx, ]
+# synth <- as.data.frame(lapply(plpn$trn, sample,
+#                               nrow(plpn$trn) , replace = TRUE))
+# plpn$trn <- rbind(data.frame(y = 1, plpn$trn),
+#                   data.frame(y = 0, synth))
+# 
+# 
+# adult$data <- read.csv("original_data/adult.csv")
+# set.seed(100)
+# idx <- sample(nrow(adult$data), nrow(adult$data) * 0.8)
+# adult$trn <- adult$data[idx, ]
+# adult$tst <- adult$data[-idx, ]
+# synth <- as.data.frame(lapply(adult$trn, sample,
+#                               nrow(adult$trn) , replace = TRUE))
+# adult$trn <- rbind(data.frame(y = 1, adult$trn),
+#                   data.frame(y = 0, synth))
+# 
+# car$data <- read.csv("original_data/car.csv")
+# set.seed(2000)
+# idx <- sample(nrow(car$data), nrow(car$data) * 0.8)
+# car$trn <- car$data[idx, ]
+# car$tst <- car$data[-idx, ]
+# synth <- as.data.frame(lapply(car$trn, sample,
+#                               nrow(car$trn) , replace = TRUE))
+# car$trn <- rbind(data.frame(y = 1, car$trn),
+#                   data.frame(y = 0, synth))
+# 
+# forestfires$data <- read.csv("original_data/forestfires.csv")
+# set.seed(1080)
+# forestfires$data <- forestfires$data %>% mutate_if(is.integer, as.numeric)
+# idx <- sample(nrow(forestfires$data), nrow(forestfires$data) * 0.8)
+# forestfires$trn <- forestfires$data[idx, ]
+# forestfires$tst <- forestfires$data[-idx, ]
+# synth <- as.data.frame(lapply(forestfires$trn, sample,
+#                               nrow(forestfires$trn) , replace = TRUE))
+# forestfires$trn <- rbind(data.frame(y = 1, forestfires$trn),
+#                   data.frame(y = 0, synth))
+# 
+# mushroom$data <- read.csv("original_data/mushroom.csv")
+# set.seed(30025)
+# idx <- sample(nrow(mushroom$data), nrow(mushroom$data) * 0.8)
+# mushroom$trn <- mushroom$data[idx, ]
+# mushroom$tst <- mushroom$data[-idx, ]
+# synth <- as.data.frame(lapply(mushroom$trn, sample,
+#                               nrow(mushroom$trn) , replace = TRUE))
+# mushroom$trn <- rbind(data.frame(y = 1, mushroom$trn),
+#                   data.frame(y = 0, synth))
+# 
+# obesity$data <- read.csv("original_data/obesity.csv")
+# set.seed(9999)
+# idx <- sample(nrow(obesity$data), nrow(obesity$data) * 0.8)
+# obesity$trn <- obesity$data[idx, ]
+# obesity$tst <- obesity$data[-idx, ]
+# synth <- as.data.frame(lapply(obesity$trn, sample,
+#                               nrow(obesity$trn) , replace = TRUE))
+# obesity$trn <- rbind(data.frame(y = 1, obesity$trn),
+#                   data.frame(y = 0, synth))
+# 
+# spambase$data <- read.csv("original_data/spambase.csv")
+# set.seed(1357)
+# idx <- sample(nrow(spambase$data), nrow(spambase$data) * 0.8)
+# spambase$trn <- spambase$data[idx, ]
+# spambase$tst <- spambase$data[-idx, ]
+# synth <- as.data.frame(lapply(spambase$trn, sample,
+#                               nrow(spambase$trn) , replace = TRUE))
+# spambase$trn <- rbind(data.frame(y = 1, spambase$trn),
+#                   data.frame(y = 0, synth))
+# 
+# student$data <- read.csv("original_data/student.csv")
+# set.seed(314)
+# student$data <- student$data %>% mutate_if(is.integer, as.numeric)
+# idx <- sample(nrow(student$data), nrow(student$data) * 0.8)
+# student$trn <- student$data[idx, ]
+# student$tst <- student$data[-idx, ]
+# synth <- as.data.frame(lapply(student$trn, sample,
+#                               nrow(student$trn) , replace = TRUE))
+# student$trn <- rbind(data.frame(y = 1, student$trn),
+#                   data.frame(y = 0, synth))
+# 
+# wq$data <- read.csv("original_data/wine_quality.csv")
+# set.seed(272)
+# idx <- sample(nrow(wq$data), nrow(wq$data) * 0.8)
+# wq$trn <- wq$data[idx, ]
+# wq$tst <- wq$data[-idx, ]
+# synth <- as.data.frame(lapply(wq$trn, sample,
+#                               nrow(wq$trn) , replace = TRUE))
+# wq$trn <- rbind(data.frame(y = 1, wq$trn),
+#                   data.frame(y = 0, synth))
+# 
+
+```
+
+```{r}
+# write.csv(plpn$trn, 'original_data/plpn_trn.csv')
+# write.csv(plpn$tst, 'original_data/plpn_tst.csv')
+# 
+# write.csv(adult$trn, 'original_data/adult_trn.csv')
+# write.csv(adult$tst, 'original_data/adult_tst.csv')
+# 
+# write.csv(car$trn, 'original_data/car_trn.csv')
+# write.csv(car$tst, 'original_data/car_tst.csv')
+# 
+# write.csv(forestfires$trn, 'original_data/forestfires_trn.csv')
+# write.csv(forestfires$tst, 'original_data/forestfires_tst.csv')
+# 
+# write.csv(mushroom$trn, 'original_data/mushroom_trn.csv')
+# write.csv(mushroom$tst, 'original_data/mushroom_tst.csv')
+# 
+# write.csv(obesity$trn, 'original_data/obesity_trn.csv')
+# write.csv(obesity$tst, 'original_data/obesity_tst.csv')
+# 
+# write.csv(spambase$trn, 'original_data/spambase_trn.csv')
+# write.csv(spambase$tst, 'original_data/spambase_tst.csv')
+# 
+# write.csv(student$trn, 'original_data/student_trn.csv')
+# write.csv(student$tst, 'original_data/student_tst.csv')
+# 
+# write.csv(wq$trn, 'original_data/wq_trn.csv')
+# write.csv(wq$tst, 'original_data/wq_tst.csv')
+```

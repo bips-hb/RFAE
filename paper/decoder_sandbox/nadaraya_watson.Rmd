@@ -1,0 +1,279 @@
+---
+title: "nadaraya_watson"
+output: html_notebook
+---
+
+
+0, Load Libraries
+```{r}
+source('../eigenmap.R')
+source('../z_to_adj.R')
+source("../adj_to_leaves.R")
+library(arf)
+library(palmerpenguins)
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(ranger)
+library(dplyr)
+
+registerDoParallel(cores = 8)
+```
+
+1, Load Datasets
+```{r}
+plpn <- adult <- car <- forestfires <- obesity <- list()
+spambase <- student <- wq <- list()
+
+plpn$trn <- read.csv('original_data/plpn_trn.csv', row.names = 1)
+plpn$tst <- read.csv('original_data/plpn_tst.csv', row.names = 1)
+plpn$trn <- plpn$trn %>% mutate_if(is.character, as.factor)
+plpn$tst <- plpn$tst %>% mutate_if(is.character, as.factor)
+plpn$trn <- plpn$trn %>% mutate_if(is.integer, as.numeric)
+plpn$tst <- plpn$tst %>% mutate_if(is.integer, as.numeric)
+plpn$trn_og <- subset(subset(plpn$trn, y == 1), select = -y)
+
+adult$trn <- read.csv('original_data/adult_trn.csv', row.names = 1)
+adult$tst <- read.csv('original_data/adult_tst.csv', row.names = 1)
+adult$trn <- adult$trn %>% mutate_if(is.character, as.factor)
+adult$tst <- adult$tst %>% mutate_if(is.character, as.factor)
+adult$trn <- adult$trn %>% mutate_if(is.integer, as.numeric)
+adult$tst <- adult$tst %>% mutate_if(is.integer, as.numeric)
+adult$trn_og <- subset(subset(adult$trn, y == 1), select = -y)
+
+car$trn <- read.csv('original_data/car_trn.csv', row.names = 1)
+car$tst <- read.csv('original_data/car_tst.csv', row.names = 1)
+car$trn <- car$trn %>% mutate_if(is.character, as.factor)
+car$tst <- car$tst %>% mutate_if(is.character, as.factor)
+car$trn_og <- subset(subset(car$trn, y == 1), select = -y)
+
+forestfires$trn <- read.csv('original_data/forestfires_trn.csv', row.names = 1)
+forestfires$tst <- read.csv('original_data/forestfires_tst.csv', row.names = 1)
+forestfires$trn <- forestfires$trn %>% mutate_if(is.character, as.factor)
+forestfires$tst <- forestfires$tst %>% mutate_if(is.character, as.factor)
+forestfires$trn <- forestfires$trn %>% mutate_if(is.integer, as.numeric)
+forestfires$tst <- forestfires$tst %>% mutate_if(is.integer, as.numeric)
+forestfires$trn_og <- subset(subset(forestfires$trn, y == 1), select = -y)
+
+obesity$trn <- read.csv('original_data/obesity_trn.csv', row.names = 1)
+obesity$tst <- read.csv('original_data/obesity_tst.csv', row.names = 1)
+obesity$trn <- obesity$trn %>% mutate_if(is.character, as.factor)
+obesity$tst <- obesity$tst %>% mutate_if(is.character, as.factor)
+obesity$trn_og <- subset(subset(obesity$trn, y == 1), select = -y)
+
+spambase$trn <- read.csv('original_data/spambase_trn.csv', row.names = 1)
+spambase$tst <- read.csv('original_data/spambase_tst.csv', row.names = 1)
+spambase$trn <- spambase$trn %>% mutate_if(is.character, as.factor)
+spambase$tst <- spambase$tst %>% mutate_if(is.character, as.factor)
+spambase$trn <- spambase$trn %>% mutate_if(is.integer, as.numeric)
+spambase$tst <- spambase$tst %>% mutate_if(is.integer, as.numeric)
+spambase$trn_og <- subset(subset(spambase$trn, y == 1), select = -y)
+
+student$trn <- read.csv('original_data/student_trn.csv', row.names = 1)
+student$tst <- read.csv('original_data/student_tst.csv', row.names = 1)
+student$trn <- student$trn %>% mutate_if(is.character, as.factor)
+student$tst <- student$tst %>% mutate_if(is.character, as.factor)
+student$trn <- student$trn %>% mutate_if(is.integer, as.numeric)
+student$tst <- student$tst %>% mutate_if(is.integer, as.numeric)
+student$trn_og <- subset(subset(student$trn, y == 1), select = -y)
+
+wq$trn <- read.csv('original_data/wq_trn.csv', row.names = 1)
+wq$tst <- read.csv('original_data/wq_tst.csv', row.names = 1)
+wq$trn <- wq$trn %>% mutate_if(is.character, as.factor)
+wq$tst <- wq$tst %>% mutate_if(is.character, as.factor)
+wq$trn <- wq$trn %>% mutate_if(is.integer, as.numeric)
+wq$tst <- wq$tst %>% mutate_if(is.integer, as.numeric)
+wq$trn_og <- subset(subset(wq$trn, y == 1), select = -y)
+```
+
+2, Train model
+- 2 version RF each
+- 2 version ARF each
+
+```{r}
+num_trees = 100
+max_depth = 2
+set.seed(2112)
+for (i in 1:4) {
+  plpn$rf[[i]] <- ranger(species ~., data=plpn$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)
+  car$rf[[i]] <- ranger(class ~., data=car$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  obesity$rf[[i]] <- ranger(NObeyesdad ~., data=obesity$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  student$rf[[i]] <- ranger(G3 ~., data=student$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  spambase$rf[[i]] <- ranger(class ~., data=spambase$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  wq$rf[[i]] <- ranger(quality ~., data=wq$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  forestfires$rf[[i]] <- ranger(area ~., data=forestfires$trn_og, 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  plpn$urf[[i]] <- ranger(y ~., data=plpn$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)
+  car$urf[[i]] <- ranger(y ~., data=car$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  obesity$urf[[i]] <- ranger(y ~., data=obesity$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  student$urf[[i]] <- ranger(y ~., data=student$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  spambase$urf[[i]] <- ranger(y ~., data=spambase$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  wq$urf[[i]] <- ranger(y ~., data=wq$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+  forestfires$urf[[i]] <- ranger(y ~., data=forestfires$trn , 
+               num.trees = num_trees * i, 
+               respect.unordered.factors='order',
+               max.depth = max_depth * i)  
+}
+```
+
+```{r}
+
+for (i in 1:4) {
+  
+  plpn$emap_u[[i]] <- eigenmap(plpn$urf[[i]], subset(plpn$trn, y==1), k=round(0.2*ncol(plpn$trn)))
+  plpn$z_u[[i]] <- predict.eigenmap(plpn$emap_u[[i]], plpn$urf[[i]], plpn$tst)
+  
+  car$emap_u[[i]] <- eigenmap(car$urf[[i]], car$trn, k=round(0.2*ncol(car$trn)))
+  car$z_u[[i]] <- predict.eigenmap(car$emap_u[[i]], car$urf[[i]], car$tst)
+  
+  forestfires$emap_u[[i]] <- eigenmap(forestfires$urf[[i]], 
+                               subset(forestfires$trn, y==1), k=round(0.2*ncol(forestfires$trn)))
+  forestfires$z_u[[i]] <- predict.eigenmap(forestfires$emap_u[[i]], 
+                                    forestfires$urf[[i]], forestfires$tst)
+  
+  obesity$emap_u[[i]] <- eigenmap(obesity$urf[[i]], subset(obesity$trn, y==1), k=round(0.2*ncol(obesity$trn)))
+  obesity$z_u[[i]] <- predict.eigenmap(obesity$emap_u[[i]], obesity$urf[[i]], obesity$tst)
+  
+  spambase$emap_u[[i]] <- eigenmap(spambase$urf[[i]], subset(spambase$trn, y==1), k=round(0.2*ncol(spambase$trn)))
+  spambase$z_u[[i]] <- predict.eigenmap(spambase$emap_u[[i]], spambase$urf[[i]], spambase$tst)
+  
+  student$emap_u[[i]] <- eigenmap(student$urf[[i]], subset(student$trn, y==1), k=round(0.2*ncol(student$trn)))
+  student$z_u[[i]] <- predict.eigenmap(student$emap_u[[i]], student$urf[[i]], student$tst)
+  
+  wq$emap_u[[i]] <- eigenmap(wq$urf[[i]], subset(wq$trn, y==1), k=round(0.2*ncol(wq$trn)))
+  wq$z_u <- predict.eigenmap(wq$emap_u[[i]], wq$urf[[i]], wq$tst)
+  
+  
+  plpn$emap[[i]] <- eigenmap(plpn$rf[[i]], plpn$trn_og[, !names(plpn$trn_og) %in% c('species')], k = 2)
+  plpn$z[[i]] <- predict.eigenmap(plpn$emap[[i]], plpn$rf[[i]], plpn$tst[, !names(plpn$tst) %in% c('species')])
+  
+  car$emap[[i]] <- eigenmap(car$rf[[i]], car$trn_og[, !names(car$trn_og) %in% c('class')], k = 2)
+  car$z[[i]] <- predict.eigenmap(car$emap[[i]], car$rf[[i]], car$tst[, !names(car$tst) %in% c('class')])
+  
+  
+  obesity$emap[[i]] <- eigenmap(obesity$rf[[i]], obesity$trn_og[, !names(obesity$trn_og) %in% c('NObeyesdad')], k = 2)
+  obesity$z[[i]] <- predict.eigenmap(obesity$emap[[i]], obesity$rf[[i]], obesity$tst[, !names(obesity$tst) %in% c('NObeyesdad')])
+  
+  student$emap[[i]] <- eigenmap(student$rf[[i]], student$trn_og[, !names(student$trn_og) %in% c('G3')], k = 2)
+  student$z[[i]] <- predict.eigenmap(student$emap[[i]], student$rf[[i]], student$tst[, !names(student$tst) %in% c('G3')])
+  
+  spambase$emap[[i]] <- eigenmap(spambase$rf[[i]], spambase$trn_og[, !names(spambase$trn_og) %in% c('class')], k = 2)
+  spambase$z[[i]] <- predict.eigenmap(spambase$emap[[i]], spambase$rf[[i]], spambase$tst[, !names(spambase$tst) %in% c('class')])
+  
+  wq$emap[[i]] <- eigenmap(wq$rf[[i]], wq$trn_og[, !names(wq$trn_og) %in% c('quality')], k = 2)
+  wq$z[[i]] <- predict.eigenmap(wq$emap[[i]], wq$rf[[i]], wq$tst[, !names(wq$tst) %in% c('quality')])
+  
+  forestfires$emap[[i]] <- eigenmap(forestfires$rf[[i]], forestfires$trn_og[, !names(forestfires$trn_og) %in% c('area')], k = 2)
+  forestfires$z[[i]] <- predict.eigenmap(forestfires$emap[[i]], 
+                                         forestfires$rf[[i]], 
+                                         forestfires$tst[, !names(forestfires$tst) %in% c('area')])
+}
+dataset = list(plpn, adult, car, obesity, student, spambase, wq, forestfires)
+```
+
+```{r}
+nw_z_data = matrix(data=NA, nrow = 0, ncol = 2)
+nw_Z_data_u = matrix(data = NA, nrow = 0, ncol = 2)
+
+for (k in seq_along(dataset)) {
+  for (i in 1:3) {
+    for (j in (i+1):4) {
+      adj <-  make_adj(dataset[[k]]$rf[[i]], dataset[[k]]$trn, dataset[[k]]$tst)$adj_matrix
+      adj2 <- make_adj(dataset[[k]]$rf[[j]], dataset[[k]]$trn, dataset[[k]]$tst)$adj_matrix
+      adju <- make_adj(dataset[[k]]$rf[[i]], dataset[[k]]$trn, dataset[[k]]$tst)$adj_matrix
+      adju2 <- make_adj(dataset[[k]]$rf[[j]], dataset[[k]]$trn, dataset[[k]]$tst)$adj_matrix
+      
+      adj = t(apply(adj, 1, function(x) x/sum(x)))
+      adj2 = t(apply(adj2, 1, function(x) x/sum(x)))
+      adju = t(apply(adju, 1, function(x) x/sum(x)))
+      adju2 = t(apply(adju2, 1, function(x) x/sum(x)))
+      
+      nw_norm = 0
+      nw_norm_u = 0
+      for(l in 1:nrow(adj)) {
+        nw_dist <- 2^(-1/2) * sum((adj[l, ] - adj2[l, ])^2)
+        nw_dist_u <- 2^(-1/2) * sum((adju[l, ] - adju2[l, ])^2)
+        if (nw_dist > nw_norm) {
+          nw_norm <- nw_dist
+        }
+        if (nw_dist_u > nw_norm_u) {
+          nw_norm_u <- nw_dist_u
+        }
+      }
+      
+      z_norm = 0
+      z_norm_u = 0
+      for (l in 1:nrow(dataset[[k]]$z[[i]])) {
+        z_dist <-  sum((dataset[[k]]$z[[i]][l, ] - dataset[[k]]$z[[j]][l, ])^2)
+        z_dist_u <-  sum((dataset[[k]]$z_u[[i]][l, ] - dataset[[k]]$z_u[[j]][l, ])^2)
+        if (z_dist > z_norm) {
+          z_norm <- z_dist
+        }
+        if (z_dist_u > z_norm_u) {
+          z_norm_u <- z_dist_u
+        }
+      }
+      print(nw_norm)
+      nw_z_data = rbind(nw_z_data, c(nw_norm, z_norm))
+      nw_z_data_u = rbind(nw_z_data, c(nw_norm_u, z_norm_u))
+    }
+  }
+}
+
+```
+
+```{r}
+cor(nw_z_data[, 1], nw_z_data[, 2])
+plot(nw_z_data[, 1], nw_z_data[, 2])
+```
+
+```{r}
+cor(nw_z_data_u[, 1], nw_z_data_u[, 2])
+plot(nw_z_data_u[, 1], nw_z_data_u[, 2])
+```
+
+
+
+

@@ -1,0 +1,172 @@
+---
+title: "new decode demo"
+output: html_notebook
+---
+
+```{r}
+
+source('../eigenmap.R')
+source('../adj_to_leaves.R')
+source("../decode.R")
+source("../utils.R")
+source("../decode_knn.R")
+source("../errors.R")
+library(arf)
+library(glmnet)
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table, warn.conflicts=FALSE)
+library(RANN, include.only = c("nn2"))
+library(caret)
+
+registerDoParallel()
+```
+
+```{r}
+decode_clean <- function(
+    A0,
+    emap,
+    x,
+    k,
+    parallel = TRUE) {
+  
+  # Preliminaries, metadata
+  m <- ncol(A0)
+  n <- nrow(A0)
+  factor_cols <- emap$meta$metadata$fctr
+  x <- as.data.frame(x)
+  
+  # Loop of weighted means
+  A0 <- t(A0)
+  loop <- function(i) {
+    
+    # Who are my neighbors?
+    idx <- order(A0[i, ], decreasing = TRUE)
+    neighbors <- idx[seq_len(k)]
+    x_tmp <- x[neighbors, ]
+    w <- A0[i, ][neighbors]
+    w <- w / sum(w)
+    
+    # Take most likely label or weighted mean of continuous outcomes
+    if (any(factor_cols)) {
+      x_tmp_cat <- x_tmp[, factor_cols, drop = FALSE]
+      out_cat <- t(as.data.frame(sapply(x_tmp_cat, w_max, weights = w)))
+      row.names(out_cat) <- NULL
+    } else {
+      out_cat <- data.table()
+    }
+    if (any(!factor_cols)) {
+      x_tmp_cnt <- as.matrix(x_tmp[, !factor_cols, drop = FALSE])
+      out_cnt <- as.data.frame(t(crossprod(x_tmp_cnt, w)))
+    } else {
+      out_cnt <- data.table()
+    }
+    
+    # Export
+    out <- cbind(out_cat, out_cnt)
+    return(out) 
+    
+  }
+  
+  # Execute in parallel
+  if (isTRUE(parallel)) {
+    out <- foreach(i = seq_len(m), .combine = rbind,
+                   .export = "w_max", 
+                   .packages = "data.table") %dopar% loop(i)
+  } else {
+    out <- foreach(i = seq_len(m), .combine = rbind) %do% loop(i)
+  }
+  colnames(out) <- c(emap$meta$metadata[fctr == TRUE, variable],
+                     emap$meta$metadata[fctr == FALSE, variable])
+  
+  # Polish, export
+  out <- post_x(out, emap$meta)
+  return(out)
+  
+}
+```
+
+```{r}
+# read penguins 
+plpn = list()
+
+plpn$trn <- read.csv("original_data/plpn_trn.csv", row.names = 1)
+plpn$tst <- read.csv("original_data/plpn_tst.csv", row.names = 1)
+#plpn$trn$year <- as.numeric(plpn$trn$year)
+#plpn$tst$year <- as.numeric(plpn$tst$year)
+plpn$trn <- prep_x(plpn$trn) 
+plpn$tst <- prep_x(plpn$tst)
+plpn$trn_og <- subset(subset(plpn$trn, y == 1), select = -y)
+
+# misc arf stuff, not that relevant
+plpn$arf <- adversarial_rf(plpn$trn_og, num_trees = 500)
+plpn$param <- forde(plpn$arf, plpn$trn_og)
+plpn$synth <- forge(plpn$param, nrow(plpn$trn_og))
+
+plpn$trn_new <- rbind(data.frame(y=1, plpn$trn_og), 
+                      data.frame(y=0, plpn$synth))
+
+# rf and tests
+plpn$rf <- ranger(y ~ ., data = plpn$trn, num.trees = 500, min.bucket = 5,
+                  max.depth = 4,
+                  classification = TRUE, respect.unordered.factors ='order')
+
+adj <- make_adj(plpn$rf, plpn$trn_og, plpn$tst)$adj_matrix
+plpn$emap <- eigenmap(plpn$rf, plpn$trn_og, k=2)
+plpn$z <- predict.eigenmap(plpn$emap, plpn$rf, plpn$tst)
+
+plpn$result<- decode(plpn$z, plpn$emap, plpn$trn_og, k = 10)
+plpn$error <-  reconstruction_error(plpn$tst, plpn$result)
+```
+
+```{r}
+obesity <- list()
+obesity$trn <- read.csv('original_data/obesity_trn.csv', row.names = 1)
+obesity$tst <- read.csv('original_data/obesity_tst.csv', row.names = 1)
+obesity$trn <- prep_x(obesity$trn) 
+obesity$tst <- prep_x(obesity$tst)
+
+obesity$rf <- ranger(y ~., data = obesity$trn, 
+                     min.bucket = 5,
+                     classification = TRUE, respect.unordered.factors = 'order',
+                     num.trees = 500)
+
+obesity$trn_og <- subset(subset(obesity$trn, y == 1), select = -y)
+obesity$emap <- eigenmap(obesity$rf, obesity$trn_og, k=round(0.2*ncol(obesity$trn)))
+obesity$z <- predict.eigenmap(obesity$emap, obesity$rf, obesity$tst)
+
+obesity$result <- decode(z = obesity$z,
+                 emap = obesity$emap,
+                 x = obesity$trn_og,
+                 k = 6)
+obesity$error = reconstruction_error(obesity$tst, obesity$result)
+```
+
+```{r}
+car <- list()
+car$trn <- read.csv('original_data/car_trn.csv', row.names = 1)
+car$tst <- read.csv('original_data/car_tst.csv', row.names = 1)
+car$trn <- prep_x(car$trn) 
+car$tst <- prep_x(car$tst)
+
+car$rf <- ranger(y ~., data = car$trn, 
+                     classification = TRUE, respect.unordered.factors = 'order',
+                      max.depth = 6,
+                     num.trees = 200)
+
+car$trn_og <- subset(subset(car$trn, y == 1), select = -y)
+car$emap <- eigenmap(car$rf, car$trn_og, k=round(0.2*ncol(car$trn)))
+car$z <- predict.eigenmap(car$emap, car$rf, car$tst)
+
+car$result <- decode(z = car$z,
+                 emap = car$emap,
+                 x = car$trn_og,
+                 k = 10)
+car$error = reconstruction_error(car$tst, car$result)
+```

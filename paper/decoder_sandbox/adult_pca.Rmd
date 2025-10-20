@@ -1,0 +1,79 @@
+---
+title: "adult pca with varied dz"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+adult <- list()
+adult$trn <- read.csv('original_data/adult_trn.csv')
+adult$trn <- subset(subset(adult$trn, y == 1), select = -y)
+adult$tst <- read.csv('original_data/adult_tst.csv')
+adult$trn <- adult$trn %>% mutate_if(is.character, as.factor)
+adult$tst <- adult$tst %>% mutate_if(is.character, as.factor)
+```
+
+```{r}
+X <- X_enc <- rbind(adult$trn, adult$tst)
+factor_cols <- sapply(X, is.factor)
+factor_names <- colnames(X)[factor_cols]
+lvls = list()
+lvl_names <- list()
+for (i in 1:sum(factor_cols)) {
+  factor_data <- X[[factor_names[i]]]
+  one_hot <- model.matrix(~factor_data - 1)
+  lvl_names[[i]] <- colnames(one_hot) <- paste(factor_names[i], 
+                                               levels(factor_data), sep = "_")
+  
+  lvls[[factor_names[i]]] <- levels(factor_data)
+  X_enc <- cbind(X_enc[, !colnames(X_enc) %in% factor_names[i]],
+                 one_hot)
+  
+}
+adult$trn_enc <- X_enc[1:nrow(adult$trn), ]
+adult$trn_enc<- scale(adult$trn_enc)
+scaling_mean <- attr(adult$trn_enc, "scaled:center")  
+scaling_sd <- attr(adult$trn_enc, "scaled:scale")     
+
+adult$tst_enc <- X_enc[(nrow(adult$trn) + 1):nrow(X_enc), ]
+mu = colMeans(adult$trn_enc)
+Xpca = prcomp(adult$trn_enc)
+
+adult$tst_enc <- scale(adult$tst_enc, scaling_mean, scaling_sd)
+pca_tst <- predict(Xpca, newdata = adult$tst_enc)
+
+for (i in 1:ncol(adult$trn)) {
+
+  npc = i
+  Xhat = pca_tst[,1:npc] %*% t(Xpca$rotation[,1:npc])
+  Xhat = as.data.frame(scale(Xhat, center = -mu, scale = FALSE))
+  
+  Xhat <- sweep(Xhat, 2, scaling_sd, "*")  # Multiply by standard deviation
+  Xhat <- sweep(Xhat, 2, scaling_mean, "+")  # Add the mean
+  for (j in 1:sum(factor_cols)) {
+    one_hot <- Xhat[, lvl_names[[j]]]
+    one_hot <- t(apply(one_hot, 1, function(row) {
+      as.numeric(row == max(row))
+    }))
+    restored_factor <- apply(one_hot, 1, function(row) {
+      lvls[[j]][which(row == 1)]
+    })
+    restored_factor <- factor(restored_factor, levels = lvls[[j]])
+    names(restored_factor) <- factor_names[j]
+    Xhat[[factor_names[j]]] <- restored_factor
+    Xhat <- Xhat[, !colnames(Xhat) %in% lvl_names[[j]]]
+  }
+  adult$pca_tst[[i]] <- Xhat
+}
+
+```
+
+```{r}
+for (i in 1:ncol(adult$trn)) {
+  write.csv(adult$pca_tst[[i]], paste0("vary_param/pca_",
+                                       i, ".csv"))
+}
+```

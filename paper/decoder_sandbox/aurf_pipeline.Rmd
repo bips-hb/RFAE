@@ -1,0 +1,353 @@
+---
+title: "aurf pipeline"
+output: html_notebook
+---
+Autoencoding Forests pipeline. Stages:
+1, Data -> RF Model (ranger or arf)
+2, RF Model -> Laplacian Eigenmap
+3, Laplacian Eigenmap -> RF Embedding
+4, RF Embedding -> Recovered Ajacency Matrix
+5, Recovered Adjacency Matrix -> Recovered Leaves
+6, Recovered Leaves -> Simulated Data
+
+
+```{r}
+source('../eigenmap.R')
+source('../adj_to_leaves.R')
+source("../decode_leaves.R")
+source("../utils.R")
+source("../errors.R")
+library(palmerpenguins, warn.conflicts=FALSE)
+library(arf)
+library(glmnet)
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(RANN)
+library(mgcv)
+library(data.table, warn.conflicts=FALSE)
+
+cl <- makeCluster(12)
+registerDoParallel(cl)
+```
+
+```{r}
+# read penguins 
+plpn = list()
+
+plpn$trn <- read.csv("original_data/plpn_trn.csv", row.names = 1)
+plpn$tst <- read.csv("original_data/plpn_tst.csv", row.names = 1)
+plpn$trn <- prep_x(plpn$trn) 
+plpn$tst <- prep_x(plpn$tst)
+plpn$rf <- ranger(y ~ ., data = plpn$trn, num.trees = 50,
+                  classification = TRUE, respect.unordered.factors ='order')
+plpn$trn_og <- subset(subset(plpn$trn, y == 1), select = -y)
+```
+
+```{r}
+plpn$emap <- eigenmap(plpn$rf, plpn$trn_og, k=round(0.2 * ncol(plpn$trn_og)))
+plpn$z <- predict.eigenmap(plpn$emap, plpn$rf, plpn$tst)
+plpn$result <- decode_leaves(z=plpn$z, rf=plpn$rf, emap=plpn$emap, x=plpn$trn_og, estimate_A0 = TRUE, sparsity = 'adaptive')
+```
+
+```{r}
+z <- plpn$z
+rf <- plpn$rf
+emap <- plpn$emap
+x <- plpn$trn_og
+estimate_A0 <- TRUE
+k <- NULL
+sparsity <- 'global'
+num_trees <- NULL
+exclusive <- FALSE
+max_mem <- 20
+parallel <- TRUE
+
+  if (!is.matrix(z)) {
+    stop('z must be a matrix with one row per sample to decode.')
+  }
+  m <- nrow(z)
+  d_z <- ncol(z)
+  colnames_z <- paste0('z', seq_len(d_z))
+  colnames(z) <- colnames_z
+  n <- nrow(emap$leafIDs)
+  d <- emap$meta$metadata[, .N]
+  colnames_x <- emap$meta$metadata$variable
+  factor_cols <- emap$meta$metadata$fctr
+  factor_names <- emap$meta$metadata[fctr == TRUE, variable]
+  lvls <- emap$meta$levels
+  input_class <- emap$meta$input_class
+  if (ncol(z) != ncol(emap$z)) {
+    stop('ncol(z) must match ncol(emap$z).')
+  }
+  # Training data supplied?
+  if (!is.null(x)) {
+    x <- as.data.frame(x)
+  }
+  
+  if (is.null(num_trees)) {
+    num_trees <- rf$num.trees
+    trees <- seq_len(num_trees)
+  } else if (num_trees > rf$num.trees) {
+    warning('num_trees cannot exceed rf$num.trees. Proceeding with all trees.')
+    num_trees <- rf$num.trees
+    trees <- seq_len(num_trees)
+  } else {
+    trees <- sample(rf$num.trees, num_trees)
+  }
+    
+  if (is.null(k)) {
+    k <- rowSums(emap$A != 0)
+    if (sparsity == 'global') {
+      max_k <- round(mean(k))
+      k_hat <- rep(max_k, m)
+    } else {
+      df <- data.table(k, emap$z)
+      setnames(df, paste0('V', seq_len(d_z)), colnames_z)
+      spline_terms <- paste0('s(', colnames_z, ', bs = "cs")', collapse = ' + ')
+      formula <- as.formula(paste('k ~', spline_terms))
+      gam_model <- gam(formula, data = df)
+      k_hat <- round(predict(gam_model, as.data.frame(z)))
+      k_hat[k_hat < 0] <- 0L
+      max_k <- max(k_hat)
+    }
+  } else {
+    max_k <- k
+    k_hat <- rep(max_k, m)
+  }
+  
+  
+  if (isTRUE(estimate_A0)) {
+    # Estimate adjacencies
+    L0 <- (z * sqrt(emap$lambda)) %*% t(emap$v) 
+    L0[L0 < 0] <- 0
+    d_old <- 1 / emap$d # These are now square root of node degrees
+    d_mat <- matrix(rep(d_old, m), nrow = m, byrow = TRUE)
+    A0 <- t(L0 * d_mat)
+    d_hat <- colSums(A0)
+    d_mat <- matrix(rep(d_hat, n), nrow = n, byrow = TRUE)
+    A0 <- t(A0 * d_mat)
+    A0[A0 > rf$num.trees] <- rf$num.trees # Not a problem
+  } else {
+    # Compute nearest neighbors
+    knn_res <- nn2(data = emap$z, query = z, k = max_k)
+  }
+  
+  split_vars <- unique(unlist(rf$forest$split.varIDs))
+  keep_vars <- colnames_x[split_vars]
+  d_tmp <- length(keep_vars)
+  if (d > d_tmp) {
+    uninf_idx <- setdiff(seq_len(d), split_vars)
+    uninformative <- emap$meta$metadata[uninf_idx, variable]
+  } else {
+    uninformative <- character()
+  }
+  
+  bnd_fn <- function(tree, ram) {
+    num_nodes <- length(rf$forest$split.varIDs[[tree]])
+    lb <- matrix(-Inf, nrow = num_nodes, ncol = d)
+    ub <- matrix(Inf, nrow = num_nodes, ncol = d)
+    for (j in seq_len(d)) {
+      lb[, j] <- emap$meta$metadata$min[j]
+      ub[, j] <- emap$meta$metadata$max[j]
+    }
+    for (i in 1:num_nodes) {
+      left_child <- rf$forest$child.nodeIDs[[tree]][[1]][i] + 1L
+      right_child <- rf$forest$child.nodeIDs[[tree]][[2]][i] + 1L
+      splitvarID <- rf$forest$split.varIDs[[tree]][i] + 1L
+      splitval <- rf$forest$split.value[[tree]][i]
+      if (left_child > 1) {
+        ub[left_child, ] <- ub[right_child, ] <- ub[i, ]
+        lb[left_child, ] <- lb[right_child, ] <- lb[i, ]
+        if (left_child != right_child) {
+          # If no pruned node, split changes bounds
+          ub[left_child, splitvarID] <- lb[right_child, splitvarID] <- splitval
+        }
+      }
+    }
+    leaves <- which(rf$forest$child.nodeIDs[[tree]][[1]] == 0L) 
+    colnames(lb) <- colnames(ub) <- emap$meta$metadata$variable
+    out <- merge(melt(data.table(tree = tree, leaf = leaves, lb[leaves, , drop = FALSE]), 
+                      id.vars = c('tree', 'leaf'), value.name = 'min'), 
+                 melt(data.table(tree = tree, leaf = leaves, ub[leaves, , drop = FALSE]), 
+                      id.vars = c('tree', 'leaf'), value.name = 'max'), 
+                 by = c('tree', 'leaf', 'variable'), sort = FALSE)
+    out <- out[variable %in% keep_vars]
+    if (isTRUE(ram)) {
+      return(out)
+    } else {
+      saveRDS(out, paste0('bnds', tree, '.rds'))
+    }
+  }  
+  
+  
+  nl <- sapply(trees, function(b) sum(treeInfo(rf, tree = b)['terminal']))
+  Nl <- sum(nl)
+  bnds_nrow <- Nl * d_tmp
+  estimated_memory <- bnds_nrow * 28 / 1024^3 # Each row = 28 bits, converting to GB
+  ram_flag <- estimated_memory < max_mem
+  if (isTRUE(ram_flag)) {
+    if (isTRUE(parallel)) {
+      bnds <- foreach(tree = trees, .combine = rbind, .packages = 'data.table') %dopar%
+        bnd_fn(tree, ram_flag)
+    } else {
+      bnds <- foreach(tree = trees, .combine = rbind, .packages = 'data.table') %do%
+        bnd_fn(tree, ram_flag)
+    }
+  } else {
+    warning('Writing bound tables to disk. This will use an estimated ',
+            round(estimated_memory, 2), 'GB of space.')
+    if (isTRUE(parallel)) {
+      foreach(tree = trees, .packages = 'data.table') %dopar% bnd_fn(tree, ram_flag)
+    } else {
+      foreach(tree = trees, .packages = 'data.table') %do% bnd_fn(tree, ram_flag)
+    }
+  }
+```
+
+```{r}
+i <-  1
+    k <- k_hat[i]
+    if (isTRUE(estimate_A0)) {
+      neighbors <- order(A0[i, ], decreasing = TRUE)[seq_len(k)]
+      y <- A0[i, ][neighbors]
+      up <- 1L
+    } else {
+      neighbors <- knn_res$nn.idx[i, seq_len(k)]
+      y <- log(1 / knn_res$nn.dists[i, seq_len(k)])
+      up <- Inf
+    }
+    
+    df <- emap$leafIDs[neighbors, trees] + 1L
+    df <- unique(data.table(
+      'tree' = rep(trees, each = k),
+      'leaf' = as.integer(df)
+    ))
+    df[, n := .N, by = tree]
+    
+    candidate_list <- function(dat, lo, hi, ooc) {
+      if (isTRUE(ram_flag)) {
+        if ('coef' %in% colnames(dat)) {
+          out <- merge(dat[tree %in% ooc, .(tree, leaf, variable, min, max, coef)],
+                       lo, by = 'variable')
+        } else {
+          out <- merge(dat[tree %in% ooc, .(tree, leaf, variable, min, max)], 
+                       lo, by = 'variable')
+        }
+        out <- merge(out, hi, by = 'variable')
+      } else {
+        # REVISIT
+        bnds <- rbindlist(lapply(ooc, function(b) {
+          readRDS(paste0('bnds', b, '.rds'))
+        }))
+        out <- merge(bnds, lo, by = 'variable')
+        out <- merge(out, hi, by = 'variable')
+      }
+      # Feasibility constraint
+      out[, feasible := all(min < f_max & max > f_min), by = .(tree, leaf)]
+      out <- out[feasible == TRUE][, feasible := NULL]
+      # Some variables may be uninformative
+      tmp <- unique(out[, .(variable, min, max)])
+      tmp[, n := .N, by = variable]
+      if (tmp[, any(n == 1)]) {
+        out <- out[variable %in% tmp[n > 1, unique(variable)]]
+      }
+      return(out)
+    }
+```
+
+```{r}
+plpn$rf2 <- ranger(y ~ ., data = plpn$trn, num.trees = 100,
+                  classification = TRUE, respect.unordered.factors ='partition')
+
+plpn$emap2 <- eigenmap(plpn$rf, plpn$trn_og, k=round(0.2 * ncol(plpn$trn_og)))
+plpn$z2 <- predict.eigenmap(plpn$emap, plpn$rf, plpn$tst)
+plpn$result2 <- decode_leaves(z=plpn$z, rf=plpn$rf, emap=plpn$emap, x=plpn$trn_og, estimate_A0 = FALSE)
+```
+
+```{r}
+source("dummy_leaves.R")
+plpn$result_pure <- dummy_leaves(z=plpn$z, rf=plpn$rf, emap=plpn$emap, 
+                                  A=A, x=plpn$trn_og)
+```
+```{r}
+plpn$error <- reconstruction_error(plpn$result$recovered, plpn$tst)
+plpn$error_pure <- reconstruction_error(plpn$result_pure$recovered, plpn$tst)
+```
+
+```{r}
+k = 3
+knn <- nn2(data = emap$z, query = z, k = k)
+if (k > 1) {
+  wts <- 1 / knn$nn.dists
+  wts <- wts / rowSums(wts)
+} else {
+  wts <- matrix(rep(1L, m), ncol = 1)
+}
+
+trn_A <- emap$A
+tst_A <- matrix(data=NA, nrow=nrow(z), ncol=nrow(trn_A))
+for (i in seq_len(nrow(z))) {
+  a_tmp <- as.matrix(trn_A[knn$nn.idx[i, ], ])
+  w_tmp <- wts[i, ]
+  tst_A[i, ] <- t(crossprod(a_tmp, w_tmp))
+}
+tst_A <- as(tst_A, 'sparseMatrix')
+ x_tmp <- x[knn$nn.idx[i, ], ]
+    w_tmp <- wts[i, ]
+```
+
+```{r}
+plpn$result_nn <- dummy_leaves(z=plpn$z, rf=plpn$rf, emap=plpn$emap, 
+                                  A=t(tst_A), x=plpn$trn_og)
+```
+
+```{r}
+source("../decode.R")
+plpn$result_knn <- decode(plpn$z, plpn$emap, plpn$trn_og, k = 3, parallel = TRUE)
+plpn$error_knn <- reconstruction_error(plpn$result_knn, plpn$tst)
+```
+
+## Iris
+
+```{r}
+irisl <- list()
+set.seed(100)
+idx <- sample(nrow(iris), nrow(iris) * 0.8)
+irisl$trn_og <- iris[idx, ]
+irisl$tst <- iris[-idx, ]
+synth <- as.data.frame(lapply(irisl$trn, sample,
+                              nrow(irisl$trn) , replace = TRUE))
+irisl$trn <- rbind(data.frame(y = 1, irisl$trn_og),
+                  data.frame(y = 0, synth))
+
+irisl$trn <- prep_x(irisl$trn) 
+irisl$tst <- prep_x(irisl$tst)
+irisl$rf <- ranger(y ~ ., data = irisl$trn, num.trees = 100,
+                  classification = TRUE, respect.unordered.factors ='order')
+```
+
+```{r}
+irisl$emap <- eigenmap(irisl$rf, irisl$trn_og, k=round(0.2 * ncol(irisl$trn_og)))
+irisl$z <- predict.eigenmap(irisl$emap, irisl$rf, irisl$tst)
+irisl$adj <- make_adj(irisl$rf, irisl$trn_og, irisl$tst)$adj_matrix
+irisl$result_pure <- decode_leaves(z=irisl$z, rf=irisl$rf, emap=irisl$emap, x=irisl$trn_og, 
+                              A=irisl$adj,
+                              estimate_A0 = TRUE)
+```
+
+```{r}
+source("../decode_leaves.R")
+irisl$result <- decode_leaves(z=irisl$z, rf=irisl$rf, emap=irisl$emap, x=irisl$trn_og,
+                              estimate_A0 = TRUE)
+```
+
+```{r}
+irisl$result_knn <- decode(irisl$z, irisl$emap, irisl$trn_og, k = 3)
+irisl$error_knn <- reconstruction_error(irisl$result_knn, irisl$tst)
+```

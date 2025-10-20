@@ -1,0 +1,165 @@
+---
+title: "Errors and Figures"
+output: html_notebook
+---
+
+```{r}
+source('../eigenmap.R')
+source('../adj_to_leaves.R')
+source("../decode.R")
+source("../utils.R")
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table, warn.conflicts=FALSE)
+```
+
+```{r}
+ae <- spae <- eforest <- pca <- aurf <- og <- list()
+
+datasets = c("plpn", "forestfires", "car", "obesity", "student")
+for (dataset in datasets) {
+  og[[dataset]] <- read.csv(paste0("cprs_data/", dataset, "_tst.csv"), 
+                            row.names = 1)
+  ae[[dataset]] <- read.csv(paste0("ae_data/ae_", dataset, ".csv"))
+  spae[[dataset]] <- read.csv(paste0("spae_data/spae_", dataset, ".csv"))
+  eforest[[dataset]] <- read.csv(paste0("eforest_data/ef_", dataset, ".csv"), 
+                                 row.names = 1)
+  pca[[dataset]] <- read.csv(paste0("pca_data/pca_", dataset, ".csv"), 
+                             row.names = 1)
+}
+
+aurf$plpn <- read.csv("plpn_2.csv", row.names = 1)
+```
+
+```{r}
+reconstruction_error <- function(X, Xhat) {
+  error_matrix <- Xhat
+  error_vec <- c()
+  for (i in colnames(Xhat)) {
+    if (is.numeric(Xhat[[i]])) {
+      min = min(c(min(Xhat[[i]]), min(X[[i]]))) 
+      max = max(c(max(Xhat[[i]]), max(X[[i]])))
+      error_matrix[[i]] <- (Xhat[[i]] - X[[i]])/(max - min)
+      
+      error_vec <- append(error_vec, cor(Xhat[[i]], X[[i]]))
+    } else {
+      error_matrix[[i]] <- as.integer(Xhat[[i]] != X[[i]])
+      error_vec <- (sum(X[[i]] == Xhat[[i]]))/nrow(X)
+    }
+  }
+  error_matrix <- error_matrix^2
+  total_error <- sum(sqrt(rowSums(error_matrix)))/nrow(X)
+  out <- list(error_matrix = error_matrix, overall_error = total_error,
+              classic_error = error_vec)
+}
+recon_matrix <- matrix(data=0, nrow=4, ncol=length(datasets))
+classic_matrix <- matrix(data=0, nrow=4, ncol=length(datasets))
+colnames(recon_matrix) <- colnames(classic_matrix) <- datasets
+rownames(recon_matrix) <- rownames(classic_matrix) <- c("ae", "spae",
+                                                        "eforest", "pca")
+
+for (dataset in datasets) {
+  error <- reconstruction_error(og[[dataset]], ae[[dataset]])
+  recon_matrix['ae', dataset] <- error$overall_error
+  classic_matrix['ae', dataset] <- mean(error$classic_error)
+  
+  error <- reconstruction_error(og[[dataset]], spae[[dataset]])
+  recon_matrix['spae', dataset] <- error$overall_error
+  classic_matrix['spae', dataset] <- mean(error$classic_error)
+  
+  if (nrow(og[[dataset]]) != nrow(eforest[[dataset]])) {
+    recon_matrix['eforest', dataset] <- 1
+    classic_matrix['eforest', dataset] <- 0
+  } else {
+    error <- reconstruction_error(og[[dataset]], eforest[[dataset]])
+    recon_matrix['eforest', dataset] <- error$overall_error
+    classic_matrix['eforest', dataset] <- mean(error$classic_error)
+  }
+
+
+  error <- reconstruction_error(og[[dataset]], pca[[dataset]])
+  recon_matrix['pca', dataset] <- error$overall_error
+  classic_matrix['pca', dataset] <- mean(error$classic_error)
+}
+
+plpn_recon <- reconstruction_error(og$plpn, aurf$plpn)$overall_error
+#plpn_classic <- mean(reconstruction_error(og$plpn, aurf$plpn))
+```
+
+```{r}
+library(tidyr)
+data <- data.frame(
+  category = c("aurf", "ae", "spae", "eforest", "pca"),
+  plpn = c(plpn_recon, recon_matrix[, 'plpn']),
+  forestfires = c(0, recon_matrix[, 'forestfires']),
+  car = c(0, recon_matrix[, 'car']),
+  obesity = c(0, recon_matrix[, 'obesity']),
+  student = c(0, recon_matrix[, 'student'])
+)
+
+# Reshape the data to long format
+data_long <- pivot_longer(data, 
+                          cols = -category, 
+                          names_to = "dataset", 
+                          values_to = "value")
+
+# Create the bar chart
+ggplot(data_long, aes(x = dataset, y = value, fill = category)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Reconstruction Error",
+       x = "Dataset",
+       y = "Distance",
+       fill = "Category") +
+  theme_minimal()
+```
+
+```{r}
+data <- data.frame(
+  category = c("ae", "spae", "eforest", "pca"),
+  plpn = classic_matrix[, 'plpn'],
+  forestfires = classic_matrix[, 'forestfires'],
+  car = classic_matrix[, 'car'],
+  obesity = classic_matrix[, 'obesity'],
+  student = classic_matrix[, 'student']
+)
+
+# Reshape the data to long format
+data_long <- pivot_longer(data, 
+                          cols = -category, 
+                          names_to = "dataset", 
+                          values_to = "value")
+
+# Create the bar chart
+ggplot(data_long, aes(x = dataset, y = value, fill = category)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Classical Reconstruction Error",
+       x = "Dataset",
+       y = "Accuracy",
+       fill = "Category") +
+  theme_minimal()
+```
+
+To-do: Plots for change of accuracy over time with varying k-values and varying
+num_trees
+
+Add one single observation for aurf in the plpn dataset.
+```{r}
+plpn_nt <- list()
+
+plpn_nt$tn <- read.csv('vary_param/plpn_01.csv', row.names = 1)
+plpn_nt$twf <- read.csv('vary_param/plpn_025.csv', row.names = 1)
+plpn_nt$ft <- read.csv('vary_param/plpn_05.csv', row.names = 1)
+svf <- read.csv('vary_param/plpn_075.csv', row.names = 1)
+plpn_nt$all <- read.csv('vary_param/plpn_100.csv', row.names = 1)
+```
+
+```{r}
+recon_nt <- list()
+for (i in 1:4){
+  recon_nt[[i]] <- reconstruction_error(plpn_nt[[i]], og$plpn)$overall_error
+}
+recon_nt
+```

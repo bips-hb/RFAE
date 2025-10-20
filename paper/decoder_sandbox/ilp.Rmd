@@ -1,0 +1,152 @@
+---
+title: "ILP tests"
+output: html_notebook
+---
+
+```{r}
+source('../eigenmap.R')
+source('../adj_to_leaves.R')
+source("../decode_leaves.R")
+source("../utils.R")
+source("../errors.R")
+library(palmerpenguins, warn.conflicts=FALSE)
+library(arf)
+library(glmnet)
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(RANN)
+library(Rglpk)
+library(data.table, warn.conflicts=FALSE)
+
+cl <- makeCluster(8)
+registerDoParallel(cl)
+```
+
+
+```{r}
+    data <- 'plpn'
+    trn <- fread(paste0('original_data/', data, '_trn.csv'
+                        ),header=TRUE)
+    trn[, V1 := NULL]
+    trn_obj <- prep_x(trn)
+
+    tst <- fread(paste0('original_data/', data, '_tst.csv'
+                        ),header=TRUE)
+    tst[, V1 := NULL]
+    tst <- prep_x(tst, trn_obj[[2]], trn_obj[[3]])[[1]]
+    trn <- trn_obj[[1]]
+    setDT(trn)
+    setDT(tst)
+    trn_og <- trn[y == 1]
+    trn_og[, y := NULL]
+    
+    tst <- tst[1:3, ]
+```
+
+
+```{r}
+rf <- ranger(y ~ ., data = trn, num.trees = 10, max.depth = 2,
+               classification = TRUE, respect.unordered.factors = 'order')
+emap <- eigenmap(rf, trn_og, k=round(0.2 * ncol(trn_og)))
+z <- predict.eigenmap(emap, rf, tst)
+```
+
+```{r}
+m <- nrow(z)
+d_z <- ncol(z)
+colnames_z <- paste0('z', seq_len(d_z))
+colnames(z) <- colnames_z
+n <- nrow(emap$leafIDs)
+d <- emap$meta$metadata[, .N]
+colnames_x <- emap$meta$metadata$variable
+factor_cols <- emap$meta$metadata$fctr
+factor_names <- emap$meta$metadata[fctr == TRUE, variable]
+lvls <- emap$meta$levels
+input_class <- emap$meta$input_class
+L0 <- (z * sqrt(emap$lambda)) %*% t(emap$v) 
+d_old <- 1 / emap$d # These are now square root of node degrees
+d_mat <- matrix(rep(d_old, m), nrow = m, byrow = TRUE)
+A0 <- t(L0 * d_mat)
+d_hat <- colSums(A0)
+d_mat <- matrix(rep(d_hat, n), nrow = n, byrow = TRUE)
+A0 <- t(A0 * d_mat)
+A0[A0 > rf$num.trees] <- rf$num.trees
+A0[A0 < 0] <- 0# Not a problem
+```
+
+```{r}
+num_trees <- rf$num.trees
+adjs <- make_adj(rf, trn_og, tst)
+vars <- make_var(rf, adjs$adj_matrix, trn_og, num_trees)
+A_0 <- vars$A_0
+B <- vars$B
+phi <- vars$phi
+nl <- vars$nl
+N_l <- vars$N_l
+m <- vars$m
+n <- vars$n
+A_0 <- A_0
+result <- ilp_decoder(A_0/B, B, phi, nl, N_l, m, n)
+```
+
+
+```{r}
+
+print("Initializing constraints")
+objective <- c(rep(0, m * N_l), rep(1, n * m))
+constraints = matrix(0, nrow = 2 * n * m + B * m, ncol = m * N_l + n * m)
+
+
+for (i in 1:n) {
+  for (j in 1:m) {
+    # we set up indices to track coefficients, since we deconstruct the matrix
+    # inequality into individual entries, and the matrices are flattened
+    # since phi %*% Pt, phi is flattened row by row, Pt column by column.
+    i_index = (i - 1) * m + j
+    j_index = (j - 1) * N_l + 1
+    constraints[i_index,
+                j_index:(j_index - 1 + N_l)] = 1 * phi[i, ]
+    constraints[i_index, (m * N_l ) + i_index] = -1
+    # two way inequality
+    reverse_index = i_index + m * n
+    constraints[reverse_index,
+                j_index:(j_index - 1 + N_l)] = -1 * phi[i, ]
+    constraints[reverse_index, (m * N_l ) + i_index] = 1
+  }
+}
+# coding one leaf per tree constraint, keeping track by using number of leaves each tree.
+left_index <- right_index <- 1
+for (i in seq_len(m)) {
+  for (j in seq_len(B)) {
+    m_idx <- (i - 1) * B + j
+    ones <- rep(1, nl[j])
+    right_index <- length(ones) + left_index - 1
+    constraints[2 * n * m + m_idx, left_index:right_index] = ones
+    left_index <- length(ones) + left_index
+  }
+  left_index <- right_index <- 1
+}
+constraints <- as(constraints, 'sparseMatrix')
+# integer solver
+
+rhs = c(as.vector(A_0), as.vector(-A_0), rep(1, B * m))
+dir = c(rep('>', n * m), rep('>', n * m), rep('==', B * m))
+max = FALSE
+types = c(rep('I', m * N_l), rep('C', n * m))
+print("Constraints done, run ILP")
+result = Rglpk_solve_LP(obj = objective,
+                        mat = constraints,
+                        dir = dir,
+                        rhs = rhs,
+                        max = max,
+                        types = types)
+result$optimum
+P = Matrix(result$solution[1:(m * N_l)], nrow = m, ncol = N_l, sparse=TRUE)
+sum(abs(A_0 - (1/B) * phi %*% t(P)))
+```

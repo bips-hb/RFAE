@@ -1,0 +1,177 @@
+---
+title: "Experiments"
+output: html_notebook
+---
+
+```{r}
+source('../eigenmap.R')
+source('../z_to_adj.R')
+source('../adj_to_leaves.R')
+source("../decode.R")
+source("../utils.R")
+library(ggplot2)
+library(ggsci)
+library(Matrix)
+library(stats)
+library(foreach)
+library(doParallel)
+library(dplyr, warn.conflicts=FALSE)
+library(data.table,warn.conflicts=FALSE)
+library(dslabs)
+library(RSpectra)
+
+cl <- makeCluster(8)
+registerDoParallel(cl)
+```
+
+Loading
+1, Load data
+2, Split 80/20 train/test
+3, For 80%, generate synthetic random data with equal n
+4, concat data and add labels (1/0)
+5, train URF and train emap
+6, test on test data, without labels added and recover
+```{r}
+plpn <- adult <- car <- forestfires <- obesity <- list()
+spambase <- student <- wq <- list()
+
+plpn$trn <- read.csv('original_data/plpn_trn.csv', row.names = 1)
+plpn$tst <- read.csv('original_data/plpn_tst.csv', row.names = 1)
+plpn$trn <- prep_x(plpn$trn) 
+plpn$tst <- prep_x(plpn$tst)
+
+forestfires$trn <- read.csv('original_data/forestfires_trn.csv', row.names = 1)
+forestfires$tst <- read.csv('original_data/forestfires_tst.csv', row.names = 1)
+forestfires$trn <- prep_x(forestfires$trn) 
+forestfires$tst <- prep_x(forestfires$tst)
+
+car$trn <- read.csv('original_data/car_trn.csv', row.names = 1)
+car$tst <- read.csv('original_data/car_tst.csv', row.names = 1)
+car$trn <- prep_x(car$trn) 
+car$tst <- prep_x(car$tst)
+
+obesity$trn <- read.csv('original_data/obesity_trn.csv', row.names = 1)
+obesity$tst <- read.csv('original_data/obesity_tst.csv', row.names = 1)
+obesity$trn <- prep_x(obesity$trn) 
+obesity$tst <- prep_x(obesity$tst)
+
+student$trn <- read.csv('original_data/student_trn.csv', row.names = 1)
+student$tst <- read.csv('original_data/student_tst.csv', row.names = 1)
+student$trn <- prep_x(student$trn) 
+student$tst <- prep_x(student$tst)
+
+spambase$trn <- read.csv('original_data/spambase_trn.csv', row.names = 1)
+spambase$tst <- read.csv('original_data/spambase_tst.csv', row.names = 1)
+spambase$trn <- prep_x(spambase$trn) 
+spambase$tst <- prep_x(spambase$tst)
+
+wq$trn <- read.csv('original_data/wq_trn.csv', row.names = 1)
+wq$tst <- read.csv('original_data/wq_tst.csv', row.names = 1)
+wq$trn <- prep_x(wq$trn) 
+wq$tst <- prep_x(wq$tst)
+
+```
+
+```{r}
+plpn$rf <- ranger(y ~ ., data = plpn$trn,
+                  classification = TRUE, respect.unordered.factors = 'order',
+                  max.depth = 8, num.trees = 250, min.node.size = 3)
+
+# adult$rf <- ranger(y ~ ., data = adult$trn, classification = TRUE,
+#                    respect.unordered.factors = 'order', min.node.size = 10,
+#                    max.depth = 15)
+
+car$rf <- ranger(y ~ ., data = car$trn, 
+                 classification = TRUE, respect.unordered.factors = 'order',
+                 min.node.size = 3, max.depth = 10,
+                 num.trees = 300)
+
+forestfires$rf <- ranger(y ~ ., data = forestfires$trn, classification = TRUE,
+                         num.trees = 200,
+                         respect.unordered.factors = 'order')
+
+obesity$rf <- ranger(y ~., data = obesity$trn, 
+                     classification = TRUE, respect.unordered.factors = 'order',
+                     min.node.size = 5, max.depth = 10,
+                     num.trees = 200)
+
+spambase$rf <- ranger(y ~ ., data = spambase$trn, 
+                      classification = TRUE, respect.unordered.factors = 'order',
+                      min.node.size = 5, max.depth = 10)
+
+student$rf <- ranger(y ~., data = student$trn,
+                     classification = TRUE, respect.unordered.factors = 'order',
+                     num.trees = 100)
+
+wq$rf <- ranger(y ~ ., data = wq$trn, classification = TRUE, 
+                respect.unordered.factors = 'order',
+                min.node.size = 5, max.depth = 10)
+```
+
+Choose 0.2 as a compression ratio
+```{r}
+cl <- makeCluster(detectCores())
+registerDoParallel(cl)
+
+plpn$emap <- eigenmap(plpn$rf, subset(plpn$trn, y==1), k=round(0.2*ncol(plpn$trn)))
+plpn$z <- predict.eigenmap(plpn$emap, plpn$rf, plpn$tst)
+
+car$emap <- eigenmap(car$rf, car$trn, k=round(0.2*ncol(car$trn)))
+car$z <- predict.eigenmap(car$emap, car$rf, car$tst)
+
+forestfires$emap <- eigenmap(forestfires$rf, 
+                             subset(forestfires$trn, y==1), k=round(0.2*ncol(forestfires$trn)))
+forestfires$z <- predict.eigenmap(forestfires$emap, 
+                                  forestfires$rf, forestfires$tst)
+
+obesity$emap <- eigenmap(obesity$rf, subset(obesity$trn, y==1), k=round(0.2*ncol(obesity$trn)))
+obesity$z <- predict.eigenmap(obesity$emap, obesity$rf, obesity$tst)
+
+spambase$emap <- eigenmap(spambase$rf, subset(spambase$trn, y==1), k=round(0.2*ncol(spambase$trn)))
+spambase$z <- predict.eigenmap(spambase$emap, spambase$rf, spambase$tst)
+
+student$emap <- eigenmap(student$rf, subset(student$trn, y==1), k=round(0.2*ncol(student$trn)))
+student$z <- predict.eigenmap(student$emap, student$rf, student$tst)
+
+wq$emap <- eigenmap(wq$rf, subset(wq$trn, y==1), k=round(0.2*ncol(wq$trn)))
+wq$z <- predict.eigenmap(wq$emap, wq$rf, wq$tst)
+
+gc()
+```
+
+
+```{r}
+
+plpn$result <- decode(plpn$z, plpn$rf, plpn$emap, 
+                      subset(plpn$trn, y==1),
+                      max_mem = 20)
+car$result <- decode(car$z, car$rf, car$emap, 
+                             subset(subset(car$trn, y == 1), select = -y), max_mem = 20)
+forestfires$result <- decode(forestfires$z, forestfires$rf, forestfires$emap, 
+                             subset(subset(forestfires$trn, y == 1), select = -y), max_mem = 20)
+obesity$result <- decode(obesity$z, obesity$rf, obesity$emap, 
+                             subset(subset(obesity$trn, y == 1), select = -y), max_mem = 20)
+
+student$result <- decode(student$z, student$rf, student$emap, 
+                             subset(subset(student$trn, y == 1), select = -y), max_mem = 20)
+
+wq$result <- decode(wq$z, wq$rf, wq$emap, 
+                             subset(subset(wq$trn, y == 1), select = -y), max_mem = 20)
+
+spambase$result <- decode(spambase$z, spambase$rf, spambase$emap, 
+                             subset(subset(spambase$trn, y == 1), select = -y), max_mem = 20)
+
+
+```
+
+```{r}
+write.csv(plpn$result$recovered, "aurf_data/aurf_plpn_v2.csv")
+
+write.csv(car$result$recovered, "aurf_data/aurf_car_v2.csv")
+write.csv(obesity$result$recovered, "aurf_data/aurf_obesity_v2.csv")
+write.csv(forestfires$result$recovered, "aurf_data/aurf_forestfires_v2.csv")
+write.csv(student$result$recovered, "aurf_data/aurf_student_v2.csv")
+write.csv(wq$result$recovered, "aurf_data/aurf_wq_v2.csv")
+write.csv(spambase$result$recovered, "aurf_data/aurf_spambase_v2.csv")
+```
+

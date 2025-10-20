@@ -1,0 +1,213 @@
+---
+title: "eforest"
+output: html_notebook
+---
+
+
+```{r}
+source("eForest.R")
+source("eForestSynth.R")
+source("utils.R")
+library(ranger)
+
+library(palmerpenguins, warn.conflicts = FALSE)
+library(dplyr, warn.conflicts = FALSE)
+library(Matrix)
+library(stats)
+library(foreach)
+library(RSpectra)
+library(doParallel)
+library(data.table, warn.conflicts = FALSE)
+library(arf)
+#library(reshape2)
+
+cl <- makeCluster(detectCores() / 2)
+registerDoParallel(cl)
+#registerDoSEQ()
+#stopCluster(cl)
+```
+
+
+```{r}
+plpn <- adult <- car <- forestfires <- mushroom <- obesity <- list()
+spambase <- student <- wq <- list()
+
+plpn$trn <- read.csv('original_data/plpn_trn.csv', row.names = 1)
+plpn$tst <- read.csv('original_data/plpn_tst.csv', row.names = 1)
+plpn$trn <- plpn$trn %>% mutate_if(is.character, as.factor)
+plpn$tst <- plpn$tst %>% mutate_if(is.character, as.factor)
+plpn$trn <- plpn$trn %>% mutate_if(is.integer, as.numeric)
+plpn$tst <- plpn$tst %>% mutate_if(is.integer, as.numeric)
+
+adult$trn <- read.csv('original_data/adult_trn.csv')
+adult$tst <- read.csv('original_data/adult_tst.csv')
+adult$trn <- adult$trn %>% mutate_if(is.character, as.factor)
+adult$tst <- adult$tst %>% mutate_if(is.character, as.factor)
+adult$trn <- adult$trn %>% mutate_if(is.integer, as.numeric)
+adult$tst <- adult$tst %>% mutate_if(is.integer, as.numeric)
+
+car$trn <- read.csv('original_data/car_trn.csv', row.names = 1)
+car$tst <- read.csv('original_data/car_tst.csv', row.names = 1)
+car$trn <- car$trn %>% mutate_if(is.character, as.factor)
+car$tst <- car$tst %>% mutate_if(is.character, as.factor)
+
+
+forestfires$trn <- read.csv('original_data/forestfires_trn.csv', row.names = 1)
+forestfires$tst <- read.csv('original_data/forestfires_tst.csv', row.names = 1)
+forestfires$trn <- forestfires$trn %>% mutate_if(is.character, as.factor)
+forestfires$tst <- forestfires$tst %>% mutate_if(is.character, as.factor)
+forestfires$trn <- forestfires$trn %>% mutate_if(is.integer, as.numeric)
+forestfires$tst <- forestfires$tst %>% mutate_if(is.integer, as.numeric)
+
+obesity$trn <- read.csv('original_data/obesity_trn.csv', row.names = 1)
+obesity$tst <- read.csv('original_data/obesity_tst.csv', row.names = 1)
+obesity$trn <- obesity$trn %>% mutate_if(is.character, as.factor)
+obesity$tst <- obesity$tst %>% mutate_if(is.character, as.factor)
+
+spambase$trn <- read.csv('original_data/spambase_trn.csv', row.names = 1)
+spambase$tst <- read.csv('original_data/spambase_tst.csv', row.names = 1)
+spambase$trn <- spambase$trn %>% mutate_if(is.character, as.factor)
+spambase$tst <- spambase$tst %>% mutate_if(is.character, as.factor)
+spambase$trn <- spambase$trn %>% mutate_if(is.integer, as.numeric)
+spambase$tst <- spambase$tst %>% mutate_if(is.integer, as.numeric)
+
+student$trn <- read.csv('original_data/student_trn.csv', row.names = 1)
+student$tst <- read.csv('original_data/student_tst.csv', row.names = 1)
+student$trn <- student$trn %>% mutate_if(is.character, as.factor)
+student$tst <- student$tst %>% mutate_if(is.character, as.factor)
+student$trn <- student$trn %>% mutate_if(is.integer, as.numeric)
+student$tst <- student$tst %>% mutate_if(is.integer, as.numeric)
+
+wq$trn <- read.csv('original_data/wq_trn.csv', row.names = 1)
+wq$tst <- read.csv('original_data/wq_tst.csv', row.names = 1)
+wq$trn <- wq$trn %>% mutate_if(is.character, as.factor)
+wq$tst <- wq$tst %>% mutate_if(is.character, as.factor)
+wq$trn <- wq$trn %>% mutate_if(is.integer, as.numeric)
+wq$tst <- wq$tst %>% mutate_if(is.integer, as.numeric)
+```
+
+```{r}
+rf <- forestfires$rf
+x <- forestfires$tst
+z <- forestfires$z
+nSynth <- nrow(forestfires$tst)
+num_trees <- rf$num.trees
+x <- suppressWarnings(prep_x(x))
+n <- nrow(x)
+d <- ncol(x)
+factor_cols <- sapply(x, is.factor)
+
+factor_names <- colnames(x)[factor_cols]
+if (sum(factor_cols) == 1L) {
+  lvls <- data.table(
+    variable = factor_names, 
+    value = rf$forest$covariate.levels[[factor_names[1]]]
+  )[, number := .I]
+} else if (sum(factor_cols) > 1L) {
+  lvls <- rbindlist(lapply(factor_names, function(j) {
+    data.table(
+      variable = j, value = rf$forest$covariate.levels[[j]]
+    )[, number := .I]
+  }))
+}
+# Synthesize
+keep <- data.table(obs = seq_len(n))
+#keep <- data.table(obs = sample(n, nSynth, replace = TRUE))
+synth <- merge(keep, z, by = 'obs', allow.cartesian = TRUE, sort = FALSE)
+synth = as.data.table(synth)
+synth[, idx := rep(seq_len(nSynth), each = d)]
+synth[, fctr := rep(factor_cols, nSynth)]
+synth[, new := runif(.N, min, max)]
+synth[fctr == TRUE, new := round(new)]
+synth <- dcast(synth, idx ~ variable, value.var = 'new')[, idx := NULL]
+
+
+# Fix factor columns
+if (any(factor_cols)) {
+  for (j in factor_names) {
+    tmp <- lvls[variable == j, .(value, number)]
+    setnames(tmp, 'number', j)
+    synth <- merge(synth, tmp, by = j, sort = FALSE)[, c(j) := NULL]
+    setnames(synth, 'value', j)
+  }
+}
+setcolorder(synth, colnames(x))
+
+
+```
+
+```{r}
+plpn$rf <- ranger(y ~ ., data = plpn$trn,
+                  classification = TRUE, respect.unordered.factors = 'order')
+plpn$z <- eForest(plpn$rf, plpn$tst)
+plpn$synth <- eForestSynth(plpn$rf, plpn$tst, plpn$z, nrow(plpn$tst))
+
+adult$rf <- ranger(y ~ ., data = adult$trn, classification = TRUE,
+                   respect.unordered.factors = 'order')
+adult$z <- eForest(adult$rf, adult$tst)
+adult$synth <- eForestSynth(adult$rf, adult$tst, adult$z, nrow(adult$tst))
+
+car$rf <- ranger(y ~ ., data = car$trn, 
+                 classification = TRUE, respect.unordered.factors = 'order')
+car$z <- eForest(car$rf, car$tst)
+car$synth <- eForestSynth(car$rf, car$tst, car$z, nrow(car$tst))
+
+forestfires$rf <- ranger(y ~ ., data = forestfires$trn, classification = TRUE,
+                         respect.unordered.factors = 'order')
+forestfires$z <- eForest(forestfires$rf, forestfires$tst)
+forestfires$synth <- eForestSynth(forestfires$rf, forestfires$tst, 
+                                  forestfires$z, nrow(forestfires$tst))
+
+
+obesity$rf <- ranger(y ~., data = obesity$trn, 
+                     classification = TRUE, respect.unordered.factors = 'order')
+obesity$z <- eForest(obesity$rf, obesity$tst)
+obesity$synth <- eForestSynth(obesity$rf, obesity$tst, 
+                              obesity$z, nrow(obesity$tst))
+
+spambase$rf <- ranger(y ~ ., data = spambase$trn, 
+                      classification = TRUE, respect.unordered.factors = 'order')
+spambase$z <- eForest(spambase$rf, spambase$tst)
+spambase$synth <- eForestSynth(spambase$rf, spambase$tst, 
+                               spambase$z, nrow(spambase$tst))
+
+student$rf <- ranger(y ~., data = student$trn,
+                     classification = TRUE, respect.unordered.factors = 'order')
+student$z <- eForest(student$rf, student$tst)
+student$synth <- eForestSynth(student$rf, student$tst, 
+                              student$z, nrow(student$tst))
+
+wq$rf <- ranger(y ~ ., data = wq$trn, classification = TRUE, 
+                respect.unordered.factors = 'order')
+wq$z <- eForest(wq$rf, wq$tst)
+wq$synth <- eForestSynth(wq$rf, wq$tst, 
+                         wq$z, nrow(wq$tst))
+```
+
+```{r}
+write.csv(plpn$synth, "eforest_data/ef_plpn.csv")
+write.csv(car$synth, "eforest_data/ef_car.csv")
+write.csv(obesity$synth, "eforest_data/ef_obesity.csv")
+write.csv(forestfires$synth, "eforest_data/ef_forestfires.csv")
+write.csv(student$synth, "eforest_data/ef_student.csv")
+write.csv(wq$synth, "eforest_data/ef_wq.csv")
+write.csv(spambase$synth, "eforest_data/ef_spambase.csv")
+write.csv(adult$synth, "eforest_data/ef_adult.csv")
+```
+```{r}
+error_matrix <- synth
+for (i in 1:ncol(synth)) {
+  if (is.numeric(synth[[i]])) {
+    min = min(c(min(synth[[i]]), min(X[[i]]))) 
+    max = max(c(max(synth[[i]]), max(X[[i]])))
+    error_matrix[[i]] <- (synth[[i]] - X[[i]])/(max - min)
+  } else {
+    error_matrix[[i]] <- as.integer(synth[[i]] != X[[i]])
+  }
+}
+
+error_matrix = error_matrix^2
+errors = sum(sqrt(rowSums(error_matrix)))
+print('Average Error: ')
+print(errors/nrow(X))
+```

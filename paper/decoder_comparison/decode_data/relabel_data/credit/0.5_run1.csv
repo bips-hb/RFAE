@@ -1,0 +1,378 @@
+checking_status,duration,credit_history,purpose,credit_amount,savings_status,employment,installment_commitment,personal_status,other_parties,residence_since,property_magnitude,age,other_payment_plans,housing,existing_credits,job,num_dependents,own_telephone,foreign_worker,class
+>=200,4,all paid,domestic appliance,251,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,295,<100,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,506,<100,4<=X<7,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,310,<100,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,395,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,372,<100,1<=X<4,1,male mar/wid,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,311,no known savings,4<=X<7,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,333,<100,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,476,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,496,<100,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,339,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,380,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,481,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,286,<100,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,362,no known savings,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,rent,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,255,<100,4<=X<7,1,male single,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,298,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,413,500<=X<1000,1<=X<4,1,male single,guarantor,1,car,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,430,500<=X<1000,1<=X<4,1,male single,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,326,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,273,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,465,<100,4<=X<7,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,556,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,293,500<=X<1000,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,512,500<=X<1000,4<=X<7,1,male single,guarantor,1,no known property,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,329,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,590,500<=X<1000,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,261,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,373,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,437,no known savings,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,619,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,584,500<=X<1000,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,318,no known savings,1<=X<4,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,493,<100,1<=X<4,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,478,no known savings,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,542,500<=X<1000,4<=X<7,1,male single,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,377,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,284,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,435,<100,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,438,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,443,no known savings,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,294,500<=X<1000,4<=X<7,1,male single,guarantor,1,no known property,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,484,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,346,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,343,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,412,<100,4<=X<7,1,male single,co applicant,1,no known property,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,292,100<=X<500,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,552,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,322,<100,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,423,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,478,<100,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,345,no known savings,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,361,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,268,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,390,500<=X<1000,1<=X<4,1,male single,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,279,500<=X<1000,4<=X<7,1,male single,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,277,100<=X<500,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,374,no known savings,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,300,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,339,500<=X<1000,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,for free,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,382,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,448,<100,1<=X<4,1,male single,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,401,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,445,<100,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,617,<100,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,for free,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,351,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,474,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,414,500<=X<1000,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,323,no known savings,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,456,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,463,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,463,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,270,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,607,<100,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,353,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,280,no known savings,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,483,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,382,<100,1<=X<4,1,male single,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,292,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,596,no known savings,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,352,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,295,no known savings,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,390,no known savings,4<=X<7,1,male mar/wid,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,339,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,431,<100,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,430,500<=X<1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,506,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,603,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,327,no known savings,1<=X<4,1,male single,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,486,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,402,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,401,no known savings,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,407,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,373,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,362,500<=X<1000,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,258,500<=X<1000,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,342,100<=X<500,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,284,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,434,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,489,<100,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,393,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,510,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,528,100<=X<500,4<=X<7,1,male single,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,315,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,297,100<=X<500,4<=X<7,1,male single,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,584,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,423,<100,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,286,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,446,500<=X<1000,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,457,no known savings,1<=X<4,1,male single,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,489,500<=X<1000,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,518,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,598,<100,4<=X<7,1,male single,guarantor,1,no known property,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,327,100<=X<500,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,441,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,480,<100,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,393,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,530,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,296,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,385,<100,1<=X<4,1,male mar/wid,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,370,<100,4<=X<7,1,male single,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,476,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,430,no known savings,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,486,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,594,<100,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,492,<100,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,511,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,289,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,361,<100,4<=X<7,1,male mar/wid,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,491,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,345,500<=X<1000,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,308,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,275,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,584,no known savings,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,359,500<=X<1000,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,303,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,264,no known savings,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,492,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,478,500<=X<1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,297,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,415,100<=X<500,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,258,<100,4<=X<7,1,male mar/wid,guarantor,1,no known property,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,401,500<=X<1000,1<=X<4,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,369,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,life insurance,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,305,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,431,no known savings,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,506,<100,1<=X<4,1,male single,co applicant,1,car,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,291,no known savings,1<=X<4,1,male single,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,258,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,474,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,482,no known savings,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,379,<100,1<=X<4,1,male single,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,299,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,375,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,no known property,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,613,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,387,no known savings,1<=X<4,1,male single,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,268,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,396,500<=X<1000,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,394,<100,1<=X<4,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,429,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,453,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,no known property,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,484,no known savings,1<=X<4,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,592,no known savings,4<=X<7,1,male single,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,354,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,434,<100,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,274,100<=X<500,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,453,<100,1<=X<4,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,512,100<=X<500,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,620,no known savings,4<=X<7,1,male single,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,327,500<=X<1000,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,428,<100,4<=X<7,1,male single,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,465,no known savings,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,318,no known savings,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,610,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,608,no known savings,4<=X<7,1,male mar/wid,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,329,<100,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,603,no known savings,1<=X<4,1,male mar/wid,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,558,<100,4<=X<7,1,male single,guarantor,1,life insurance,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,431,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,388,<100,1<=X<4,1,male single,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,326,100<=X<500,1<=X<4,1,male single,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,306,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,396,<100,1<=X<4,1,male mar/wid,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,506,<100,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,387,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,572,500<=X<1000,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,260,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,330,<100,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,379,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,463,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,424,<100,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,351,100<=X<500,1<=X<4,1,male single,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,554,no known savings,4<=X<7,1,male mar/wid,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,505,<100,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,574,<100,4<=X<7,1,male single,guarantor,1,car,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,443,no known savings,4<=X<7,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,341,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,507,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,274,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,477,500<=X<1000,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,282,no known savings,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,492,100<=X<500,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,302,no known savings,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,362,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,434,100<=X<500,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,270,<100,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,257,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,514,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,399,500<=X<1000,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,500,100<=X<500,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,363,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,496,<100,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,343,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,574,no known savings,1<=X<4,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,564,no known savings,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,415,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,608,500<=X<1000,4<=X<7,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,328,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,322,no known savings,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,366,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,402,<100,1<=X<4,1,male single,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,278,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,312,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,429,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,317,100<=X<500,1<=X<4,1,male single,co applicant,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,315,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,363,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,414,<100,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,609,no known savings,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,272,500<=X<1000,4<=X<7,1,male single,guarantor,1,car,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,595,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,387,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,292,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,339,<100,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,380,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,317,no known savings,1<=X<4,1,male mar/wid,guarantor,1,car,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,336,no known savings,4<=X<7,1,male single,co applicant,1,car,24,stores,rent,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,471,no known savings,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,442,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,608,<100,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,546,100<=X<500,1<=X<4,1,male single,guarantor,1,no known property,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,436,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,416,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,411,500<=X<1000,1<=X<4,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,384,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,life insurance,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,350,no known savings,1<=X<4,1,male single,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,280,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,376,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,415,<100,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,324,no known savings,4<=X<7,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,477,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,318,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,322,<100,4<=X<7,1,male single,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,336,100<=X<500,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,393,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,488,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,344,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,for free,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,294,no known savings,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,474,no known savings,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,469,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,347,<100,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,413,100<=X<500,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,407,no known savings,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,288,no known savings,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,602,<100,1<=X<4,1,male single,guarantor,1,life insurance,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,330,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,329,no known savings,1<=X<4,1,male single,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,446,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,483,no known savings,1<=X<4,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,572,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,441,no known savings,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,520,100<=X<500,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,385,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,259,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,405,no known savings,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,325,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,339,no known savings,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,300,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,323,100<=X<500,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,360,<100,1<=X<4,1,male single,guarantor,1,no known property,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,436,500<=X<1000,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,468,<100,4<=X<7,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,371,100<=X<500,4<=X<7,1,male single,guarantor,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,344,no known savings,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,324,<100,1<=X<4,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,322,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,443,<100,1<=X<4,1,male single,guarantor,1,no known property,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,445,<100,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,493,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,296,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,610,100<=X<500,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,498,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,car,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,283,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,382,500<=X<1000,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,367,<100,1<=X<4,1,male single,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,406,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,310,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,341,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,no known property,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,285,<100,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,353,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,334,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,274,no known savings,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,382,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,354,500<=X<1000,1<=X<4,1,male single,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,500,100<=X<500,1<=X<4,1,male single,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,442,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,434,<100,1<=X<4,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,443,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,car,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,288,no known savings,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,273,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,379,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,457,<100,1<=X<4,1,male mar/wid,guarantor,1,no known property,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,384,<100,1<=X<4,1,male single,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,526,no known savings,1<=X<4,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,393,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,599,<100,1<=X<4,1,male mar/wid,guarantor,1,car,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,585,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,life insurance,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,389,100<=X<500,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,419,no known savings,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,313,no known savings,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,377,<100,1<=X<4,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,413,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,390,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,445,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,428,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,399,<100,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,458,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,298,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,540,no known savings,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,446,<100,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,607,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,392,no known savings,1<=X<4,1,male single,co applicant,1,real estate,20,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,355,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,251,100<=X<500,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,589,no known savings,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,456,<100,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,339,500<=X<1000,1<=X<4,1,male single,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,495,100<=X<500,1<=X<4,1,male single,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,446,500<=X<1000,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,430,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,304,<100,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,263,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,423,<100,1<=X<4,1,male single,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,437,500<=X<1000,1<=X<4,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,275,no known savings,4<=X<7,1,male mar/wid,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,595,<100,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,318,100<=X<500,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,490,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,no known property,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,499,500<=X<1000,4<=X<7,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,326,500<=X<1000,4<=X<7,1,male single,guarantor,1,life insurance,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,607,500<=X<1000,4<=X<7,1,male single,co applicant,1,no known property,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,391,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,450,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,397,no known savings,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,266,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,253,<100,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,321,<100,4<=X<7,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,410,100<=X<500,4<=X<7,1,male single,guarantor,1,life insurance,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,496,no known savings,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,440,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,real estate,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,416,100<=X<500,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,392,<100,1<=X<4,1,male single,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,491,100<=X<500,1<=X<4,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,508,no known savings,1<=X<4,1,male mar/wid,co applicant,1,no known property,24,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,413,500<=X<1000,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,492,500<=X<1000,4<=X<7,1,male mar/wid,guarantor,1,no known property,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,no credits/all paid,domestic appliance,377,500<=X<1000,4<=X<7,1,male single,guarantor,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,276,500<=X<1000,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,276,<100,4<=X<7,1,male mar/wid,co applicant,1,real estate,21,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,264,500<=X<1000,1<=X<4,1,male mar/wid,co applicant,1,car,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,409,no known savings,4<=X<7,1,male mar/wid,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,all paid,domestic appliance,557,100<=X<500,1<=X<4,1,male single,co applicant,1,life insurance,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,324,100<=X<500,4<=X<7,1,male mar/wid,guarantor,1,real estate,19,stores,rent,1,skilled,1,none,yes,bad
+>=200,4,all paid,domestic appliance,347,500<=X<1000,1<=X<4,1,male mar/wid,guarantor,1,life insurance,20,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,418,100<=X<500,4<=X<7,1,male single,co applicant,1,real estate,24,stores,own,1,skilled,1,yes,yes,bad
+>=200,4,no credits/all paid,domestic appliance,371,100<=X<500,1<=X<4,1,male mar/wid,guarantor,1,real estate,19,stores,for free,1,skilled,1,none,yes,bad
+>=200,4,critical/other existing credit,domestic appliance,475,no known savings,1<=X<4,1,male single,guarantor,1,real estate,21,stores,rent,1,skilled,1,none,yes,bad
