@@ -61,10 +61,10 @@ eigenvalues. In either case, a warning is issued.
 }
 \examples{
 # Train ARF
-arf <- adversarial_rf(iris)
+arf <- arf::adversarial_rf(iris)
 
 # Embed the data
-emap <- eigenmap(arf, iris)
+emap <- encode(arf, iris)
 
 
 }
@@ -82,5 +82,5 @@ dimensionality reduction of manifolds. \emph{Proceedings of the 21st
 International Conference on Machine Learning}.
 }
 \seealso{
-\code{\link{arf}}
+\code{\link[arf]{adversarial_rf}}
 }

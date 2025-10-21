@@ -64,14 +64,14 @@
 #'
 #' @examples
 #' # Train ARF
-#' arf <- adversarial_rf(iris)
+#' arf <- arf::adversarial_rf(iris)
 #'
 #' # Embed the data
-#' emap <- eigenmap(arf, iris)
+#' emap <- encode(arf, iris)
 #'
 #'
 #' @seealso
-#' \code{\link{arf}}
+#' \code{\link[arf]{adversarial_rf}}
 #'
 #'
 #' @export
@@ -233,17 +233,17 @@ encode <- function(
 #' tst <- setdiff(1:nrow(iris), trn)
 #'
 #' # Train ARF
-#' arf <- adversarial_rf(iris[trn, ])
+#' arf <- arf::adversarial_rf(iris[trn, ])
 #'
 #' # Learn the Laplacian eigenmap
-#' emap <- eigenmap(arf, iris[trn, ])
+#' emap <- encode(arf, iris[trn, ])
 #'
 #' # Embed test points
-#' emb <- predict.eigenmap(emap, arf, iris[tst, ])
+#' emb <- predict(emap, arf, iris[tst, ])
 #'
 #'
 #' @seealso
-#' \code{\link{arf}}
+#' \code{\link[arf]{adversarial_rf}}
 #'
 #'
 #' @export

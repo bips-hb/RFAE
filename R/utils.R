@@ -1,7 +1,7 @@
 #' Preprocess input data
-#' 
+#'
 #' This function prepares input data.
-#' 
+#'
 #' @param x Input data.frame.
 #' @keywords internal
 
@@ -22,15 +22,15 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
     if (is.null(to_numeric)) {
       to_numeric <- sapply(seq_len(ncol(x)), function(j) {
         idx_integer[j] & length(unique(x[[j]])) > default
-      }) 
+      })
     } else {
       to_numeric <- to_numeric[names(x)]
     }
     if (any(to_numeric)) {
-      warning('Recoding integers with more than 5 unique values as numeric. ', 
+      warning('Recoding integers with more than 5 unique values as numeric. ',
               'To override this behavior, explicitly code these variables as factors.')
       x[, to_numeric] <- lapply(x[, to_numeric, drop = FALSE], as.numeric)
-    } 
+    }
     if (is.null(to_factor)) {
       to_factor <- sapply(seq_len(ncol(x)), function(j) {
         idx_integer[j] & length(unique(x[[j]])) < 6
@@ -39,7 +39,7 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
       to_factor <- to_factor[names(x)]
     }
     if (any(to_factor)) {
-      warning('Recoding integers with fewer than 6 unique values as ordered factors. ', 
+      warning('Recoding integers with fewer than 6 unique values as ordered factors. ',
               'To override this behavior, explicitly code these variables as numeric.')
       x[, to_factor] <- lapply(which(to_factor), function(j) {
         lvls <- sort(unique(x[[j]]))
@@ -52,28 +52,28 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
 
 
 #' Post-process data
-#' 
+#'
 #' This function prepares output data.
-#' 
+#'
 #' @param x Input data.frame.
 #' @param meta Metadata.
-#' @param round Round continuous variables to their respective maximum precision 
+#' @param round Round continuous variables to their respective maximum precision
 #'   in the real data set?
 #' @param input_class Input class of \code{x}.
 #' @param lvls Metadata on factor variables.
-#' 
+#'
 #' @import data.table
 #' @keywords internal
 
 post_x <- function(x, meta, round = TRUE) {
-  
+
   # To avoid data.table check issues
   variable <- val <- NULL
-  
+
   # Assign some things
   input_class <- meta$input_class
   lvls <- meta$levels
-  
+
   # Order, classify features
   meta_tmp <- meta$metadata[variable %in% colnames(x)]
   setcolorder(x, match(meta_tmp$variable, colnames(x)))
@@ -83,7 +83,7 @@ post_x <- function(x, meta, round = TRUE) {
   idx_ordered <- meta_tmp[, which(grepl('ordered', class))]
   idx_logical <- meta_tmp[, which(class == 'logical')]
   idx_integer <- meta_tmp[, which(class == 'integer')]
-  
+
   # Recode
   if (sum(idx_numeric) > 0L & round) {
     x[, idx_numeric] <- lapply(idx_numeric, function(j) {
@@ -114,9 +114,9 @@ post_x <- function(x, meta, round = TRUE) {
       } else {
         as.integer(as.character(x[[j]]))
       }
-    }) 
+    })
   }
-  
+
   # Export
   if ('data.table' %in% input_class) {
     setDT(x)[]
@@ -130,27 +130,29 @@ post_x <- function(x, meta, round = TRUE) {
 
 
 #' Apply adaptive sparsity thresholds
-#' 
+#'
 #' This function caps the number of expected neighbors in a data-driven manner.
-#' 
+#'
 #' @param emap Spectral embedding for the \code{rf} learned via \code{eigenmap}.
 #' @param A0 Adjacency matrix for test samples.
-#' @param parallel Compute in parallel? 
-#' 
+#' @param parallel Compute in parallel?
+#'
 #' @import data.table
 #' @import Matrix
-#' @import foreach 
+#' @import foreach
 #' @import mgcv
+#' @importFrom methods as new
+#' @importFrom stats quantile
 #' @keywords internal
 
 sparsify <- function(emap, A0, parallel = TRUE) {
-  
+
   # Hyperparameters
   n <- nrow(emap$z)
   m <- nrow(A0)
-  
+
   # Estimate training adjacency matrix
-  L_hat <- emap$z %*% diag(sqrt(emap$lambda)) %*% t(emap$v) 
+  L_hat <- emap$z %*% diag(sqrt(emap$lambda)) %*% t(emap$v)
   L_hat[L_hat < 0] <- 0
   L_hat <- as(L_hat, 'sparseMatrix')
   d_old <- 1 / emap$d # These are now square root of node degrees
@@ -160,7 +162,7 @@ sparsify <- function(emap, A0, parallel = TRUE) {
   d_mat <- matrix(rep(d_hat, n), nrow = n, byrow = TRUE)
   A_hat <- t(A_hat * d_mat)
   diag(A_hat) <- 0
-  
+
   # Count true and estimated neighbors
   neighb_fn <- function(i) {
     data.table(k = sum(emap$A[i, ] > 0), k_hat = sum(A_hat[i, ] > 0))
@@ -170,10 +172,10 @@ sparsify <- function(emap, A0, parallel = TRUE) {
   } else {
     df <- rbindlist(lapply(seq_len(n), neighb_fn))
   }
-  
+
   # Fit cubic spline
   f <- gam(k ~ s(k_hat, bs = 'cs'), data = df)
-  
+
   # Predict neighbors for A0
   if (isTRUE(parallel)) {
     k_hat <- foreach(i = seq_len(m), .combine = c) %dopar% sum(A0[i, ] > 0)
@@ -189,7 +191,7 @@ sparsify <- function(emap, A0, parallel = TRUE) {
   if (any(sup1)) {
     sp_hat[sup1] <- 1
   }
-  
+
   # Zero out entries below the adaptive thresholds
   zero_out <- function(i) {
     tmp <- A0[i, ]
@@ -203,11 +205,11 @@ sparsify <- function(emap, A0, parallel = TRUE) {
   } else {
     out <- foreach(ii = seq_len(m), .combine = rbind) %dopar% zero_out(ii)
   }
-  
+
   # Export
   dimnames(out) <- NULL
   out <- as(out, 'sparseMatrix')
   return(out)
-  
+
 }
 

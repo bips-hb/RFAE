@@ -38,13 +38,13 @@ trn <- sample(1:nrow(iris), 100)
 tst <- setdiff(1:nrow(iris), trn)
 
 # Train ARF
-arf <- adversarial_rf(iris[trn, ])
+arf <- arf::adversarial_rf(iris[trn, ])
 
 # Learn the Laplacian eigenmap
-emap <- eigenmap(arf, iris[trn, ])
+emap <- encode(arf, iris[trn, ])
 
 # Embed test points
-emb <- predict.eigenmap(emap, arf, iris[tst, ])
+emb <- predict(emap, arf, iris[tst, ])
 
 
 }
@@ -54,5 +54,5 @@ M. (2004). Learning eigenfunctions links spectral embedding and kernel PCA.
 \emph{Neural Computation, 16}(10): 2197-2219.
 }
 \seealso{
-\code{\link{arf}}
+\code{\link[arf]{adversarial_rf}}
 }

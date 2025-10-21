@@ -40,13 +40,15 @@ Imports:
     foreach,
     data.table,
     stats,
-    arf,
-    glmnet,
     Matrix,
     RSpectra,
     RANN,
     caret,
-    mgcv
+    mgcv,
+    methods
+Suggests:
+    tibble,
+    arf
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2 

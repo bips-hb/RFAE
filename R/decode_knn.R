@@ -31,6 +31,7 @@
 #' @import Matrix
 #' @import data.table
 #' @importFrom RANN nn2
+#' @importFrom stats runif
 #' @importFrom foreach foreach %do% %dopar%
 #'
 #'
