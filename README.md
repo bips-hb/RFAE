@@ -24,7 +24,9 @@ Alternatively, you can just run `benchmark_plots` with `raw.csv` and `plot_data.
 
 The `visual_experiments` subfolder contains scripts and results for the MNIST experiments in figures 3, 7 and 8.
 
+The `denoising.R` file contains the script for the denoising experiment in figure 4.
+
 The `decoder_sandbox` subfolder contains miscellaneous files relating to the development of RFAE.
 
-The `R` and `cpp` files not in any subfolder are all the scripts that were used in the experiments and benchmarks. Please do not move these if you want to rerun experiments, as some experiments may depend on these scripts.
+The remaining `R` and `cpp` files not in any subfolder are all the scripts that were used in the experiments and benchmarks. Please do not move these if you want to rerun experiments, as some experiments may depend on these scripts.
 
