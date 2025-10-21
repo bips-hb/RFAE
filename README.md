@@ -6,8 +6,11 @@ The package can be installed by running:
 ```
 devtools::install_github("bips-hb/RFAE")
 ```
+You can also clone the repository and run:
+```
+devtools::build("RFAE")
+```
 The `paper` folder contains the scripts to rerun and reproduce the experiments performed and report in the paper. 
-
 The `compression_benchmark` subfolder contains scripts and results for the compression/distortion benchmark, or table 1. Some specific running instructions:
 
 - All other methods were run on a HPC unit. We include the python/R file required to run the models on HPC, but don't upload the run script to maintain anonymity. Alternatively, you can run it locally.
