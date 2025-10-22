@@ -2,7 +2,7 @@
 
 S3method(predict,encode)
 export(encode)
-export(f1_score)
+export(reconstruction_error)
 export(train_decoder)
 import(Matrix)
 import(caret)

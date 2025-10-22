@@ -1,5 +1,4 @@
-#' Calculate reconstruction errors. Function calculates separate reconstruction
-#' errors for categorical and numerical variables
+#' Mixed-type Reconstruction Error
 #'
 #'
 #' @param Xhat Reconstructed dataset
@@ -7,44 +6,29 @@
 #'
 #'
 #' @details
-#'
+#' In standard AEs, reconstruction error is generally estimated via \eqn{L_2}
+#' loss. This is not sensible with a mix of continous and categorical data, so
+#' we devise a measure that evalues distortion on continuous variables as
+#' \eqn{1 - R^2}, and categorical variables as accuracy.
 #'
 #' @return
-#' Column-wise reconstruction error, and the average reconstruction
-#' error for categorical and numeric variables
-#'
-#'
-#' @references
-#'
+#' A list containing column-wise reconstruction error, and the average
+#' reconstruction error for categorical and numeric variables. Values lie
+#' between 0-1, where 0 represents perfect reconstruction, and 1 represents
+#' maximum distortion.
 #'
 #' @examples
 #'
-#'
-#' @seealso
-#'
+#' arf <- adversarial_rf::arf(iris)
+#' emap <- encode(arf, iris, k = 2)
+#' z <- predict.encode(emap, arf, iris)
+#' out <- decode_knn(arf, emap, z, k = 5)$x_hat
+#' error <- reconstruction_error(out, X)
 #'
 #' @export
 #' @import caret
 #'
-
-f1_score <- function(y, yhat) {
-  lvls <- union(y, yhat)
-  y <- factor(as.character(y), levels = lvls)
-  yhat <- factor(as.character(yhat), levels = lvls)
-  cm <- suppressWarnings(confusionMatrix(yhat, y))
-
-  if (nlevels(as.factor(y)) > 2) {
-    f1 <- cm$byClass[, "F1"]
-    prevalence <- cm$byClass[, "Prevalence"]
-    f1[is.na(f1)] <- 0
-
-    weighted_f1 <- sum(f1 * prevalence)
-  } else {
-    weighted_f1 <- cm$byClass["F1"]
-  }
-
-  return(weighted_f1)
-}
+#'
 reconstruction_error <- function(Xhat, X) {
   num_error <-  list()
   cat_error <-  list()
