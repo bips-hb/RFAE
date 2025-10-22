@@ -2,7 +2,7 @@
 % Please edit documentation in R/encode.R
 \name{encode}
 \alias{encode}
-\title{Laplacian Eigenmaps}
+\title{Encoding with Diffusion Maps}
 \usage{
 encode(rf, x, k = 5L, stepsize = 1L, parallel = TRUE)
 }
@@ -20,44 +20,39 @@ See Details.}
 via \code{doParallel}.}
 }
 \value{
-A list with six elements: (1) \code{z}: a \code{k}-dimensional nonlinear
-embedding of \code{x} implied by \code{rf}. (2) \code{w}: the embedding
-weights that map scaled model adjacencies to eigenvectors. (3) \code{v}:
-the leaking \code{k} eigenvectors; (4) \code{lambda}: the leading \code{k}
-eigenvalues; (5) \code{d}: the inverse square root of the node degrees. (6)
-\code{leafIDs}: a matrix with \code{nrow(x)} rows and \code{rf$num.trees}
-columns, representing the terminal nodes of each training sample in each tree.
+A list with eight elements: (1) \code{Z}: a \code{k}-dimensional nonlinear
+embedding of \code{x} implied by \code{rf}. (2) \code{A}: the normalized
+adjacency matrix (3) \code{v}: the leading \code{k} eigenvectors;
+(4) \code{lambda}: the leading \code{k} eigenvalues; (5) \code{stepsize}: the
+number of steps in the random walk. (6) \code{leafIDs}: a matrix with
+\code{nrow(x)} rows and \code{rf$num.trees} columns, representing the
+terminal nodes of each training sample in each tree; (7) the number of
+samples in each leaf; (8) metadata about the \code{rf}.
 }
 \description{
-Computes the Laplacian eigenmap of a random forest, including a spectral
+Computes the diffusion map of a random forest kernel, including a spectral
 decomposition and associated weights.
 }
 \details{
-\code{eigenmap} learns a low-dimensional embedding of the data implied by the
+\code{encode} learns a low-dimensional embedding of the data implied by the
 adjacency matrix of the \code{rf}. Random forests can be understood as an
 adaptive nearest neighbors algorithm, where proximity between samples is
 determined by how often they are routed to the same leaves. We compute the
-graph Laplacian of the model adjacencies over the training data \code{x}, and
-perform a spectral decomposition of the resulting matrix up to degree
-\code{k}. The function returns the resulting eigenvectors, embedding weights,
-node degrees, and leaf IDs.
+spectral decomposition of the model adjacencies over the training data
+\code{X}, and take the leading \code{k} eigenvectors and eigenvalues. The
+function returns the resulting diffusion map, eigenvectors, eigenvalues,
+and leaf sizes.
 
-Let \eqn{A} be the weighted adjacency matrix of \code{x} implied by
-\code{rf}. Let \eqn{D} be the degree matrix of \eqn{A}. Then the
-(unnormalized) graph Laplacian is given by \eqn{L = D - A}. The symmetrically
-normalized graph Laplacian is given by \eqn{L_{sym} = I - D^{-1/2} L D^{-1/2}}.
-Projecting data onto the leading nonconstant eigenvectors of this matrix is a
-form of kernel principal component analysis (Ham et al., 2004) with some
-locality preserving optimality properties (Belkin & Niyogi, 2003). We can
+Let \eqn{K} be the weighted adjacency matrix of code \code{x} implied by
+\code{rf}. This defines a weighted, undirected graph over the training data,
+which we can also interpret as the transitions of a Markov process 'between'
+data points. Spectral analysis produces the decomposition \eqn{K = V\lambda V^{-1}},
+where we can take leading nonconstant eigenvectors. The diffusion map
+\eqn{Z = \sqrt{n} V \lambda^{t}} (Coifman & Lafon, 2006) represents the
+long-run connectivity structure of the graph after t time steps of a Markov
+process, with some nice optimization properties (von Luxburg, 2007). We can
 embed new data into this space using the Nyström formula (Bengio et al.,
 2004).
-
-In some cases, instability in the spectral decomposition may result in
-negative eigenvalues. Behavior in this case is determined by the
-\code{approx} argument. If \code{TRUE}, \code{eigenmap} proceeds with the
-nearest positive definite approximation, computed via Higham's (2002)
-algorithm. If \code{FALSE}, the function proceeds with only the nonnegative
-eigenvalues. In either case, a warning is issued.
 }
 \examples{
 # Train ARF
@@ -69,17 +64,15 @@ emap <- encode(arf, iris)
 
 }
 \references{
-Belkin, M. & Niyogi, P. (2003). Laplacian eigenmaps for dimensionality
-reduction and data representation. \emph{Neural Computation, 15}(6):
-1373-1396.
-
 Bengio, Y., Delalleau, O., Le Roux, N., Paiement, J., Vincent, P., & Ouimet,
 M. (2004). Learning eigenfunctions links spectral embedding and kernel PCA.
 \emph{Neural Computation, 16}(10): 2197-2219.
 
-Ham, J., Lee, D., Sebastian, M., & Schölkopf, B. (2004). A kernel view of the
-dimensionality reduction of manifolds. \emph{Proceedings of the 21st
-International Conference on Machine Learning}.
+Coifman, R. R., & Lafon, S. (2006). Diffusion maps. \emph{Applied and
+Computational Harmonic Analysis, 21}(1), 5–30.
+
+von Luxburg, U. (2007). A tutorial on spectral clustering. \emph{Statistics
+and Computing, 17}(4), 395–416.
 }
 \seealso{
 \code{\link[arf]{adversarial_rf}}
