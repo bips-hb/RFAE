@@ -21,4 +21,3 @@ in the real data set?}
 \description{
 This function prepares output data.
 }
-\keyword{internal}

@@ -34,7 +34,112 @@
 #' @importFrom stats runif
 #' @importFrom foreach foreach %do% %dopar%
 #'
+
+decode_knn <- function(
+    rf,
+    emap,
+    z,
+    x_tilde = NULL,
+    k = 5,
+    parallel = TRUE) {
+
+  # Preliminaries, metadata
+  m <- nrow(z)
+  if (!is.null(x_tilde)) {
+    if (nrow(x_tilde) != nrow(emap$leafIDs)) {
+      stop('When providing x_tilde, nrow(x_tilde) must match nrow(emap$leafIDs).')
+    }
+    x_tilde_provided <- TRUE
+  }
+  factor_cols <- emap$meta$metadata$fctr
+
+  # Compute nearest neighbors and distances in embedding space
+  knn <- nn2(data = emap$Z, query = z, k = k)
+  if (k > 1) {
+    wts <- 1 / knn$nn.dists
+    if (any(!is.finite(wts))) {
+      inf_idx <- which(!is.finite(wts))
+      n_clones <- length(inf_idx)
+      wts[inf_idx, ] <- matrix(
+        rep(c(1, rep(0, k - 1)), n_clones), nrow = n_clones, byrow = TRUE
+      )
+    }
+    wts <- wts / rowSums(wts)
+  } else {
+    wts <- matrix(rep(1L, m), ncol = 1)
+  }
+  neighbors <- as.integer(t(knn$nn.idx)) # could be reduced by unique
+
+  # Optionally estimate data from leaf bounds
+  if (is.null(x_tilde)) {
+    x_tilde_provided <- FALSE
+    x_tilde <- train_decoder(rf, emap, neighbors, parallel = parallel)
+    x_tilde <- as.data.frame(x_tilde)
+    if (nrow(x_tilde) < length(neighbors)) {
+      rownames(x_tilde) <- as.character(unique(neighbors))
+      x_tilde <- x_tilde[as.character(neighbors), ]
+      rownames(x_tilde) <- NULL
+    }
+  }
+
+  # CONTINUOUS DATA SHOULD BE A SINGLE MATRIX OPERATION
+
+  # Loop of weighted means
+  loop <- function(i) {
+
+    # Pick out neighbors, weights
+    if (isTRUE(x_tilde_provided)) {
+      x_tmp <- x_tilde[knn$nn.idx[i, ], ]
+    } else {
+      x_tmp <- x_tilde[(i-1)*k + seq(k), ]
+    }
+    w <- wts[i, ]
+
+    # Take most likely label or weighted mean of continuous outcomes
+    out_cat <- out_cnt <- data.table()
+    if (any(factor_cols)) {
+      x_tmp_cat <- x_tmp[, factor_cols, drop = FALSE]
+      out_cat <- t(as.data.frame(sapply(x_tmp_cat, w_max, weights = w)))
+      row.names(out_cat) <- NULL
+    }
+    if (any(!factor_cols)) {
+      x_tmp_cnt <- as.matrix(x_tmp[, !factor_cols, drop = FALSE])
+      out_cnt <- as.data.frame(t(crossprod(x_tmp_cnt, w)))
+    }
+
+    # Export
+    out <- cbind(out_cat, out_cnt)
+    return(out)
+
+  }
+
+  # Execute in parallel
+  if (isTRUE(parallel)) {
+    out <- foreach(i = seq_len(m), .combine = rbind,
+                   .export = c("w_max"),
+                   .packages = c("data.table")) %dopar% loop(i)
+  } else {
+    out <- foreach(i = seq_len(m), .combine = rbind) %do% loop(i)
+  }
+  colnames(out) <- c(emap$meta$metadata[fctr == TRUE, variable],
+                     emap$meta$metadata[fctr == FALSE, variable])
+
+  # Polish, export
+  out <- post_x(out, emap$meta)
+  if (!isTRUE(x_tilde_provided)) {
+    out <- list('x_hat' = out, 'x_tilde' = x_tilde)
+  }
+  return(out)
+
+}
+
+
+#' Train RF Decoder
 #'
+#' This function rebuilds training data like eForest.
+#'
+#' @param x Input data.frame.
+#' @keywords internal
 
 train_decoder <- function(
     rf,
@@ -71,7 +176,7 @@ train_decoder <- function(
   keep_vars <- rf$forest$independent.variable.names[
     unique((unlist(rf$forest$split.varIDs) + 1)[
       unlist(do.call(rbind, rf$forest$child.nodeIDs)[,1]) != 0
-      ])]
+    ])]
 
   # Define bound function
   bnd_fn <- function(b) {
@@ -221,105 +326,4 @@ w_max <- function(values, weights) {
   scores <- sapply(uv, function(v) sum(weights[values == v]))
   uv[which.max(scores)]
 }
-
-# Decoder
-decode_knn <- function(
-    rf,
-    emap,
-    z,
-    x_tilde = NULL,
-    k = 5,
-    parallel = TRUE) {
-
-  # Preliminaries, metadata
-  m <- nrow(z)
-  if (!is.null(x_tilde)) {
-    if (nrow(x_tilde) != nrow(emap$leafIDs)) {
-      stop('When providing x_tilde, nrow(x_tilde) must match nrow(emap$leafIDs).')
-    }
-    x_tilde_provided <- TRUE
-  }
-  factor_cols <- emap$meta$metadata$fctr
-
-  # Compute nearest neighbors and distances in embedding space
-  knn <- nn2(data = emap$Z, query = z, k = k)
-  if (k > 1) {
-    wts <- 1 / knn$nn.dists
-    if (any(!is.finite(wts))) {
-      inf_idx <- which(!is.finite(wts))
-      n_clones <- length(inf_idx)
-      wts[inf_idx, ] <- matrix(
-        rep(c(1, rep(0, k - 1)), n_clones), nrow = n_clones, byrow = TRUE
-      )
-    }
-    wts <- wts / rowSums(wts)
-  } else {
-    wts <- matrix(rep(1L, m), ncol = 1)
-  }
-  neighbors <- as.integer(t(knn$nn.idx)) # could be reduced by unique
-
-  # Optionally estimate data from leaf bounds
-  if (is.null(x_tilde)) {
-    x_tilde_provided <- FALSE
-    x_tilde <- train_decoder(rf, emap, neighbors, parallel = parallel)
-    x_tilde <- as.data.frame(x_tilde)
-    if (nrow(x_tilde) < length(neighbors)) {
-      rownames(x_tilde) <- as.character(unique(neighbors))
-      x_tilde <- x_tilde[as.character(neighbors), ]
-      rownames(x_tilde) <- NULL
-    }
-  }
-
-  # CONTINUOUS DATA SHOULD BE A SINGLE MATRIX OPERATION
-
-  # Loop of weighted means
-  loop <- function(i) {
-
-    # Pick out neighbors, weights
-    if (isTRUE(x_tilde_provided)) {
-      x_tmp <- x_tilde[knn$nn.idx[i, ], ]
-    } else {
-      x_tmp <- x_tilde[(i-1)*k + seq(k), ]
-    }
-    w <- wts[i, ]
-
-    # Take most likely label or weighted mean of continuous outcomes
-    out_cat <- out_cnt <- data.table()
-    if (any(factor_cols)) {
-      x_tmp_cat <- x_tmp[, factor_cols, drop = FALSE]
-      out_cat <- t(as.data.frame(sapply(x_tmp_cat, w_max, weights = w)))
-      row.names(out_cat) <- NULL
-    }
-    if (any(!factor_cols)) {
-      x_tmp_cnt <- as.matrix(x_tmp[, !factor_cols, drop = FALSE])
-      out_cnt <- as.data.frame(t(crossprod(x_tmp_cnt, w)))
-    }
-
-    # Export
-    out <- cbind(out_cat, out_cnt)
-    return(out)
-
-  }
-
-  # Execute in parallel
-  if (isTRUE(parallel)) {
-    out <- foreach(i = seq_len(m), .combine = rbind,
-                   .export = c("w_max"),
-                   .packages = c("data.table")) %dopar% loop(i)
-  } else {
-    out <- foreach(i = seq_len(m), .combine = rbind) %do% loop(i)
-  }
-  colnames(out) <- c(emap$meta$metadata[fctr == TRUE, variable],
-                     emap$meta$metadata[fctr == FALSE, variable])
-
-  # Polish, export
-  out <- post_x(out, emap$meta)
-  if (!isTRUE(x_tilde_provided)) {
-    out <- list('x_hat' = out, 'x_tilde' = x_tilde)
-  }
-  return(out)
-
-}
-
-
 

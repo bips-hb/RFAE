@@ -184,6 +184,8 @@ encode <- function(
   # Export
   out <- list('Z' = Z, 'A' = A, 'V' = e_vec, 'lambda' = e_val, 'stepsize' = stepsize,
               'leafIDs' = leafIDs, 'sizes' = sizes, 'meta' = meta)
+  class(out) <- "encode"
+
   return(out)
 
 }

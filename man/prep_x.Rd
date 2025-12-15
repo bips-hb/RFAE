@@ -12,4 +12,3 @@ prep_x(x, to_numeric = NULL, to_factor = NULL, default = 5)
 \description{
 This function prepares input data.
 }
-\keyword{internal}

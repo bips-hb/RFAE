@@ -16,7 +16,7 @@ library(arf)
 source("encode.R")
 source("decode_knn.R")
 
-source("utils.R")
+source("R/utils.R")
 source("errors.R")
 
 # Register cores
@@ -27,9 +27,9 @@ loop <- function(dat, latent_rate=0.2, runs=10) {
   # Import data
   for (i in seq_along(dat)) {
     data <- dat[i]
-    full <- fread(paste0('../../original_data/', data, '.csv'
+    full <- fread(paste0('paper/compression_benchmarks/original_data/', data, '.csv'
     ),header=TRUE)
-    bootstraps <- as.matrix(fread(paste0('../../original_data/bootstrap_', data, '.csv')))
+    bootstraps <- as.matrix(fread(paste0('paper/compression_benchmarks/original_data/bootstrap_', data, '.csv')))
     colnames(full) = make.names(colnames(full))
     d <- ncol(full)
     dz <- max(1, round(d * latent_rate))
@@ -51,10 +51,10 @@ loop <- function(dat, latent_rate=0.2, runs=10) {
       # trn <- trn_obj[[1]]
       # setDT(trn)
       # setDT(tst)
-      # 
+      #
       # trn_og <- trn[y == 1]
       # trn_og[, y := NULL]
-      
+
       trn <- full[bootstrap, ]
       setDT(trn)
       trn_obj <- prep_x(trn)
@@ -68,13 +68,13 @@ loop <- function(dat, latent_rate=0.2, runs=10) {
       #rf <- ranger(x = trn, y = trn[,sample(c(0,1), .N, replace = T)], classification = T,
       #             num.trees = 500, mtry = ncol(trn), splitrule = "extratrees", num.random.splits = 1, respect.unordered.factors = "order")
       emap <- encode(rf, trn, k=dz)
-      z <- predict.encode(emap, rf, tst)
+      z <- predict(emap, rf, tst)
       out <- decode_knn(rf, emap, z, k = 20)$x_hat
       fwrite(out, paste0(data, '/', latent_rate, '_run', j, '.csv'))
-      
+
     }
   }
-}  
+}
 
 compressions <- c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1)
 

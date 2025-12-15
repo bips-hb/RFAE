@@ -3,7 +3,7 @@
 #' This function prepares input data.
 #'
 #' @param x Input data.frame.
-#' @keywords internal
+#' @export
 
 prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
   # Reclass all non-numeric features as factors
@@ -63,7 +63,7 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
 #' @param lvls Metadata on factor variables.
 #'
 #' @import data.table
-#' @keywords internal
+#' @export
 
 post_x <- function(x, meta, round = TRUE) {
 
