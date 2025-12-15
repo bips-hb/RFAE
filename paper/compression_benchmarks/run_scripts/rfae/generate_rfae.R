@@ -70,7 +70,7 @@ loop <- function(dat, latent_rate=0.2, runs=10) {
       emap <- encode(rf, trn, k=dz)
       z <- predict(emap, rf, tst)
       out <- decode_knn(rf, emap, z, k = 20)$x_hat
-      fwrite(out, paste0(data, '/', latent_rate, '_run', j, '.csv'))
+      #fwrite(out, paste0(data, '/', latent_rate, '_run', j, '.csv'))
 
     }
   }
