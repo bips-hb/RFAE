@@ -46,7 +46,7 @@ reconstruction_error <- function(Xhat, X) {
     else {
       yhat <- as.character(Xhat[[i]])
       y <- as.character(X[[i]])
-      error <- sum(yhat == y) / nrow(X)
+      error <- sum(yhat != y) / nrow(X)
       #error <- f1_score(X[[i]], Xhat[[i]])
       cat_error[[i]] <- error
     }
