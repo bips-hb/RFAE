@@ -12,18 +12,19 @@ reconstruction_error(Xhat, X)
 \item{X}{Ground truth dataset}
 }
 \value{
-A list containing column-wise reconstruction error, and the average
+A list containing column-wise reconstruction accuracy, and the average
 reconstruction error for categorical and numeric variables. Values lie
-between 0-1, where 0 represents perfect reconstruction, and 1 represents
-maximum distortion.
+between 0-1, where 1 represents perfect reconstruction, and 0 represents no
+reconstruction. Note that in the original paper, this is presented as the
+distortion - this is because we do 1 - error in the plotting stage.
 }
 \description{
 Mixed-type Reconstruction Error
 }
 \details{
 In standard AEs, reconstruction error is generally estimated via \eqn{L_2}
-loss. This is not sensible with a mix of continous and categorical data, so
-we devise a measure that evalues distortion on continuous variables as
+loss. This is not sensible with a mix of continuous and categorical data, so
+we devise a measure that evaluates distortion on continuous variables as
 \eqn{1 - R^2}, and categorical variables as accuracy.
 }
 \examples{
