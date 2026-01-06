@@ -1,0 +1,32 @@
+---
+title: "Adjacency Test"
+output: html_notebook
+---
+
+```{r}
+library(ranger)
+library(Matrix)
+source('../../R/encode.R')
+
+rf = ranger(Species ~ ., data = iris)
+x = iris
+n_trees <- rf$num.trees
+n_samples <- nrow(x)
+
+# Weighted adjacency matrix
+leafIDs <- stats::predict(rf, x, type = 'terminalNodes')$predictions + 1L
+leafIDs_global_vec <- as.integer(
+  leafIDs + rep(seq_len(n_trees) - 1L, each = n_samples) * max(leafIDs)
+)
+M <- sparseMatrix(i = rep(seq_len(n_samples), n_trees),
+                  j = leafIDs_global_vec,
+                  x = 1L)
+rm(leafIDs_global_vec)
+gc()
+leaf_sizes <- colSums(M)
+leaf_weights <- 1 / leaf_sizes
+M_norm <- M %*% Diagonal(x = leaf_weights)
+A <- M_norm %*% t(M) / n_trees
+rm(M, M_norm)
+
+```
