@@ -1,0 +1,29 @@
+---
+title: "rfae"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rfae}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This vignette is a tutorial for the entire pipeline of the Autoencoding Random Forests (RFAE) algorithm. This consists of:
+- Training a base Random Forests (RF) model
+- Using the trained RF to encode data into embeddings 
+- Decoding the embeddings back into the input space. 
+
+```{r rfae}
+# Load libraries
+library(RFAE)
+library(data.table)
+library(ggplot2)
+
+set.seed(42)
+```
