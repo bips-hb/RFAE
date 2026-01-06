@@ -6,9 +6,6 @@
 \usage{
 train_decoder(rf, emap, neighbors = NULL, null_value = NULL, parallel = TRUE)
 }
-\arguments{
-\item{x}{Input data.frame.}
-}
 \description{
 This function rebuilds training data like eForest.
 }

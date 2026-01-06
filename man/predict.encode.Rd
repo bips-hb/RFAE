@@ -4,7 +4,7 @@
 \alias{predict.encode}
 \title{Predict Spectral Embeddings}
 \usage{
-\method{predict}{encode}(emap, rf, x, parallel = TRUE)
+\method{predict}{encode}(emap, rf, x, parallel = TRUE, ...)
 }
 \arguments{
 \item{emap}{Spectral embedding for the \code{rf} learned via \code{eigenmap}.}
@@ -15,6 +15,8 @@
 
 \item{parallel}{Compute in parallel? Must register backend beforehand, e.g.
 via \code{doParallel}.}
+
+\item{...}{Additional arguments passed to methods.}
 }
 \value{
 A matrix of embeddings, with \code{nrow(x)} rows and \code{k} columns, the

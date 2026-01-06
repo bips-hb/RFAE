@@ -5,6 +5,11 @@
 #' @param x Input data.frame.
 #' @export
 
+#' @noRd
+utils::globalVariables(c(".", "N", "V1", "bb", "fctr", "g_max", "g_min",
+                         "i", "ii", "leaf", "leaf_size", "mu", "number",
+                         "obs", "tree", "trouble", "val", "variable"))
+
 prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
   # Reclass all non-numeric features as factors
   x <- as.data.frame(x)
@@ -59,8 +64,6 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
 #' @param meta Metadata.
 #' @param round Round continuous variables to their respective maximum precision
 #'   in the real data set?
-#' @param input_class Input class of \code{x}.
-#' @param lvls Metadata on factor variables.
 #'
 #' @import data.table
 #' @export

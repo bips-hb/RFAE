@@ -202,7 +202,7 @@ encode <- function(
 #' @param x Data to be embedded.
 #' @param parallel Compute in parallel? Must register backend beforehand, e.g.
 #'   via \code{doParallel}.
-#'
+#' @param ... Additional arguments passed to methods.
 #'
 #' @details
 #' This function uses the weights learned via \code{eigenmap} to project new
@@ -254,7 +254,8 @@ predict.encode <- function(
     emap,
     rf,
     x,
-    parallel = TRUE) {
+    parallel = TRUE,
+    ...) {
 
   # Prelimz
   tmp <- as.matrix(emap$V)

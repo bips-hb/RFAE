@@ -6,6 +6,9 @@
 #' @param rf Pre-trained random forest object of class \code{ranger}.
 #' @param z Matrix of embedded data to map back to the input space.
 #' @param emap Spectral embedding learned via \code{eigenmap}.
+#' @param x_tilde Supplied training data, if none supplied then the RF is used
+#' to generate synthetic training data according to the eForest scheme. Default
+#' is NULL.
 #' @param k Number of nearest neighbors to evaluate.
 #' @param parallel Compute in parallel? Must register backend beforehand, e.g.
 #'   via \code{doParallel}.
@@ -138,7 +141,6 @@ decode_knn <- function(
 #'
 #' This function rebuilds training data like eForest.
 #'
-#' @param x Input data.frame.
 #' @keywords internal
 
 train_decoder <- function(

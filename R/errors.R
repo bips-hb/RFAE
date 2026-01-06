@@ -20,11 +20,11 @@
 #'
 #' @examples
 #'
-#' arf <- adversarial_rf::arf(iris)
+#' arf <- arf::adversarial_rf(iris)
 #' emap <- encode(arf, iris, k = 2)
-#' z <- predict.encode(emap, arf, iris)
+#' z <- predict(emap, arf, iris)
 #' out <- decode_knn(arf, emap, z, k = 5)$x_hat
-#' error <- reconstruction_error(out, X)
+#' error <- reconstruction_error(out, iris)
 #'
 #' @export
 #' @import caret

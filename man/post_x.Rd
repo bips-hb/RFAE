@@ -13,10 +13,6 @@ post_x(x, meta, round = TRUE)
 
 \item{round}{Round continuous variables to their respective maximum precision
 in the real data set?}
-
-\item{input_class}{Input class of \code{x}.}
-
-\item{lvls}{Metadata on factor variables.}
 }
 \description{
 This function prepares output data.

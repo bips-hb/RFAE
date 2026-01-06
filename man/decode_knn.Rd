@@ -13,6 +13,10 @@ decode_knn(rf, emap, z, x_tilde = NULL, k = 5, parallel = TRUE)
 
 \item{z}{Matrix of embedded data to map back to the input space.}
 
+\item{x_tilde}{Supplied training data, if none supplied then the RF is used
+to generate synthetic training data according to the eForest scheme. Default
+is NULL.}
+
 \item{k}{Number of nearest neighbors to evaluate.}
 
 \item{parallel}{Compute in parallel? Must register backend beforehand, e.g.
