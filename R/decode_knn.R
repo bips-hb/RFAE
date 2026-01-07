@@ -156,6 +156,7 @@ decode_knn <- function(
 #' This function rebuilds training data like eForest.
 #'
 #' @keywords internal
+#' @noRd
 
 train_decoder <- function(
     rf,

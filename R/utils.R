@@ -3,12 +3,15 @@
 #' This function prepares input data.
 #'
 #' @param x Input data.frame.
+#' @param to_numeric List of variables to force as numeric.
+#' @param to_factor List of variables to force as factor.
+#' @param default Threshold to classify a variable as numeric (more than default
+#'  unique values) or factor (less or equal to unique values).
+#'
+#' @return
+#' Preprocessed data.frame.
+#'
 #' @export
-
-#' @noRd
-utils::globalVariables(c(".", "N", "V1", "bb", "fctr", "g_max", "g_min",
-                         "i", "ii", "leaf", "leaf_size", "mu", "number",
-                         "obs", "tree", "trouble", "val", "variable"))
 
 prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
   # Reclass all non-numeric features as factors
@@ -64,7 +67,8 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
 #' @param meta Metadata.
 #' @param round Round continuous variables to their respective maximum precision
 #'   in the real data set?
-#'
+#' @return
+#' A data.frame which follows the structure and ordering of the input dataset.
 #' @import data.table
 #' @export
 
@@ -147,18 +151,19 @@ post_x <- function(x, meta, round = TRUE) {
 #' @importFrom methods as new
 #' @importFrom stats quantile
 #' @keywords internal
+#' @noRd
 
 sparsify <- function(emap, A0, parallel = TRUE) {
 
   # Hyperparameters
-  n <- nrow(emap$z)
+  n <- nrow(emap$Z)
   m <- nrow(A0)
 
   # Estimate training adjacency matrix
-  L_hat <- emap$z %*% diag(sqrt(emap$lambda)) %*% t(emap$v)
+  L_hat <- emap$Z %*% diag(sqrt(emap$lambda)) %*% t(emap$V)
   L_hat[L_hat < 0] <- 0
   L_hat <- as(L_hat, 'sparseMatrix')
-  d_old <- 1 / emap$d # These are now square root of node degrees
+  d_old <- 1 / emap$sizes # These are now square root of node degrees
   d_mat <- matrix(rep(d_old, n), nrow = n, byrow = TRUE)
   A_hat <- t(L_hat * d_mat)
   d_hat <- colSums(A_hat)
@@ -213,6 +218,5 @@ sparsify <- function(emap, A0, parallel = TRUE) {
   dimnames(out) <- NULL
   out <- as(out, 'sparseMatrix')
   return(out)
-
 }
 

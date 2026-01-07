@@ -23,7 +23,7 @@ Description: Autoencoding random forests (RFAEs) provide a method to
     that it can accept any trained RF of ranger object type: RF, URF or
     ARFs. Because of this, it inherits RFs' robust performance and
     capacity to seamlessly handle mixed-type tabular data. For more
-    details, see Vu et al. (2025) <https://arxiv.org/abs/2505.21441>.
+    details, see Vu et al. (2025) <arXiv:2505.21441>.
 License: GPL (>= 3)
 URL: https://github.com/bips-hb/RFAE
 BugReports: https://github.com/bips-hb/RFAE/issues

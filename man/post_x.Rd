@@ -14,6 +14,9 @@ post_x(x, meta, round = TRUE)
 \item{round}{Round continuous variables to their respective maximum precision
 in the real data set?}
 }
+\value{
+A data.frame which follows the structure and ordering of the input dataset.
+}
 \description{
 This function prepares output data.
 }
