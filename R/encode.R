@@ -197,7 +197,7 @@ encode <- function(
 #' Projects test data into the forest embedding space using a pre-trained
 #' Laplacian eigenmap.
 #'
-#' @param emap Spectral embedding for the \code{rf} learned via \code{eigenmap}.
+#' @param object Spectral embedding for the \code{rf} learned via \code{eigenmap}.
 #' @param rf Pre-trained random forest object of class \code{ranger}.
 #' @param x Data to be embedded.
 #' @param parallel Compute in parallel? Must register backend beforehand, e.g.
@@ -251,21 +251,21 @@ encode <- function(
 #'
 
 predict.encode <- function(
-    emap,
+    object,
     rf,
     x,
     parallel = TRUE,
     ...) {
 
   # Prelimz
-  tmp <- as.matrix(emap$V)
+  tmp <- as.matrix(object$V)
   n_trees <- rf$num.trees
   trn_n <- nrow(tmp)
   d_z <- ncol(tmp)
   tst_n <- nrow(x)
 
   # Weighted adjacency matrix
-  leafIDs_train <- emap$leafIDs
+  leafIDs_train <- object$leafIDs
   leafIDs_test <- stats::predict(rf, x, type = 'terminalNodes')$predictions + 1L
   max_leaf <- max(leafIDs_train, leafIDs_test, na.rm = TRUE)
 
@@ -302,7 +302,7 @@ predict.encode <- function(
   A0 <- t(M_train %*% t(M_test_norm) / n_trees)
 
   # Embed using the Nyström formula
-  Z0 <- as.matrix(A0 %*% emap$Z %*% Diagonal(x = 1 / emap$lambda))
+  Z0 <- as.matrix(A0 %*% object$Z %*% Diagonal(x = 1 / object$lambda))
 
   # Export
   return(Z0)

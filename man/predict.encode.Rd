@@ -4,10 +4,10 @@
 \alias{predict.encode}
 \title{Predict Spectral Embeddings}
 \usage{
-\method{predict}{encode}(emap, rf, x, parallel = TRUE, ...)
+\method{predict}{encode}(object, rf, x, parallel = TRUE, ...)
 }
 \arguments{
-\item{emap}{Spectral embedding for the \code{rf} learned via \code{eigenmap}.}
+\item{object}{Spectral embedding for the \code{rf} learned via \code{eigenmap}.}
 
 \item{rf}{Pre-trained random forest object of class \code{ranger}.}
 

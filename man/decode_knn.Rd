@@ -29,3 +29,20 @@ Decoded dataset.
 Maps the low-dimensional KPCA embedding of a random forest back to the input
 space via iterative k-nearest neighbors.
 }
+\details{
+\code{decode_knn} decodes the embedded data back to the original input space
+using a k-nearest neighbors (kNN) approach. For a given embedding vector,
+decoding works by first finding the k nearest embeddings within the training
+set. Then, \code{x_tilde} is either supplied or generated from the RF, which
+provides a proxy for the training samples associated with these embeddings,
+to avoid needing to retain training data. Finally, data is reconstructed by
+weighted averaging for numerical features, and the most likely value for
+categorical features.
+}
+\examples{
+arf <- arf::adversarial_rf(iris)
+emap <- encode(arf, iris, k = 2)
+z <- predict(emap, arf, iris)
+out <- decode_knn(arf, emap, z, k = 5)$x_hat
+
+}
