@@ -29,10 +29,20 @@
 #'
 #'
 #' @examples
-#' arf <- arf::adversarial_rf(iris)
-#' emap <- encode(arf, iris, k = 2)
-#' z <- predict(emap, arf, iris)
-#' out <- decode_knn(arf, emap, z, k = 5)$x_hat
+#' # Set seed
+#' set.seed(1)
+#'
+#' # Split training and test
+#' trn <- sample(1:nrow(iris), 100)
+#' tst <- setdiff(1:nrow(iris), trn)
+#'
+#' # Train RF, learn the encodings and project test points.
+#' rf <- ranger::ranger(Species ~ ., data = iris[trn, ], num.trees=50)
+#' emap <- encode(rf, iris[trn, ], k=2)
+#' emb <- predict(emap, rf, iris[tst, ])
+#'
+#' # Decode test samples back to the input space
+#' out <- decode_knn(rf, emap, emb, k=5)$x_hat
 #'
 #' @export
 #' @import Matrix

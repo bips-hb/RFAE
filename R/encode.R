@@ -229,14 +229,15 @@ encode <- function(
 #' trn <- sample(1:nrow(iris), 100)
 #' tst <- setdiff(1:nrow(iris), trn)
 #'
-#' # Train ARF
-#' arf <- arf::adversarial_rf(iris[trn, ])
+#' # Train RF. You can also use RF variants, such as the Adversarial Random
+#' # Forests (ARF).
+#' rf <- ranger::ranger(Species ~ ., data = iris[trn, ], num.trees=50)
 #'
-#' # Learn the Laplacian eigenmap
-#' emap <- encode(arf, iris[trn, ])
+#' # Learn the encodings, which are found using diffusion maps.
+#' emap <- encode(rf, iris[trn, ], k=2)
 #'
 #' # Embed test points
-#' emb <- predict(emap, arf, iris[tst, ])
+#' emb <- predict(emap, rf, iris[tst, ])
 #'
 #'
 #' @seealso
