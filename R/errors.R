@@ -9,14 +9,13 @@
 #' In standard AEs, reconstruction error is generally estimated via \eqn{L_2}
 #' loss. This is not sensible with a mix of continuous and categorical data, so
 #' we devise a measure that evaluates distortion on continuous variables as
-#' \eqn{1 - R^2}, and categorical variables as accuracy.
+#' \eqn{1 - R^2}, and categorical variables as prediction error.
 #'
 #' @return
-#' A list containing column-wise reconstruction accuracy, and the average
+#' A list containing column-wise reconstruction error, and the average
 #' reconstruction error for categorical and numeric variables. Values lie
-#' between 0-1, where 1 represents perfect reconstruction, and 0 represents no
-#' reconstruction. Note that in the original paper, this is presented as the
-#' distortion - this is because we do 1 - error in the plotting stage.
+#' between 0-1, where 0 represents perfect reconstruction, and 1 represents no
+#' reconstruction.
 #'
 #' @examples
 #' # Set seed
@@ -35,7 +34,7 @@
 #' out <- decode_knn(rf, emap, emb, k=5)$x_hat
 #'
 #' # Compute the reconstruction error
-#'
+#' error <- reconstruction_error(out, iris[tst, ])
 #' @export
 #' @import caret
 #'
@@ -51,12 +50,12 @@ reconstruction_error <- function(Xhat, X) {
       #error <- 1 - cor(Xhat[[i]], X[[i]]) ^ 2
       rss <- sum((X[[i]] - Xhat[[i]])^2)
       tss <- sum((X[[i]] - mean(X[[i]]))^2)
-      num_error[[i]] <- max(1 - (rss/tss), 0)
+      num_error[[i]] <- 1 - max(1 - (rss/tss), 0)
     }
     else {
       yhat <- as.character(Xhat[[i]])
       y <- as.character(X[[i]])
-      error <- sum(yhat == y) / nrow(X)
+      error <- sum(yhat != y) / nrow(X)
       #error <- f1_score(X[[i]], Xhat[[i]])
       cat_error[[i]] <- error
     }
