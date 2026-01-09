@@ -11,8 +11,8 @@ Authors@R: c(
     person("David S.", "Watson", role = "aut",
            comment = c(ORCID = "0000-0001-9632-2159"))
   )
-Description: Autoencoding random forests ('RFAEs') provide a method to
-    autoencode data using random forests, which involves projecting the
+Description: Autoencoding Random Forests ('RFAE') provide a method to
+    autoencode data using Random Forests ('RF'), which involves projecting the
     data to a latent feature space of chosen dimensionality (usually a
     lower dimension), and then decoding the latent representations back
     into the input space. The encoding stage is useful for feature
