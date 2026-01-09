@@ -1,6 +1,6 @@
 
 # Autoencoding Random Forests #
-This repository contains all experiments and code used in the Autoencoding Random Forests paper (<https://arxiv.org/abs/2505.21441>), a NeurIPS 2025 poster. From this repository, you can either install the Autoencoding Random Forests model (RFAE) as a package, or rerun the scripts we used to get our experimental results. Since we did not compile RFAE into a package during our experiments, you do not need to build RFAE to rerun these scripts.
+Autoencoding random forests ('RFAEs') provide a method to autoencode data using random forests, which involves projecting the data to a latent feature space of chosen dimensionality (usually a lower dimension), and then decoding the latent representations back into the input space. The encoding stage is useful for feature engineering and data visualisation tasks, akin to how principal component analysis ('PCA') is used , and the decoding stage is usefulfor compression and denoising tasks. At its core, 'RFAE' is a post-processing pipeline on a trained random forest model. This means that it can accept any trained RF of ranger object type: 'RF', 'URF' or ARFs'. Because of this, it inherits RFs' robust performance and capacity to seamlessly handle mixed-type tabular data. 
 
 The package can be installed by running:
 ```
@@ -10,23 +10,40 @@ You can also clone the repository and run:
 ```
 devtools::build("RFAE")
 ```
-The `paper` folder contains the scripts to rerun and reproduce the experiments performed and report in the paper. 
-The `compression_benchmark` sub-folder contains scripts and results for the compression/distortion benchmark, or table 1. Some specific running instructions:
+# Examples
 
-- All other methods were run on a HPC unit. We include the python/R file required to run the models on HPC, but don't upload the run script to maintain anonymity. Alternatively, you can run it locally.
-- Folders and sub-folders need to be created for the reconstructed data to be placed, of template METHOD_data/DATASET/ (e.g., `rfae_data/adult`)
-- Files are then structured as LATENT_RATE_runRUN.csv (e.g., `0.1_run1.csv`)
-- The data to be used as input for the benchmark is the original data file, accompanied with a bootstrap index file of randomly generated bootstraps. We include this file to load the bootstrapped data instead of writing multiple versions of each dataset.
-- TVAE uses the CTGAN package, but to run it, you need to replace the tvae.py script into ctgan/synthesizers/tvae.py and install the package that way.
-- After finishing, you can run `benchmark_plots.R`.
+Using Fisher's iris dataset, we train a RF and pass it through the autoencoding pipeline:
 
-Alternatively, you can just run `benchmark_plots` with `raw.csv` and `plot_data.csv`, which are the original results from this experiment.
+```
+# Set seed
+set.seed(1)
+# Split training and test
+trn <- sample(1:nrow(iris), 100)
+tst <- setdiff(1:nrow(iris), trn)
+# Train RF
+rf <- ranger::ranger(Species ~ ., data = iris[trn, ], num.trees=50)
+```
+Encode data and project test data to create new embeddings:
+```
+# Fit encoder object
+emap <- encode(rf, iris[trn, ], k=2)
+# Embed new test samples
+emb <- predict(emap, rf, iris[tst, ])
+```
+Decode test samples back to the input space: 
+```
+# Decode samples
+out <- decode_knn(rf, emap, emb, k=5)$x_hat
+```
+Measure the reconstruction error between decoded and actual samples:
+```
+error <- reconstruction_error(out, iris[tst, ])
+```
 
-The `visual_experiments` subfolder contains scripts and results for the MNIST experiments in figures 3, 7 and 8.
+For more detailed examples, refer to the package vignette.
 
-The `denoising.R` file contains the script for the denoising experiment in figure 4.
+# Python Library
+The Python version of RFAE is currently under development. A preliminary version is currently available at [RFAE_py](https://github.com/binhducvu/RFAE_py)
 
-The `decoder_sandbox` subfolder contains miscellaneous files relating to the development of RFAE.
-
-The remaining `R` and `cpp` files not in any subfolder are all the scripts that were used in the experiments and benchmarks. Please do not move these if you want to rerun experiments, as some experiments may depend on these scripts.
-
+# References
+- Vu, B. D., Kapar, J., Wright, M., & Watson, D. S. (2025). Autoencoding Random Forests. arXiv preprint arXiv:2505.21441. Link [here](https://arxiv.org/abs/2505.21441) - NeurIPS version coming soon!
