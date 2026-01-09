@@ -8,24 +8,34 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
+options(rmarkdown.html_vignette.check_title = FALSE)
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-This vignette is a tutorial for the entire pipeline of the Autoencoding Random Forests (RFAE) algorithm. This consists of:
-1. Training a base Random Forests (RF) model
-2. Using the trained RF to encode data into embeddings 
-3. Decoding the embeddings back into the input space. 
+Autoencoding Random Forests (RFAE) provide a framework for dimensionality reduction and data reconstruction using the leaf-node connectivity of Random Forests. This vignette demonstrates the three-step pipeline:
+     
+1. Training a base Random Forest (RF).
+
+2. Encoding data into low-dimensional embeddings.
+
+3. Decoding those embeddings back into the original input space.
 
 # Random Forest Training
 
 Rather than being trained end-to-end, the RFAE algorithm is more like a post-processing procedure on a trained Random Forest (RF), so first we need to train a RF.
 
-We start with a dataset of interest, and decide whether we want to train the RF supervised ( the class label is not in the autoencoding process), or unsupervised (all features are passed through the pipeline). While the traditional RF algorithm is exclusively used for supervised learning, there have been many variants (such as Adversarial RFs (ARF), Unsupervised RFs (URF), and more) which allow for the class label to be preserved in the learning process, involving either splitting independently of the target, or training the model to distinguish between synthetic generated data and real data.
+Unlike standard autoencoders, RFAE is essentially a post-processing procedure applied to a pre-trained Random Forest - so first, we need to train a RF.
 
-RFAE is compatible with `ranger`-like objects, which means it can either use the `ranger` RF (supervised by default), or the `adversarial_rf` (unsupervised) from the `arf` package ([Watson et al., 2023](https://proceedings.mlr.press/v206/watson23a.html)).
+Given a dataset of interest, you must decide whether to train the Random Forest (RF) in a supervised or unsupervised manner. 
+
+1. Supervised Learning: Uses a target class label to guide tree splits (default in ranger). Subsequently, this label will be excluded from the subsequent encoding/decoding steps.
+
+2. Unsupervised Learning: Uses variants like Adversarial Random Forests (ARF) ([Watson et al., 2023](https://proceedings.mlr.press/v206/watson23a.html)) or Unsupervised RFs (URF) ([Shi & Horvath, 2006](https://www.tandfonline.com/doi/abs/10.1198/106186006X94072)), or others. These allow the model to learn the data's structure without a target label. For example, an ARF learns the data distribution by training the model to distinguish between real observations and synthetically generated dummy data in an adversarial manner.
+
+RFAE is compatible with ranger-like objects. It can be implemented using either the standard `ranger` package for supervised models or the adversarial_rf function from the `arf` package for unsupervised applications. You can also build other variants from `ranger`; please refer to their [documentation](https://www.rdocumentation.org/packages/ranger) for more details.
 
 ```{r rfae}
 # Load libraries
@@ -40,7 +50,7 @@ set.seed(42)
 trn <- sample(1:nrow(iris), 100)
 tst <- setdiff(1:nrow(iris), trn)
 
-# Train RFs, one supervised and one unsupervised
+# Train a RF and an ARF
 rf <- ranger(Species ~., data = iris[trn, ], num.trees=50)
 arf <- adversarial_rf(iris[trn, ], num_trees = 50)
 ```
@@ -74,9 +84,9 @@ The result of either functions is an object of class `ranger`, which we can inpu
 
 The next step is to train the model to encode the data, using `encode`. This function first computes the adjacency matrix between training samples implied by the `rf`. Samples are considered similar if they are routed into the same leaves often throughout the forest. 
 
-The `encode` function requires a `ranger` object, the training data `x` and a parameter `k` for the dimensionality of the embeddings. You can also set `stepsize`, an integer which controls the number of time steps in the diffusion process, and governs whether you want local or global connectivity captured in your embedding. The default value is 1, which gives the most local connectivity; increasing this allows the information captured by the embeddings to be more global. 
+The `encode` function requires a `ranger` object, the training data `x` and a parameter `k` for the dimensionality of the embeddings. You can also set `stepsize`, an integer which controls the number of time steps in the diffusion process, and governs whether you want local or global connectivity captured in your embedding. The default value is 1, which gives the most local connectivity; increasing this allows the information captured by the embeddings to be more global (see [here](https://en.wikipedia.org/wiki/Diffusion_map) for more details  . 
 
-The function outputs a list of length 8, containning `Z`, a `k`-dimensional non-linear embedding of `x` implied by `rf`; `A`, the adjacency matrix; and other information from the encoding process to aid with later steps. 
+The function outputs a list of length 8, containing `Z`, a `k`-dimensional non-linear embedding of `x` implied by `rf`; `A`, the adjacency matrix; and other information from the encoding process to aid with later steps. 
 
 For large datasets, this function can be very computationally expensive, as it requires at least $\mathcal{O}\big(n^2\big)$ space for the adjacency matrix, where $n$ is the sample size.
 
@@ -98,7 +108,7 @@ We find a slightly different set of embeddings due to the introduction of the Sp
 
 Moving forward in the vignette, we will only use the `emap_arf` encodings for the pipeline to avoid repeating. In practice, the user should decide whether they want to have supervised embeddings (which may be more useful in feature engineering for classification/regression) or unsupervised (which may be more useful in data analysis).
 
-```{r encoding2, fig.height=5, fig.width=8}
+```{r encoding2, fig.height=5, fig.width=7}
 # Plot the embedded training data
 tmp <- data.frame(
   dim1 = emap_arf$Z[, 1],
@@ -126,7 +136,7 @@ A[1:5, 1:5]
 
 With our learned embeddings, which are contained in the `emap` object, we can also project new data onto the principal components, using `predict`. Internally, the function passes the testing data through the RF, which is passed as an argument, computes the adjacency matrix between training and testing samples, then projects data using the Nyst\"om formula, and returns an embedding matrix of size $n_{test} \times k $.
 
-```{r encoding5, fig.height=5, fig.width=8}
+```{r encoding5, fig.height=5, fig.width=7}
 # Project testing data
 emb <- predict(emap_arf, arf, iris[tst, ])
 
@@ -172,7 +182,7 @@ We provide this in the form of `reconstruction_error`, which takes first the `Xh
 
 The function then returns a list of 5 elements, with entries for (1) errors for numerical features; (2) errors for categorical features; (3) average numerical error; (4) average categorical error; and (5) the overall average error. 
 
-```{r}
+```{r errors}
 errors <- reconstruction_error(out$x_hat, iris[tst, ])
 # Error in numerical features
 errors$num_error
@@ -186,3 +196,26 @@ errors$cat_avg
 errors$ovr_error
 ```
 
+```{r errors2, fig.height=5, fig.width=7}
+
+# Plotting the errors by each feature
+error_df <- data.frame(
+  Variable = c(names(errors$num_error), names(errors$cat_error)),
+  Error = c(unlist(errors$num_error), unlist(errors$cat_error)),
+  Type = c(rep("Numeric", length(errors$num_error)), 
+           rep("Categorical", length(errors$cat_error)))
+)
+
+ggplot(error_df, aes(x = reorder(Variable, Error), y = Error, fill = Type)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  geom_hline(aes(yintercept = errors$ovr_error), 
+             linetype = "dashed", color = "red") +
+  annotate("text", x = 1.5, y = errors$ovr_error + 0.02, 
+           label = paste("Avg Error:", round(errors$ovr_error, 3))) +
+  theme_minimal() +
+  labs(
+    title = "Reconstruction Error by Feature",
+    x = NULL,
+    y = "Distortion"
+  )
+```
