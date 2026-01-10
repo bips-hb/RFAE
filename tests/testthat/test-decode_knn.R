@@ -1,10 +1,11 @@
 library(testthat)
 library(ranger)
 library(arf)
+
 set.seed(42)
 trn <- sample(1:nrow(iris), 100)
 tst <- setdiff(1:nrow(iris), trn)
-arf <- adversarial_rf(iris[trn, ], num_trees = 20)
+arf <- adversarial_rf(iris[trn, ], num_trees = 20, parallel = FALSE)
 
 emap <- encode(arf, iris[trn, ], k = 2)
 emb_tst <- predict(emap, arf, iris[tst, ])
