@@ -52,7 +52,7 @@ tst <- setdiff(1:nrow(iris), trn)
 
 # Train a RF and an ARF
 rf <- ranger(Species ~., data = iris[trn, ], num.trees=50)
-arf <- adversarial_rf(iris[trn, ], num_trees = 50)
+arf <- adversarial_rf(iris[trn, ], num_trees = 50, parallel = FALSE)
 ```
 
 We can speed up computations by registering a parallel backend, which can be used by `ranger` and `arf`, as well as the later functions in the pipeline. The default behavior of all functions is to compute in parallel, if possible, so it is advised to do so. How this is done varies across operating systems.
