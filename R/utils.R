@@ -2,14 +2,14 @@
 #'
 #' This function prepares input data.
 #'
-#' @param x Input data.frame.
+#' @param x Input `data.frame`.
 #' @param to_numeric List of variables to force as numeric.
 #' @param to_factor List of variables to force as factor.
 #' @param default Threshold to classify a variable as numeric (more than default
 #'  unique values) or factor (less or equal to unique values).
 #'
 #' @return
-#' Preprocessed data.frame.
+#' Preprocessed `data.frame`.
 #'
 #' @export
 
@@ -63,12 +63,12 @@ prep_x <- function(x, to_numeric=NULL, to_factor=NULL, default = 5) {
 #'
 #' This function prepares output data.
 #'
-#' @param x Input data.frame.
+#' @param x Input `data.frame`.
 #' @param meta Metadata.
 #' @param round Round continuous variables to their respective maximum precision
 #'   in the real data set?
 #' @return
-#' A data.frame which follows the structure and ordering of the input dataset.
+#' A `data.frame` which follows the structure and ordering of the input dataset.
 #' @import data.table
 #' @export
 

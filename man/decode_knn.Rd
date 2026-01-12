@@ -31,13 +31,14 @@ space via iterative k-nearest neighbors.
 }
 \details{
 \code{decode_knn} decodes the embedded data back to the original input space
-using a k-nearest neighbors (kNN) approach. For a given embedding vector,
-decoding works by first finding the k nearest embeddings within the training
-set. Then, \code{x_tilde} is either supplied or generated from the RF, which
-provides a proxy for the training samples associated with these embeddings,
-to avoid needing to retain training data. Finally, data is reconstructed by
-weighted averaging for numerical features, and the most likely value for
-categorical features.
+using a k-nearest neighbors (kNN) (Cover & Hart, 1967) approach. For a given
+embedding vector, decoding works by first finding the k nearest embeddings
+within the training set. Then, \code{x_tilde} is either supplied or generated
+from the RF (if generated, using the 'eForest' scheme (Feng & Zhou, 2018)),
+which provides a proxy for the training samples associated with these
+embeddings, to avoid needing to retain training data. Finally, data is
+reconstructed by weighted averaging for numerical features, and the most
+likely value for categorical features.
 }
 \examples{
 # Set seed
@@ -55,4 +56,12 @@ emb <- predict(emap, rf, iris[tst, ])
 # Decode test samples back to the input space
 out <- decode_knn(rf, emap, emb, k=5)$x_hat
 
+}
+\references{
+Cover, T., & Hart, P. (1967). Nearest neighbor pattern classification.
+\emph{IEEE Transactions on Information Theory, 13}(1), 21–27.
+
+Feng, J., & Zhou, Z. H. (2018, April). Autoencoder by forest. In
+\emph{Proceedings of the AAAI conference on artificial intelligence} (Vol. 32
+, No. 1).
 }

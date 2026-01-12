@@ -18,7 +18,8 @@ between 0-1, where 0 represents perfect reconstruction, and 1 represents no
 reconstruction.
 }
 \description{
-Mixed-type Reconstruction Error
+Computes the reconstruction error of a decoded dataset compared to the
+original.
 }
 \details{
 In standard AEs, reconstruction error is generally estimated via \eqn{L_2}

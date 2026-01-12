@@ -7,7 +7,7 @@
 prep_x(x, to_numeric = NULL, to_factor = NULL, default = 5)
 }
 \arguments{
-\item{x}{Input data.frame.}
+\item{x}{Input \code{data.frame}.}
 
 \item{to_numeric}{List of variables to force as numeric.}
 
@@ -17,7 +17,7 @@ prep_x(x, to_numeric = NULL, to_factor = NULL, default = 5)
 unique values) or factor (less or equal to unique values).}
 }
 \value{
-Preprocessed data.frame.
+Preprocessed \code{data.frame}.
 }
 \description{
 This function prepares input data.

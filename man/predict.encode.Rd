@@ -24,7 +24,7 @@ latter argument used to learn the \code{eigenmap}.
 }
 \description{
 Projects test data into the forest embedding space using a pre-trained
-Laplacian eigenmap.
+encoding map.
 }
 \details{
 This function uses the weights learned via \code{eigenmap} to project new

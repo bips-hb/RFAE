@@ -195,7 +195,7 @@ encode <- function(
 #' Predict Spectral Embeddings
 #'
 #' Projects test data into the forest embedding space using a pre-trained
-#' Laplacian eigenmap.
+#' encoding map.
 #'
 #' @param object Spectral embedding for the \code{rf} learned via \code{eigenmap}.
 #' @param rf Pre-trained random forest object of class \code{ranger}.

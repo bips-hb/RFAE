@@ -7,7 +7,7 @@
 post_x(x, meta, round = TRUE)
 }
 \arguments{
-\item{x}{Input data.frame.}
+\item{x}{Input \code{data.frame}.}
 
 \item{meta}{Metadata.}
 
@@ -15,7 +15,7 @@ post_x(x, meta, round = TRUE)
 in the real data set?}
 }
 \value{
-A data.frame which follows the structure and ordering of the input dataset.
+A \code{data.frame} which follows the structure and ordering of the input dataset.
 }
 \description{
 This function prepares output data.

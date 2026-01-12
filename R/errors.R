@@ -1,5 +1,7 @@
 #' Mixed-type Reconstruction Error
 #'
+#' Computes the reconstruction error of a decoded dataset compared to the
+#' original.
 #'
 #' @param Xhat Reconstructed dataset
 #' @param X Ground truth dataset
