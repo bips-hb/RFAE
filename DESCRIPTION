@@ -27,7 +27,7 @@ Description: Autoencoding Random Forests ('RFAE') provide a method to
     capacity to seamlessly handle mixed-type tabular data. For more details, see 
     Vu et al. (2025) <doi:10.48550/arXiv.2505.21441>.
 License: GPL (>= 3)
-URL: https://github.com/bips-hb/RFAE
+URL: https://github.com/bips-hb/RFAE, https://bips-hb.github.io/RFAE/
 BugReports: https://github.com/bips-hb/RFAE/issues
 Depends: 
     R (>= 4.4.0)
