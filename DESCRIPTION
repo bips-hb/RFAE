@@ -12,6 +12,7 @@ Authors@R: c(
     person("David S.", "Watson", role = "aut",
            comment = c(ORCID = "0000-0001-9632-2159"))
   )
+Maintainer: Binh Duc Vu <vuducbinh2210@gmail.com>
 Description: Autoencoding Random Forests ('RFAE') provide a method to
     autoencode mixed-type tabular data using Random Forests ('RF'), which 
     involves projecting the data to a latent feature space of user-chosen 
