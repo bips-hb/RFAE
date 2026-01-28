@@ -54,13 +54,11 @@ For more detailed examples, refer to the package vignette.
 
 # Python Library
 
-The Python version of RFAE is currently under development. A preliminary
-version is currently available at
+The Python version of RFAE is available at
 [RFAE_py](https://github.com/binhducvu/RFAE_py)
 
 # References
 
 - Vu, B. D., Kapar, J., Wright, M., & Watson, D. S. (2025). Autoencoding
   Random Forests. arXiv preprint arXiv:2505.21441. Link
-  [here](https://arxiv.org/abs/2505.21441) - NeurIPS version coming
-  soon!
+  [here](https://arxiv.org/abs/2505.21441)
